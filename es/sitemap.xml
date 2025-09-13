@@ -2,138 +2,138 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/contact/</loc>
+    <loc>https://jordi13.github.io/contact/</loc>
     <lastmod>2025-09-08T10:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/contact/"
+                href="https://jordi13.github.io/ca/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/contact/"
+                href="https://jordi13.github.io/contact/"
                 />
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://jordi13.github.io/</loc>
     <lastmod>2025-09-08T10:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/"
+                href="https://jordi13.github.io/ca/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/"
+                href="https://jordi13.github.io/"
                 />
   </url><url>
-    <loc>https://example.org/about/</loc>
+    <loc>https://jordi13.github.io/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/about/"
+                href="https://jordi13.github.io/ca/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/about/"
+                href="https://jordi13.github.io/about/"
                 />
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://jordi13.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/categories/"
+                href="https://jordi13.github.io/ca/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/categories/"
+                href="https://jordi13.github.io/categories/"
                 />
   </url><url>
-    <loc>https://example.org/experience/</loc>
+    <loc>https://jordi13.github.io/experience/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/experience/"
+                href="https://jordi13.github.io/ca/experience/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/experience/"
+                href="https://jordi13.github.io/experience/"
                 />
   </url><url>
-    <loc>https://example.org/footer/</loc>
+    <loc>https://jordi13.github.io/footer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/footer/"
+                href="https://jordi13.github.io/ca/footer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/footer/"
+                href="https://jordi13.github.io/footer/"
                 />
   </url><url>
-    <loc>https://example.org/head/</loc>
+    <loc>https://jordi13.github.io/head/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/head/"
+                href="https://jordi13.github.io/ca/head/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/head/"
+                href="https://jordi13.github.io/head/"
                 />
   </url><url>
-    <loc>https://example.org/hero/</loc>
+    <loc>https://jordi13.github.io/hero/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/hero/"
+                href="https://jordi13.github.io/ca/hero/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/hero/"
+                href="https://jordi13.github.io/hero/"
                 />
   </url><url>
-    <loc>https://example.org/nav/</loc>
+    <loc>https://jordi13.github.io/nav/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/nav/"
+                href="https://jordi13.github.io/ca/nav/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/nav/"
+                href="https://jordi13.github.io/nav/"
                 />
   </url><url>
-    <loc>https://example.org/skills/</loc>
+    <loc>https://jordi13.github.io/skills/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/skills/"
+                href="https://jordi13.github.io/ca/skills/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/skills/"
+                href="https://jordi13.github.io/skills/"
                 />
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://jordi13.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://example.org/ca/tags/"
+                href="https://jordi13.github.io/ca/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://example.org/tags/"
+                href="https://jordi13.github.io/tags/"
                 />
   </url>
 </urlset>

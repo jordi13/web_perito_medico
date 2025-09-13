@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dr. Blanch</title>
-    <link>https://example.org/ca/</link>
+    <link>https://jordi13.github.io/ca/</link>
     <description>Recent content on Dr. Blanch</description>
     <generator>Hugo</generator>
     <language>ca</language>
     <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="https://example.org/ca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jordi13.github.io/ca/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>https://example.org/ca/contact/</link>
+      <link>https://jordi13.github.io/ca/contact/</link>
       <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://example.org/ca/contact/</guid>
+      <guid>https://jordi13.github.io/ca/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://example.org/ca/about/</link>
+      <link>https://jordi13.github.io/ca/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/about/</guid>
+      <guid>https://jordi13.github.io/ca/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Experiència</title>
-      <link>https://example.org/ca/experience/</link>
+      <link>https://jordi13.github.io/ca/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/experience/</guid>
+      <guid>https://jordi13.github.io/ca/experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Footer</title>
-      <link>https://example.org/ca/footer/</link>
+      <link>https://jordi13.github.io/ca/footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/footer/</guid>
+      <guid>https://jordi13.github.io/ca/footer/</guid>
       <description></description>
     </item>
     <item>
       <title>Head</title>
-      <link>https://example.org/ca/head/</link>
+      <link>https://jordi13.github.io/ca/head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/head/</guid>
+      <guid>https://jordi13.github.io/ca/head/</guid>
       <description></description>
     </item>
     <item>
       <title>Hero</title>
-      <link>https://example.org/ca/hero/</link>
+      <link>https://jordi13.github.io/ca/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/hero/</guid>
+      <guid>https://jordi13.github.io/ca/hero/</guid>
       <description></description>
     </item>
     <item>
       <title>Nav</title>
-      <link>https://example.org/ca/nav/</link>
+      <link>https://jordi13.github.io/ca/nav/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/nav/</guid>
+      <guid>https://jordi13.github.io/ca/nav/</guid>
       <description></description>
     </item>
     <item>
       <title>Skills</title>
-      <link>https://example.org/ca/skills/</link>
+      <link>https://jordi13.github.io/ca/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/ca/skills/</guid>
+      <guid>https://jordi13.github.io/ca/skills/</guid>
       <description></description>
     </item>
   </channel>
