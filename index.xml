@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dr. Blanch</title>
-    <link>https://jordi13.github.io/</link>
+    <link>https://jordi13.github.io/web_perito_medico/</link>
     <description>Recent content on Dr. Blanch</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="https://jordi13.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jordi13.github.io/web_perito_medico/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>https://jordi13.github.io/contact/</link>
+      <link>https://jordi13.github.io/web_perito_medico/contact/</link>
       <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://jordi13.github.io/contact/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://jordi13.github.io/about/</link>
+      <link>https://jordi13.github.io/web_perito_medico/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/about/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Experiencia</title>
-      <link>https://jordi13.github.io/experience/</link>
+      <link>https://jordi13.github.io/web_perito_medico/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/experience/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Footer</title>
-      <link>https://jordi13.github.io/footer/</link>
+      <link>https://jordi13.github.io/web_perito_medico/footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/footer/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/footer/</guid>
       <description></description>
     </item>
     <item>
       <title>Head</title>
-      <link>https://jordi13.github.io/head/</link>
+      <link>https://jordi13.github.io/web_perito_medico/head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/head/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/head/</guid>
       <description></description>
     </item>
     <item>
       <title>Hero</title>
-      <link>https://jordi13.github.io/hero/</link>
+      <link>https://jordi13.github.io/web_perito_medico/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/hero/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/hero/</guid>
       <description></description>
     </item>
     <item>
       <title>Nav</title>
-      <link>https://jordi13.github.io/nav/</link>
+      <link>https://jordi13.github.io/web_perito_medico/nav/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/nav/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/nav/</guid>
       <description></description>
     </item>
     <item>
       <title>Skills</title>
-      <link>https://jordi13.github.io/skills/</link>
+      <link>https://jordi13.github.io/web_perito_medico/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/skills/</guid>
+      <guid>https://jordi13.github.io/web_perito_medico/skills/</guid>
       <description></description>
     </item>
   </channel>
