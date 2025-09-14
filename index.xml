@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dr. Blanch</title>
-    <link>https://jordi13.github.io/web_perito_medico/</link>
+    <link>https://jaumeblanch.com/</link>
     <description>Recent content on Dr. Blanch</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="https://jordi13.github.io/web_perito_medico/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jaumeblanch.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>https://jordi13.github.io/web_perito_medico/contact/</link>
+      <link>https://jaumeblanch.com/contact/</link>
       <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/contact/</guid>
+      <guid>https://jaumeblanch.com/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://jordi13.github.io/web_perito_medico/about/</link>
+      <link>https://jaumeblanch.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/about/</guid>
+      <guid>https://jaumeblanch.com/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Experiencia</title>
-      <link>https://jordi13.github.io/web_perito_medico/experience/</link>
+      <link>https://jaumeblanch.com/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/experience/</guid>
+      <guid>https://jaumeblanch.com/experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Footer</title>
-      <link>https://jordi13.github.io/web_perito_medico/footer/</link>
+      <link>https://jaumeblanch.com/footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/footer/</guid>
+      <guid>https://jaumeblanch.com/footer/</guid>
       <description></description>
     </item>
     <item>
       <title>Head</title>
-      <link>https://jordi13.github.io/web_perito_medico/head/</link>
+      <link>https://jaumeblanch.com/head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/head/</guid>
+      <guid>https://jaumeblanch.com/head/</guid>
       <description></description>
     </item>
     <item>
       <title>Hero</title>
-      <link>https://jordi13.github.io/web_perito_medico/hero/</link>
+      <link>https://jaumeblanch.com/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/hero/</guid>
+      <guid>https://jaumeblanch.com/hero/</guid>
       <description></description>
     </item>
     <item>
       <title>Nav</title>
-      <link>https://jordi13.github.io/web_perito_medico/nav/</link>
+      <link>https://jaumeblanch.com/nav/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/nav/</guid>
+      <guid>https://jaumeblanch.com/nav/</guid>
       <description></description>
     </item>
     <item>
       <title>Opiniones de Pacientes</title>
-      <link>https://jordi13.github.io/web_perito_medico/reviews/</link>
+      <link>https://jaumeblanch.com/reviews/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/reviews/</guid>
+      <guid>https://jaumeblanch.com/reviews/</guid>
       <description></description>
     </item>
     <item>
       <title>Skills</title>
-      <link>https://jordi13.github.io/web_perito_medico/skills/</link>
+      <link>https://jaumeblanch.com/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jordi13.github.io/web_perito_medico/skills/</guid>
+      <guid>https://jaumeblanch.com/skills/</guid>
       <description></description>
     </item>
   </channel>

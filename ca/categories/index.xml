@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dr. Blanch</title>
-    <link>https://jordi13.github.io/web_perito_medico/ca/categories/</link>
+    <link>https://jaumeblanch.com/ca/categories/</link>
     <description>Recent content in Categories on Dr. Blanch</description>
     <generator>Hugo</generator>
     <language>ca</language>
-    <atom:link href="https://jordi13.github.io/web_perito_medico/ca/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jaumeblanch.com/ca/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
