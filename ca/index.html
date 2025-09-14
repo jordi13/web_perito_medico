@@ -9,7 +9,23 @@
             document.documentElement.classList.add('dark');
         }
     </script>
+    <script>
+  (function () {
     
+    const stored = localStorage.getItem('darkMode');
+
+    if (stored === 'true') {
+      document.documentElement.classList.add('dark');
+    } else if (stored === 'false') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
+    }
+  })();
+</script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -122,7 +138,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.347c41ebd0a756102ff11cc9a6a5bcf16541da004d11bcee0b3c2c014857d3b0.css?v=1757861681" data-version="1757861681">
+    <link rel="stylesheet" href="/css/main.min.347c41ebd0a756102ff11cc9a6a5bcf16541da004d11bcee0b3c2c014857d3b0.css?v=1757862869" data-version="1757862869">
     <style>
          
         body {
