@@ -112,6 +112,18 @@
                 href="https://jordi13.github.io/web_perito_medico/nav/"
                 />
   </url><url>
+    <loc>https://jordi13.github.io/web_perito_medico/reviews/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jordi13.github.io/web_perito_medico/ca/reviews/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jordi13.github.io/web_perito_medico/reviews/"
+                />
+  </url><url>
     <loc>https://jordi13.github.io/web_perito_medico/skills/</loc>
     <xhtml:link
                 rel="alternate"
