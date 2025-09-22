@@ -16,13 +16,6 @@
       <description></description>
     </item>
     <item>
-      <title>About</title>
-      <link>https://jaumeblanch.com/about---copia/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jaumeblanch.com/about---copia/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Experiencia</title>
       <link>https://jaumeblanch.com/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -65,10 +58,17 @@
       <description></description>
     </item>
     <item>
-      <title>Skills</title>
-      <link>https://jaumeblanch.com/skills/</link>
+      <title>Servicios médicos periciales</title>
+      <link>https://jaumeblanch.com/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jaumeblanch.com/skills/</guid>
+      <guid>https://jaumeblanch.com/services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skills</title>
+      <link>https://jaumeblanch.com/skills---copia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jaumeblanch.com/skills---copia/</guid>
       <description></description>
     </item>
     <item>
