@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jaumeblanch.com/ca/contact/</loc>
+    <loc>https://jaumeblanch.com/ca/contact---copia/</loc>
     <lastmod>2025-09-08T10:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://jaumeblanch.com/contact/"
+                href="https://jaumeblanch.com/contact---copia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://jaumeblanch.com/ca/contact/"
+                href="https://jaumeblanch.com/ca/contact---copia/"
                 />
   </url><url>
     <loc>https://jaumeblanch.com/ca/</loc>
@@ -38,6 +38,18 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://jaumeblanch.com/ca/categories/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/ca/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/contact/"
                 />
   </url><url>
     <loc>https://jaumeblanch.com/ca/experience---copia/</loc>
