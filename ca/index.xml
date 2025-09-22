@@ -17,9 +17,9 @@
     </item>
     <item>
       <title>About</title>
-      <link>https://jaumeblanch.com/ca/about/</link>
+      <link>https://jaumeblanch.com/ca/about---copia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jaumeblanch.com/ca/about/</guid>
+      <guid>https://jaumeblanch.com/ca/about---copia/</guid>
       <description></description>
     </item>
     <item>
@@ -69,6 +69,13 @@
       <link>https://jaumeblanch.com/ca/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jaumeblanch.com/ca/skills/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sobre mi</title>
+      <link>https://jaumeblanch.com/ca/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jaumeblanch.com/ca/about/</guid>
       <description></description>
     </item>
   </channel>
