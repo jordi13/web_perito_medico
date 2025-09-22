@@ -32,3 +32,11 @@ function initializeSectionFadeIn() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeSectionFadeIn();
 });
+
+// Cerrar menú móvil al hacer clic en cualquier enlace
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.add('hidden');
+    });
+});
+

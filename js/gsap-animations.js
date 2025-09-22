@@ -17,17 +17,15 @@ const COMMON_ANIMATIONS = {
 const ANIMATION_REGISTRY = {
     registeredElements: new Set(),
     
-    // Register an element to prevent duplicate animations
     registerElement: (element, type) => {
         const key = `${element.tagName}-${element.className.split(' ')[0]}-${type}`;
         if (ANIMATION_REGISTRY.registeredElements.has(key)) {
-            return false; // Already registered
+            return false;
         }
         ANIMATION_REGISTRY.registeredElements.add(key);
         return true;
     },
     
-    // Check if element is already animated
     isElementAnimated: (element, type) => {
         const key = `${element.tagName}-${element.className.split(' ')[0]}-${type}`;
         return ANIMATION_REGISTRY.registeredElements.has(key);
@@ -36,7 +34,6 @@ const ANIMATION_REGISTRY = {
 
 // Utility functions for hero animations
 const Utils = {
-    // Create container with fallback
     createContainer: (parent, className, fallback) => {
         return parent.querySelector(className) || (() => {
             const container = document.createElement('div');
@@ -46,14 +43,12 @@ const Utils = {
         })();
     },
 
-    // Random position generator
     randomPosition: (min = 10, max = 90) => ({
         x: Math.random() * (max - min) + min,
         y: Math.random() * (max - min) + min
     })
 };
 
-// Mouse tracking for quick fact lighting effects
 function initQuickFactLighting() {
     const quickFactCards = document.querySelectorAll('.quick-fact-card');
     
@@ -85,8 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeHeroAnimations();
 });
 
-
-// GSAP loader with fallback
 function loadGSAP() {
     const loadScript = (src, fallback, onLoad) => {
         console.log(`Loading GSAP from: ${src}`);
@@ -119,7 +112,6 @@ function loadGSAP() {
         });
 }
 
-// Main initialization function - Hero only (optimized)
 function initializeHeroAnimations() {
     console.log('Initializing hero animation system...');
     
@@ -128,14 +120,12 @@ function initializeHeroAnimations() {
 
     console.log('🎯 Initializing hero animations...');
     
-    // Set initial states for all animated elements
     const animatedElements = heroSection.querySelectorAll('[data-animation]');
     const bgDecorations = heroSection.querySelectorAll('.absolute.opacity-10 > div');
     
     gsap.set(animatedElements, { opacity: 0, y: 50, rotationX: -15 });
     gsap.set(bgDecorations, { opacity: 0, scale: 0.5, rotation: -180 });
     
-    // Initialize floating background animations
     bgDecorations.forEach((circle, index) => {
         const delay = index * 0.5;
         const floatX = (Math.random() - 0.5) * 40;
@@ -149,19 +139,11 @@ function initializeHeroAnimations() {
         circle.setAttribute('data-natural-animation', 'true');
     });
     
-    // Initialize mouse tracking
     initMouseTracking(heroSection);
-    
-    // Initialize background shapes
     initSectionBackgroundAnimations('.hero-section', ANIMATION_CONFIG.hero);
-    
-    // Initialize typewriter effect
     initTypingEffect();
-    
-    // Initialize quick fact lighting effects
     initQuickFactLighting();
     
-    // Play hero entrance animation
     const tl = gsap.timeline();
     
     tl.to(animatedElements, { 
@@ -182,7 +164,7 @@ function initializeHeroAnimations() {
     }, "-=0.6");
 }
 
-// Enhanced typewriter effect
+// ✅ Nuevo initTypingEffect (solo escribe una vez y mantiene cursor)
 let typingEffectInitialized = false;
 
 function initTypingEffect() {
@@ -192,10 +174,9 @@ function initTypingEffect() {
     if (!typewriterElement) return;
 
     const text = typewriterElement.textContent;
-    
     typewriterElement.textContent = '';
     typewriterElement.style.color = 'transparent';
-    
+
     const cursor = document.createElement('span');
     cursor.className = 'typing-cursor';
     Object.assign(cursor.style, {
@@ -206,7 +187,7 @@ function initTypingEffect() {
         marginLeft: '2px',
         verticalAlign: 'text-bottom'
     });
-    
+
     typewriterElement.appendChild(cursor);
 
     gsap.to(cursor, {
@@ -218,15 +199,7 @@ function initTypingEffect() {
     });
 
     const chars = text.split('');
-    const timeline = gsap.timeline({ 
-        delay: 1.0,
-        repeat: -1,
-        onRepeat: () => {
-            typewriterElement.textContent = '';
-            typewriterElement.appendChild(cursor);
-            typewriterElement.style.color = 'transparent';
-        }
-    });
+    const timeline = gsap.timeline({ delay: 0.5 });
 
     chars.forEach((char, index) => {
         timeline.to(typewriterElement, {
@@ -239,23 +212,7 @@ function initTypingEffect() {
             }
         });
     });
-    
-    timeline.to(typewriterElement, { duration: 2 });
-    
-    const reversedChars = [...chars].reverse();
-    reversedChars.forEach((char, index) => {
-        timeline.to(typewriterElement, {
-            duration: 0.03,
-            onUpdate: function() {
-                const textContent = reversedChars.slice(index + 1).reverse().join('');
-                typewriterElement.textContent = textContent;
-                typewriterElement.appendChild(cursor);
-            }
-        });
-    });
-    
-    timeline.to(typewriterElement, { duration: 1 });
-    
+
     typingEffectInitialized = true;
 }
 
@@ -342,7 +299,6 @@ function initMouseTracking(heroSection) {
     }
 }
 
-// Background animations system for hero
 function createAndAnimateDiagonalLines(container, options = {}) {
     const config = { count: 4, background: 'linear-gradient(45deg, transparent, var(--color-primary-light), transparent)', height: 3, width: 1200, opacity: 0.4, scaleX: 4.0, duration: 4, rotationDuration: 8, ...options };
     
@@ -412,13 +368,11 @@ function initSectionBackgroundAnimations(sectionSelector, options = {}) {
 
     const shapesContainer = Utils.createContainer(section, '.morphing-shapes', 'morphing-shapes absolute inset-0 pointer-events-none overflow-hidden');
 
-    // Create background animations immediately for hero section
     shapesContainer.innerHTML = '';
     createAndAnimateDiagonalLines(shapesContainer, options.diagonalLines);
     createAndAnimateSplineCurves(shapesContainer, options.splineCurves);
 }
 
-// Performance optimizations
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         gsap.globalTimeline.pause();
@@ -428,7 +382,6 @@ document.addEventListener('visibilitychange', function() {
 });
 
 window.addEventListener('resize', function() {
-    // Refresh any GSAP animations if needed
     if (typeof gsap !== 'undefined') {
         gsap.globalTimeline.invalidate();
     }
