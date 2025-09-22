@@ -40,6 +40,18 @@
                 href="https://jaumeblanch.com/categories/"
                 />
   </url><url>
+    <loc>https://jaumeblanch.com/experience---copia/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/experience---copia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/experience---copia/"
+                />
+  </url><url>
     <loc>https://jaumeblanch.com/experience/</loc>
     <xhtml:link
                 rel="alternate"
@@ -122,18 +134,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://jaumeblanch.com/services/"
-                />
-  </url><url>
-    <loc>https://jaumeblanch.com/skills---copia/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://jaumeblanch.com/ca/skills---copia/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jaumeblanch.com/skills---copia/"
                 />
   </url><url>
     <loc>https://jaumeblanch.com/about/</loc>
