@@ -138,7 +138,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.4d41859644813c39bd0c072b8de4efca94e795fd0030bfc36028dd077aa9ecb3.css?v=1758628575" data-version="1758628575">
+    <link rel="stylesheet" href="/css/main.min.4d41859644813c39bd0c072b8de4efca94e795fd0030bfc36028dd077aa9ecb3.css?v=1758630044" data-version="1758630044">
     <style>
          
         body {
@@ -658,17 +658,15 @@
 
     
     <script>
-        
-        if (localStorage.getItem('darkMode') !== 'false') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+  
+  localStorage.setItem('darkMode', 'false');
+  document.documentElement.classList.remove('dark');
 
-        
-        window.addEventListener('load', function() {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
+  
+  window.addEventListener('load', function() {
+    document.body.style.visibility = 'visible';
+  });
+</script>
+
 </body>
 </html>
