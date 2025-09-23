@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Dr. Blanch</title>
+    <link>http://localhost:1313/ca/blog/</link>
+    <description>Recent content in Blog on Dr. Blanch</description>
+    <generator>Hugo</generator>
+    <language>ca</language>
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?</title>
+      <link>http://localhost:1313/ca/blog/cervicalgia-accidente/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ca/blog/cervicalgia-accidente/</guid>
+      <description>La cervicalgia és una de les lesions més freqüents en accidents de trànsit, especialment en els xocs per abast. Analitzem el temps de recuperació, les possibles seqüeles i la importància d’una valoració mèdica rigorosa.</description>
+    </item>
+  </channel>
+</rss>

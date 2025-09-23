@@ -2,6 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jaumeblanch.com/</loc>
+    <lastmod>2025-09-23T19:30:05+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/accidente-de-tr%C3%A1fico/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/peritaje-m%C3%A9dico/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/secuelas-neurol%C3%B3gicas/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/blog/secuela-neurologica-accidente-trafico/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/blog/secuela-neurologica-accidente-trafico/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/blog/secuela-neurologica-accidente-trafico/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/tags/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/traumatismo-craneoencef%C3%A1lico/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/valoraci%C3%B3n-del-da%C3%B1o-corporal/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/blog/indemnizacion-lumbalgia-accidente/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/blog/indemnizacion-lumbalgia-accidente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/blog/indemnizacion-lumbalgia-accidente/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/indemnizaci%C3%B3n-accidente-de-tr%C3%A1fico/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/lesiones-lumbares/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/lumbalgia/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/valoraci%C3%B3n-m%C3%A9dica/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jaumeblanch.com/blog/cervicalgia-accidente/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/blog/cervicalgia-accidente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/blog/cervicalgia-accidente/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/cervicalgia/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/tags/cervicalgia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/tags/cervicalgia/"
+                />
+  </url><url>
+    <loc>https://jaumeblanch.com/tags/lesiones-cervicales/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jaumeblanch.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -24,18 +132,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://jaumeblanch.com/contact/"
-                />
-  </url><url>
-    <loc>https://jaumeblanch.com/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://jaumeblanch.com/ca/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jaumeblanch.com/"
                 />
   </url><url>
     <loc>https://jaumeblanch.com/experience/</loc>
@@ -144,18 +240,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://jaumeblanch.com/about/"
-                />
-  </url><url>
-    <loc>https://jaumeblanch.com/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://jaumeblanch.com/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jaumeblanch.com/tags/"
                 />
   </url>
 </urlset>

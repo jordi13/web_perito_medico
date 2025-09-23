@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <script>
+        
+        if (localStorage.getItem('darkMode') !== 'false') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <script>
+  (function () {
+    
+    const stored = localStorage.getItem('darkMode');
+
+    if (stored === 'true') {
+      document.documentElement.classList.add('dark');
+    } else if (stored === 'false') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
+    }
+  })();
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<title>
+  
+    Blog | Dr. Blanch
+  
+</title>
+
+
+<meta name="description" content="" />
+<meta name="author" content="Jordi Blanch" />
+<link rel="canonical" href="http://localhost:1313/ca/blog/" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog | Dr. Blanch" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="http://localhost:1313/ca/blog/" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Dr. Blanch" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog | Dr. Blanch" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="" />
+
+
+<link rel="icon" href="/images/favicon.ico" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+
+    
+    
+    <style>
+:root {
+   
+  --color-primary: #095bb0;          
+  --color-primary-light: #3a7cc0;    
+  --color-primary-dark: #07498d;     
+  --color-primary-lighter: #cedeef;  
+
+  --color-second: #004182;         
+  --color-second-light: #33679b;   
+  --color-second-dark: #003468;
+  --color-second-lighter: #ccd9e6;
+  
+  --color-third: #8c8c8c;          
+  --color-third-light: #a3a3a3;
+  --color-third-dark: #707070;
+  --color-third-lighter: #e8e8e8;
+
+   
+  --color-gray-50: #f3f7fb;
+  --color-gray-100: #e6eff7;
+  --color-gray-300: #cedeef;
+  --color-gray-400: #b5cee7;
+  --color-gray-500: #9dbddf;
+  --color-gray-600: #052d58;
+  --color-gray-700: #05376a;
+  --color-gray-800: #07498d;
+  --color-gray-900: #08529e;
+
+   
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+   
+  --color-shadow-light: rgba(0, 0, 0, 0.1);
+  --color-shadow-lighter: rgba(0, 0, 0, 0.05);
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+  
+    
+   
+  --color-text-muted: var(--color-gray-500);
+  --color-border-secondary: var(--color-gray-300);
+  --color-success: var(--color-second);
+
+   
+  --color-bg: var(--color-white);
+  --color-bg-secondary: var(--color-gray-100);
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-border: var(--color-gray-300);
+
+}
+
+ 
+.dark {
+  --color-bg: #052d58;
+  --color-bg-secondary: #031b35;
+  --color-bg-tertiary: #042446;
+  --color-text-primary: var(--color-gray-50);
+  --color-text-secondary: var(--color-gray-300);
+  --color-border: var(--color-gray-700);
+  --color-text-muted: var(--color-gray-400);
+  --color-border-secondary: var(--color-gray-600); 
+}
+</style>
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/main.css?v=1758653519" data-version="1758653519">
+    <style>
+         
+        body {
+            visibility: hidden;
+        }
+        .dark body {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
+
+    <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <a href="/ca/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">Dr. Blanch</a>
+      </div>
+      <div class="hidden lg:flex items-center space-x-8">
+        
+          
+                      
+            
+            <a href="/ca/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre mi</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#services" class="nav-link text-text-primary dark:text-text-primary">Serveis</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacta</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#reviews" class="nav-link text-text-primary dark:text-text-primary">Opinions</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+          
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="relative group">
+          <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
+			<img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />
+            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+          </a>
+          <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible">
+            
+            
+              
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                  
+                    
+                  
+                
+                
+                <a href="/ca/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
+                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+                </a>
+              
+            
+              
+              
+            
+              
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                  
+                    
+                      
+                      
+                    
+                  
+                
+                
+                <a href="/blog/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
+                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+                </a>
+              
+            
+          </div>
+        </div>
+        
+
+        
+        <div class="flex items-center space-x-4" data-animation="social">
+          
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          
+         
+        </div>
+        
+       
+      </div>
+      <div class="lg:hidden flex items-center space-x-4">
+        
+       
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      
+        
+          
+          <a href="/ca/#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Sobre mi
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Serveis
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Contacta
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Experiencia
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#reviews" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Opinions
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Faqs
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Blog
+          </a>
+        
+        
+      
+      
+      
+      
+      <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
+        <div class="flex items-center space-x-3">
+          
+          
+            
+            
+              
+              		
+              
+              
+              
+              
+              
+              
+              
+              
+                
+                  
+                
+              
+			  
+			
+              
+              <a href="/ca/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Català (go to home)">
+                <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+              </a>
+            
+          
+            
+            
+          
+            
+            
+              
+              		
+              
+              
+              
+              
+              
+              
+              
+              
+                
+                  
+                    
+                    
+                  
+                
+              
+			  
+			
+              
+              <a href="/blog/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Castellano (has translation)">
+                <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+              </a>
+            
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="flex items-center space-x-6 px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2" data-animation="social">
+        <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+          <i class="fab fa-linkedin-in text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+  <style>
+    .group.open .submenu {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
+
+  
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Navigation script loaded');
+      
+      const sectionLinks = document.querySelectorAll('.section-link');
+      console.log('Found section links:', sectionLinks.length);
+      const homePath = '\/ca\/';
+      
+      sectionLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('Section link clicked:', this.getAttribute('data-section'));
+          
+          const section = this.getAttribute('data-section');
+          const isHomePage = window.location.pathname === homePath || window.location.pathname === homePath + 'index.html' || window.location.pathname === homePath.replace(/\/$/, '');
+          console.log('Is home page:', isHomePage);
+          
+          if (isHomePage) {
+            
+            const targetElement = document.querySelector(section);
+            console.log('Target element found:', !!targetElement);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'instant',
+                block: 'start'
+              });
+            }
+          } else {
+            
+            console.log('Navigating to:', homePath + section);
+            window.location.href = homePath + section;
+          }
+        });
+      });
+      
+      
+      function handleHashScroll() {
+        console.log('Checking for hash:', window.location.hash);
+        if (window.location.hash) {
+          const targetElement = document.querySelector(window.location.hash);
+          console.log('Hash target element found:', !!targetElement);
+          if (targetElement) {
+            
+            setTimeout(() => {
+              console.log('Scrolling to hash target');
+              targetElement.scrollIntoView({
+                behavior: 'instant',
+                block: 'start'
+              });
+            }, 100);
+          }
+        }
+      }
+      
+      
+      handleHashScroll();
+      
+      
+      setTimeout(handleHashScroll, 500);
+      setTimeout(handleHashScroll, 1000);
+      
+      
+      window.addEventListener('hashchange', function() {
+        console.log('Hash changed to:', window.location.hash);
+        handleHashScroll();
+      });
+      
+      
+      window.addEventListener('load', function() {
+        console.log('Window loaded, checking hash');
+        setTimeout(handleHashScroll, 200);
+      });
+    });
+    
+    
+    document.querySelectorAll('.group > a.nav-link, .group > button.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const group = this.closest('.group');
+        const isOpen = group.classList.contains('open');
+
+        
+        document.querySelectorAll('.group').forEach(g => g.classList.remove('open'));
+
+        
+        if (!isOpen) {
+          group.classList.add('open');
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const group = link.closest('.group');
+        if (!group.contains(event.target)) {
+          group.classList.remove('open');
+        }
+      });
+    });
+
+    
+    function toggleDarkMode() {
+      
+	  
+	  const isDark= true;
+      localStorage.setItem('darkMode', isDark);
+    }
+
+   
+   
+
+    
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+
+  </script>
+</nav>
+
+
+
+
+    <div class="w-full h-16"></div>
+
+    <main class="flex-grow">
+        
+<section id="blog" class="py-12 bg-bg-secondary dark:bg-bg-tertiary border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-center mb-8 font-heading text-text-primary dark:text-text-primary">
+      Blog Mèdic Pericial
+    </h1>
+    <p class="text-lg text-center mb-12 text-text-secondary dark:text-text-tertiary italic">
+      Articles i consells sobre valoració mèdica de lesions, accidents de trànsit i laborals, i peritatges mèdics en judicis.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <article class="bg-bg dark:bg-bg rounded-xl shadow-md overflow-hidden border border-border-primary dark:border-border-primary card-hover" data-animate>
+        <a href="/ca/blog/cervicalgia-accidente/">
+          
+          <img src="/images/blog/cervicalgia-accidente.jpg" alt="Blog" class="w-full h-48 object-cover">
+          
+          <div class="p-6">
+            <h2 class="text-xl font-heading font-bold text-text-primary dark:text-text-primary mb-2">Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?</h2>
+            <p class="text-text-secondary dark:text-text-tertiary text-base mb-4"></p>
+            <span class="text-primary font-medium">15 Feb 2025</span>
+          </div>
+        </a>
+      </article>
+      
+    </div>
+
+    
+    <div class="mt-12 flex justify-center">
+      
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    
+<footer class="bg-bg-secondary dark:bg-bg-secondary text-text-primary py-12 border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+
+      
+      <div class="mb-6 md:mb-0 md:w-1/2 flex flex-col md:items-start md:text-left">
+        <a href="/#home" class="text-2xl font-bold font-heading text-text-primary dark:text-text-primary">
+          Dr. Blanch
+        </a>
+        <p class="text-lg text-text-secondary dark:text-text-tertiary italic mt-2">
+          Metge pèrit acreditat en valoració del dany corporal al servei de pacients i professionals del dret.
+        </p>
+        <p class="text-text-secondary dark:text-text-tertiary mt-2 flex md:justify-start">
+          <i class="fas fa-map-marker-alt mr-2"></i>Barcelona, Catalunya
+        </p>
+        <a href="mailto:20360jbd@comb.cat" class="text-primary dark:text-primary-light mt-2 inline-flex md:justify-start">
+          <i class="fas fa-envelope mr-2"></i>20360jbd@comb.cat
+        </a>
+        <div class="flex md:justify-start space-x-6 mt-6" data-animation="social">
+          
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" class="transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-2xl text-text-primary dark:text-text-primary"></i>
+          </a>
+          
+        </div>
+      </div>
+
+      
+      <div class="flex flex-col items-end">
+        <div class="flex flex-wrap gap-2 justify-end">
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Lesions osteomusculars
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Seqüeles físiques
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Seqüeles neurológiques
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Politraumatismes
+          </span>
+          
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div class="mt-8 pt-8 border-t border-border-primary text-center text-text-secondary dark:text-text-muted text-sm">
+      <p>© 2025 | Jaume Blanch</p>
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+    
+    <script src="/js/scripts.js"></script>
+    <script src="/js/gsap-animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+
+    
+    <script>
+  
+  localStorage.setItem('darkMode', 'false');
+  document.documentElement.classList.remove('dark');
+
+  
+  window.addEventListener('load', function() {
+    document.body.style.visibility = 'visible';
+  });
+</script>
+
+</body>
+</html>
