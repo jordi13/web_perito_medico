@@ -4,9 +4,8 @@
     
     <script>
         
-        if (localStorage.getItem('darkMode') !== 'false') {
-            document.documentElement.classList.add('dark');
-        }
+        localStorage.setItem('darkMode', 'false');
+        document.documentElement.classList.remove('dark');
     </script>
     <script>
   (function () {
@@ -138,7 +137,11 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758665384" data-version="1758665384">
+    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758667509" data-version="1758667509">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
          
         body {
@@ -183,13 +186,6 @@
           
                       
             
-            <a href="/ca/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
-          
-          
-        
-          
-                      
-            
             <a href="/ca/#reviews" class="nav-link text-text-primary dark:text-text-primary">Opinions</a>
           
           
@@ -198,6 +194,13 @@
                       
             
             <a href="/ca/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiència</a>
           
           
         
@@ -329,14 +332,6 @@
       
         
           
-          <a href="/ca/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Experiencia
-          </a>
-        
-        
-      
-        
-          
           <a href="/ca/#reviews" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Opinions
           </a>
@@ -347,6 +342,14 @@
           
           <a href="/ca/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Faqs
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Experiència
           </a>
         
         
@@ -725,16 +728,36 @@
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-  
-  localStorage.setItem('darkMode', 'false');
-  document.documentElement.classList.remove('dark');
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".related-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 4000, 
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+          },
+        });
+      });
 
-  
-  window.addEventListener('load', function() {
-    document.body.style.visibility = 'visible';
-  });
-</script>
-
+      
+      window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+      });
+    </script>
 </body>
 </html>

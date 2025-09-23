@@ -4,9 +4,8 @@
     
     <script>
         
-        if (localStorage.getItem('darkMode') !== 'false') {
-            document.documentElement.classList.add('dark');
-        }
+        localStorage.setItem('darkMode', 'false');
+        document.documentElement.classList.remove('dark');
     </script>
     <script>
   (function () {
@@ -136,7 +135,11 @@
     
     
     
-    <link rel="stylesheet" href="/css/main.css?v=1758653491" data-version="1758653491">
+    <link rel="stylesheet" href="/css/main.css?v=1758666537" data-version="1758666537">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
          
         body {
@@ -181,7 +184,7 @@
           
                       
             
-            <a href="/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
           
           
         
@@ -195,7 +198,7 @@
           
                       
             
-            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+            <a href="/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
           
           
         
@@ -316,8 +319,8 @@
       
         
           
-          <a href="/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Experiencia
+          <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Faqs
           </a>
         
         
@@ -332,8 +335,8 @@
       
         
           
-          <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Faqs
+          <a href="/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Experiencia
           </a>
         
         
@@ -632,13 +635,51 @@ Esto permite:</p>
       </div>
       <div>
         
-          <a href="/blog/cervicalgia-accidente---copia-2/" class="hover:underline">¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico? →</a>
+          <a href="/blog/indemnizacion-lumbalgia-accidente/" class="hover:underline">¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico? →</a>
         
       </div>
     </div>
 
   </div>
 </article>
+
+
+
+
+<section class="mt-16 border-t border-border-primary pt-8 px-6 lg:px-12">
+  <h2 class="text-2xl font-bold text-primary mb-6">
+    También te puede interesar
+  </h2>
+
+  
+  <div class="swiper related-swiper">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <article class="bg-bg-card dark:bg-bg-card-secondary shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <a href="/blog/cervicalgia-accidente/">
+            
+            <img src="/images/blog/cervicalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="w-full h-40 object-cover rounded-md mb-4">
+            
+            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+              ¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?
+            </h3>
+            <p class="mt-2 text-text-muted text-sm">La cervicalgia es una de las lesiones más frecuentes tras accidentes de tráfico, especialmente en choques por alcance. Analizamos su tiempo de recuperación, posibles secuelas y la importancia de una valoración médica rigurosa.</p>
+          </a>
+        </article>
+      </div>
+      
+    </div>
+
+    
+    <div class="swiper-button-prev text-primary"></div>
+    <div class="swiper-button-next text-primary"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+
 
     </main>
 
@@ -715,16 +756,36 @@ Esto permite:</p>
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-  
-  localStorage.setItem('darkMode', 'false');
-  document.documentElement.classList.remove('dark');
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".related-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 4000, 
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+          },
+        });
+      });
 
-  
-  window.addEventListener('load', function() {
-    document.body.style.visibility = 'visible';
-  });
-</script>
-
+      
+      window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+      });
+    </script>
 </body>
 </html>
