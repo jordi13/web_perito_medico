@@ -110,6 +110,18 @@
                 href="https://jaumeblanch.com/ca/reviews/"
                 />
   </url><url>
+    <loc>https://jaumeblanch.com/ca/faqs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jaumeblanch.com/faqs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://jaumeblanch.com/ca/faqs/"
+                />
+  </url><url>
     <loc>https://jaumeblanch.com/ca/services/</loc>
     <xhtml:link
                 rel="alternate"
