@@ -137,7 +137,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758667509" data-version="1758667509">
+    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758697817" data-version="1758697817">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -674,11 +674,33 @@ L’informe pericial té com a objectius:</p>
 
     
     
+    
+    
+    
 
     
     
+    
+    
+      
+    
+      
+    
+    
+
+    
       
       
+      
+      
+        
+        
+      
+        
+        
+      
+        
+        
       
     
 
@@ -689,7 +711,9 @@ L’informe pericial té com a objectius:</p>
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/ca/blog/cervicalgia-accidente/">
-                <img src="/images/blog/cervicalgia-accidente.jpg" alt="Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <img src="/images/blog/cervicalgia-accidente.jpg" alt="Seqüeles neurològiques després d’un accident de trànsit: diagnòstic i valoració mèdica" class="rounded-lg mb-4 object-cover w-full h-48">
+                
                 <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?</h3>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La cervicalgia és una de les lesions més freqüents en accidents de trànsit, especialment en els xocs per abast. …</p>
@@ -702,24 +726,13 @@ L’informe pericial té com a objectius:</p>
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/ca/blog/indemnizacion-lumbalgia-accidente/">
-                <img src="/images/blog/lumbalgia-accidente.jpg" alt="Com es calcula la indemnització per lumbàlgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <img src="/images/blog/lumbalgia-accidente.jpg" alt="Seqüeles neurològiques després d’un accident de trànsit: diagnòstic i valoració mèdica" class="rounded-lg mb-4 object-cover w-full h-48">
+                
                 <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Com es calcula la indemnització per lumbàlgia després d’un accident de trànsit?</h3>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La lumbàlgia és una de les lesions habituals en accidents de trànsit. Expliquem el temps de recuperació, les possibles …</p>
               <a href="/ca/blog/indemnizacion-lumbalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
-                
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/ca/blog/cervicalgia-accidente/">
-                <img src="/images/blog/cervicalgia-accidente.jpg" alt="Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La cervicalgia és una de les lesions més freqüents en accidents de trànsit, especialment en els xocs per abast. …</p>
-              <a href="/ca/blog/cervicalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -735,6 +748,11 @@ L’informe pericial té com a objectius:</p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  if (typeof Swiper === 'undefined') {
+    console.warn('Swiper no está cargado. Asegúrate de incluir Swiper en la página.');
+    return;
+  }
+
   new Swiper('.related-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -759,9 +777,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-
-
 
 
     </main>

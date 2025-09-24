@@ -137,7 +137,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758667509" data-version="1758667509">
+    <link rel="stylesheet" href="/css/main.min.cf8e9c40384abfc32b9b957dc05413a70009b16cdd9374b1adc1b66dd3d2434d.css?v=1758697817" data-version="1758697817">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -676,11 +676,36 @@ El informe médico pericial permitirá:</p>
 
     
     
+    
+    
+    
 
     
     
+    
+    
+      
+    
+    
+
+    
       
       
+      
+      
+        
+        
+      
+        
+        
+          
+          
+          
+          
+        
+      
+        
+        
       
     
 
@@ -691,20 +716,9 @@ El informe médico pericial permitirá:</p>
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/blog/cervicalgia-accidente/">
-                <img src="/images/blog/cervicalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La cervicalgia es una de las lesiones más frecuentes tras accidentes de tráfico, especialmente en choques por alcance. …</p>
-              <a href="/blog/cervicalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/cervicalgia-accidente/">
-                <img src="/images/blog/cervicalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/cervicalgia-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
                 <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?</h3>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La cervicalgia es una de las lesiones más frecuentes tras accidentes de tráfico, especialmente en choques por alcance. …</p>
@@ -717,7 +731,9 @@ El informe médico pericial permitirá:</p>
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/blog/secuela-neurologica-accidente-trafico/">
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
                 <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
@@ -737,6 +753,11 @@ El informe médico pericial permitirá:</p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  if (typeof Swiper === 'undefined') {
+    console.warn('Swiper no está cargado. Asegúrate de incluir Swiper en la página.');
+    return;
+  }
+
   new Swiper('.related-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -761,9 +782,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-
-
 
 
     </main>
