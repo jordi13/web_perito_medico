@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secuelas Psicológicas on Dr. Blanch</title>
+    <link>http://localhost:1313/ca/tags/secuelas-psicol%C3%B3gicas/</link>
+    <description>Recent content in Secuelas Psicológicas on Dr. Blanch</description>
+    <generator>Hugo</generator>
+    <language>ca</language>
+    <lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/ca/tags/secuelas-psicol%C3%B3gicas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</title>
+      <link>http://localhost:1313/ca/blog/secuelas-psicologicas-accidente/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ca/blog/secuelas-psicologicas-accidente/</guid>
+      <description>Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés postraumático también debe valorarse en un informe pericial para garantizar una indemnización justa.</description>
+    </item>
+  </channel>
+</rss>

@@ -4,9 +4,8 @@
     
     <script>
         
-        if (localStorage.getItem('darkMode') !== 'false') {
-            document.documentElement.classList.add('dark');
-        }
+        localStorage.setItem('darkMode', 'false');
+        document.documentElement.classList.remove('dark');
     </script>
     <script>
   (function () {
@@ -136,7 +135,11 @@
     
     
     
-    <link rel="stylesheet" href="/css/main.css?v=1758653530" data-version="1758653530">
+    <link rel="stylesheet" href="/css/main.css?v=1758733217" data-version="1758733217">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
          
         body {
@@ -181,21 +184,14 @@
           
                       
             
-            <a href="/ca/#experience" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/ca/#reviews" class="nav-link text-text-primary dark:text-text-primary">Opinions</a>
-          
-          
-        
-          
-                      
-            
             <a href="/ca/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+          
+          
+        
+          
+                      
+            
+            <a href="/ca/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiència</a>
           
           
         
@@ -327,24 +323,16 @@
       
         
           
-          <a href="/ca/#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Experiencia
-          </a>
-        
-        
-      
-        
-          
-          <a href="/ca/#reviews" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Opinions
-          </a>
-        
-        
-      
-        
-          
           <a href="/ca/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Faqs
+          </a>
+        
+        
+      
+        
+          
+          <a href="/ca/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+            Experiència
           </a>
         
         
@@ -581,7 +569,7 @@
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       
-      <a href="/ca/blog/indemnizacion-lumbalgia-accidente/" class="block group">
+      <a href="/ca/blog/secuelas-psicologicas-accidente/" class="block group">
         <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
           
           
@@ -594,7 +582,7 @@
             
             <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
               <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              ¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?
+              Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente
             </h2>
             
             
@@ -605,7 +593,7 @@
             <div class="flex flex-wrap gap-2">
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
-                cervicalgia
+                secuelas psicológicas
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
@@ -613,7 +601,7 @@
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
-                lesiones cervicales
+                estrés postraumático
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
@@ -621,7 +609,7 @@
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
-                peritaje médico
+                informe pericial
               </span>
               
             </div>
@@ -681,22 +669,22 @@
           
           
           <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-            Lesions osteomusculars
+            Informes pericials
           </span>
           
           
           <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-            Seqüeles físiques
+            Assistència a judicis
           </span>
           
           
           <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-            Seqüeles neurológiques
+            Valoració del dany corporal
           </span>
           
           
           <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-            Politraumatismes
+            Peritatge mèdic
           </span>
           
         </div>
@@ -720,16 +708,36 @@
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-  
-  localStorage.setItem('darkMode', 'false');
-  document.documentElement.classList.remove('dark');
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".related-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 4000, 
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+          },
+        });
+      });
 
-  
-  window.addEventListener('load', function() {
-    document.body.style.visibility = 'visible';
-  });
-</script>
-
+      
+      window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+      });
+    </script>
 </body>
 </html>
