@@ -135,7 +135,7 @@
     
     
     
-    <link rel="stylesheet" href="/css/main.css?v=1758826046" data-version="1758826046">
+    <link rel="stylesheet" href="/css/main.css?v=1758901222" data-version="1758901222">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -524,6 +524,16 @@
         if (!group.contains(event.target)) {
           group.classList.remove('open');
         }
+		
+		const menu = document.getElementById('mobile-menu');
+		const button = document.getElementById('menu-btn');
+
+		if (!menu.classList.contains('hidden')) {
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+          menu.classList.add('hidden');
+        }
+      }
+		
       });
     });
 
