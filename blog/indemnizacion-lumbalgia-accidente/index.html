@@ -137,7 +137,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759516472" data-version="1759516472">
+    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759524982" data-version="1759524982">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -732,14 +732,14 @@ El informe médico pericial permitirá:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuela-neurologica-accidente-trafico/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
+              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -747,14 +747,14 @@ El informe médico pericial permitirá:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuelas-psicologicas-accidente/">
+              <a href="/blog/fractura-clavicula-accidente/">
                 
-                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/fractura-clavicula-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
-              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La fractura de clavícula es una lesión frecuente en accidentes de tráfico, especialmente en motoristas y ciclistas. …</p>
+              <a href="/blog/fractura-clavicula-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -918,6 +918,62 @@ document.addEventListener('DOMContentLoaded', function () {
       window.addEventListener('load', function() {
         document.body.style.visibility = 'visible';
       });
+	  
+	  
+	  
+	
+		document.addEventListener("DOMContentLoaded", function () {
+		const overlay = document.getElementById("cookie-overlay");
+		const acceptBtn = document.getElementById("accept-cookies");
+		const rejectBtn = document.getElementById("reject-cookies");
+
+		
+		if (!localStorage.getItem("cookieConsent")) {
+		  overlay.classList.remove("hidden");
+		  document.body.classList.add("overflow-hidden");
+		}
+
+		function closeModal(choice) {
+		  localStorage.setItem("cookieConsent", choice);
+		  overlay.classList.add("hidden");
+		  document.body.classList.remove("overflow-hidden");
+		}
+
+		acceptBtn.addEventListener("click", () => closeModal("accepted"));
+		rejectBtn.addEventListener("click", () => closeModal("rejected"));
+	  });
+
+
+	  
+	  
     </script>
+	
+	
+	
+	<div id="cookie-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+	  <div class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full mx-4 text-center border border-border-primary">
+		<h3 class="text-xl font-bold mb-4 text-text-primary dark:text-text-primary">
+		  Tu privacidad es importante
+		</h3>
+		<p class="text-sm text-text-secondary dark:text-text-tertiary mb-6">
+		  Este sitio utiliza cookies técnicas necesarias para su correcto funcionamiento.
+		  <a href="/cookies" class="underline text-primary dark:text-primary-light ml-1">
+			Política de cookies
+		  </a>
+		</p>
+		<div class="flex justify-center gap-4">
+		  <button id="accept-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+			Aceptar
+		  </button>
+		  <button id="reject-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+			Rechazar
+		  </button>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+
 </body>
 </html>
