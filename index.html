@@ -138,7 +138,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759561531" data-version="1759561531">
+    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759561737" data-version="1759561737">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -1563,66 +1563,52 @@ document.addEventListener('DOMContentLoaded', function() {
 	  
 	  
 	
-		document.addEventListener("DOMContentLoaded", function () {
-  const overlay = document.getElementById("cookie-overlay");
-  const box = document.getElementById("cookie-box");
-  const acceptBtn = document.getElementById("accept-cookies");
-  const rejectBtn = document.getElementById("reject-cookies");
+	document.addEventListener("DOMContentLoaded", function () {
+	  const overlay = document.getElementById("cookie-overlay");
+	  const box = document.getElementById("cookie-box");
+	  const acceptBtn = document.getElementById("accept-cookies");
+	  const rejectBtn = document.getElementById("reject-cookies");
 
-  function showModal() {
-    
-    overlay.classList.remove("hidden");
-    overlay.classList.add("flex");
+	  function showModal() {
+		overlay.classList.remove("hidden");
+		
+		overlay.classList.add("flex");
 
-    
-    setTimeout(() => {
-      overlay.classList.remove("opacity-0");
-      overlay.classList.add("opacity-100");
-      box.classList.remove("opacity-0", "scale-95");
-      box.classList.add("opacity-100", "scale-100");
-    }, 30);
+		setTimeout(() => {
+		  overlay.classList.remove("opacity-0");
+		  overlay.classList.add("opacity-100");
+		  box.classList.remove("opacity-0", "scale-95");
+		  box.classList.add("opacity-100", "scale-100");
+		}, 30);
 
-    
-    document.documentElement.classList.add("overflow-hidden");
-    document.body.classList.add("overflow-hidden");
-  }
+		
+		document.documentElement.classList.add("overflow-hidden");
+		document.body.classList.add("overflow-hidden");
+	  }
 
-  function hideModal(choice) {
-    
-    localStorage.setItem("cookieConsent", choice);
+	  function hideModal(choice) {
+		localStorage.setItem("cookieConsent", choice);
 
-    
-    overlay.classList.remove("opacity-100");
-    overlay.classList.add("opacity-0");
-    box.classList.remove("opacity-100", "scale-100");
-    box.classList.add("opacity-0", "scale-95");
+		overlay.classList.remove("opacity-100");
+		overlay.classList.add("opacity-0");
+		box.classList.remove("opacity-100", "scale-100");
+		box.classList.add("opacity-0", "scale-95");
 
-    
-    setTimeout(() => {
-      overlay.classList.remove("flex");
-      overlay.classList.add("hidden");
-      document.documentElement.classList.remove("overflow-hidden");
-      document.body.classList.remove("overflow-hidden");
-    }, 320); 
-  }
+		setTimeout(() => {
+		  overlay.classList.remove("flex");
+		  overlay.classList.add("hidden");
+		  document.documentElement.classList.remove("overflow-hidden");
+		  document.body.classList.remove("overflow-hidden");
+		}, 320);
+	  }
 
-  
-  if (!localStorage.getItem("cookieConsent")) {
-    showModal();
-  }
+	  if (!localStorage.getItem("cookieConsent")) {
+		showModal();
+	  }
 
-  if (acceptBtn) acceptBtn.addEventListener("click", () => hideModal("accepted"));
-  if (rejectBtn) rejectBtn.addEventListener("click", () => hideModal("rejected"));
-
-  
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape" && !localStorage.getItem("cookieConsent")) {
-      
-      
-      hideModal("rejected");
-    }
-  });
-});
+	  if (acceptBtn) acceptBtn.addEventListener("click", () => hideModal("accepted"));
+	  if (rejectBtn) rejectBtn.addEventListener("click", () => hideModal("rejected"));
+	});
 
 
 	  
@@ -1631,12 +1617,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	<div id="cookie-overlay" class="fixed inset-0 hidden z-[9999] transition-opacity duration-300">
+	<div id="cookie-overlay" class="fixed inset-0 hidden transition-opacity duration-300 opacity-0" style="z-index:9999;">
 	  
-	  <div class="absolute inset-0 bg-black/60"></div>
+	  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
 	  
-	  <div class="relative z-[10000] flex items-center justify-center min-h-screen px-4">
+	  <div class="relative flex items-center justify-center min-h-screen px-4">
 		<div id="cookie-box"
 			 role="dialog"
 			 aria-modal="true"
