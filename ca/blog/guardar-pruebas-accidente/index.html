@@ -134,8 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759565769" data-version="1759565769">
-
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759567369" data-version="1759567369">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -147,12 +146,21 @@
       position: fixed;
       top:0; left:0; width:100%; height:100%;
       background-color: rgba(0,0,0,0.6);
-      display: none;  
+      backdrop-filter: blur(5px);  
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.5s ease;  
     }
 
+    #cookie-overlay.show {
+      opacity: 1;
+      display: flex;
+    }
+
+     
     #cookie-box {
       background-color: #f3f3f3;
       padding: 1.5rem;
@@ -162,7 +170,7 @@
       text-align: center;
       transform: scale(0.95);
       opacity: 0;
-      transition: all 0.3s ease;
+      transition: all 0.35s ease;
       border: 1px solid #ccc;
     }
 
@@ -922,17 +930,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
       function showBanner() {
         overlay.style.display = "flex";
-        setTimeout(() => box.classList.add("show"), 50);
+        setTimeout(() => overlay.classList.add("show"), 50);
+        setTimeout(() => box.classList.add("show"), 150);
         document.body.style.overflow = "hidden";
       }
 
       function hideBanner(choice) {
         localStorage.setItem("cookieConsent", choice);
         box.classList.remove("show");
+        overlay.classList.remove("show");
         setTimeout(() => {
           overlay.style.display = "none";
           document.body.style.overflow = "";
-        }, 350);
+        }, 500); 
       }
 
       if (!localStorage.getItem("cookieConsent")) showBanner();
