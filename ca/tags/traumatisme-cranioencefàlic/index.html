@@ -135,17 +135,37 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564569" data-version="1759564569">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564702" data-version="1759564702">
 
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
-    body {
-      visibility: hidden;
+     
+    body { visibility: hidden; }
+    .dark body { visibility: hidden; }
+
+     
+    #cookie-overlay {
+      position: fixed !important;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2147483647 !important;  
+      opacity: 1;
     }
-    .dark body {
-      visibility: hidden;
+
+    #cookie-box {
+      transform: scale(0.95);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    #cookie-box.show {
+      transform: scale(1);
+      opacity: 1;
     }
   </style>
 </head>
@@ -721,6 +741,7 @@
         breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
       });
 
+      
       window.addEventListener('load', function() {
         document.body.style.visibility = 'visible';
       });
@@ -733,16 +754,13 @@
 
       if (!localStorage.getItem("cookieConsent")) {
         overlay.classList.remove("hidden");
-        setTimeout(() => {
-          box.classList.remove("opacity-0", "scale-95");
-          box.classList.add("opacity-100", "scale-100");
-        }, 50);
+        setTimeout(() => box.classList.add("show"), 50);
         document.body.style.overflow = "hidden";
       }
 
       function closeModal(choice) {
         localStorage.setItem("cookieConsent", choice);
-        box.classList.add("opacity-0", "scale-95");
+        box.classList.remove("show");
         setTimeout(() => {
           overlay.classList.add("hidden");
           document.body.style.overflow = "";
@@ -755,8 +773,8 @@
   </script>
 
   
-  <div id="cookie-overlay" class="fixed inset-0 hidden z-[2147483647] flex items-center justify-center bg-black bg-opacity-60">
-    <div id="cookie-box" class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full text-center border border-border-primary transform scale-95 opacity-0 transition-all duration-300">
+  <div id="cookie-overlay" class="hidden">
+    <div id="cookie-box" class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full text-center border border-border-primary">
       <h3 class="text-xl font-bold mb-4 text-text-primary dark:text-text-primary">
         La teva privadesa és important
       </h3>
