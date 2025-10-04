@@ -137,7 +137,7 @@
     
       
     
-    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564162" data-version="1759564162">
+    <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564306" data-version="1759564306">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -697,6 +697,9 @@ El informe médico pericial permitirá:</p>
       
         
         
+      
+        
+        
           
           
           
@@ -735,6 +738,21 @@ El informe médico pericial permitirá:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
+              <a href="/blog/guardar-pruebas-accidente/">
+                
+                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+              </a>
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
+              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+                
+              </a>
+            </div>
+          </div>
+        
+          <div class="swiper-slide">
+            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/blog/secuelas-psicologicas-accidente/">
                 
                 <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
@@ -743,21 +761,6 @@ El informe médico pericial permitirá:</p>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
               <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
-                
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/fractura-clavicula-accidente/">
-                
-                <img src="/images/blog/fractura-clavicula-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
-                
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La fractura de clavícula es una lesión frecuente en accidentes de tráfico, especialmente en motoristas y ciclistas. …</p>
-              <a href="/blog/fractura-clavicula-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -935,24 +938,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!localStorage.getItem("cookieConsent")) {
     overlay.classList.remove("hidden");
-
     setTimeout(() => {
       box.classList.remove("opacity-0", "scale-95");
       box.classList.add("opacity-100", "scale-100");
     }, 50);
 
-    
     document.body.style.overflow = "hidden";
   }
 
   function closeModal(choice) {
     localStorage.setItem("cookieConsent", choice);
-
     box.classList.add("opacity-0", "scale-95");
-
     setTimeout(() => {
       overlay.classList.add("hidden");
-      document.body.style.overflow = ""; 
+      document.body.style.overflow = "";
     }, 300);
   }
 
@@ -967,7 +966,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	
 	
-	<div id="cookie-overlay" class="fixed inset-0 hidden bg-black bg-opacity-60 flex items-center justify-center z-[9999]">
+	<div id="cookie-overlay" class="fixed inset-0 hidden z-[2147483647] flex items-center justify-center bg-black bg-opacity-60">
   <div id="cookie-box"
        class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full text-center border border-border-primary transform scale-95 opacity-0 transition-all duration-300">
     
