@@ -135,7 +135,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564842" data-version="1759564842">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564937" data-version="1759564937">
 
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -148,12 +148,12 @@
      
     #cookie-overlay {
       position: fixed !important;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top:0; left:0; width:100%; height:100%;
       background-color: rgba(0,0,0,0.6);
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 2147483647 !important;  
+      z-index: 2147483647 !important;
       opacity: 1;
     }
 
@@ -738,14 +738,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuela-neurologica-accidente-trafico/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
+              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -768,14 +768,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuela-neurologica-accidente-trafico/">
+              <a href="/blog/guardar-pruebas-accidente/">
                 
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
-              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
+              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -913,6 +913,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      
       new Swiper(".related-swiper", {
         slidesPerView: 1,
         spaceBetween: 24,
@@ -929,33 +930,34 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       
-     const overlay = document.getElementById("cookie-overlay");
-  const box = document.getElementById("cookie-box");
-  const acceptBtn = document.getElementById("accept-cookies");
-  const rejectBtn = document.getElementById("reject-cookies");
+      const overlay = document.getElementById("cookie-overlay");
+      const box = document.getElementById("cookie-box");
+      const acceptBtn = document.getElementById("accept-cookies");
+      const rejectBtn = document.getElementById("reject-cookies");
 
-  if (!localStorage.getItem("cookieConsent")) {
-    overlay.classList.remove("hidden");
-    setTimeout(() => box.classList.add("show"), 50);
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal(choice) {
-    localStorage.setItem("cookieConsent", choice);
-    box.classList.remove("show");
-
-    
-    box.addEventListener("transitionend", function handler(e) {
-      if (e.propertyName === "opacity") {
-        overlay.classList.add("hidden");
-        document.body.style.overflow = "";
-        box.removeEventListener("transitionend", handler);
+      if (!localStorage.getItem("cookieConsent")) {
+        overlay.classList.remove("hidden");
+        setTimeout(() => box.classList.add("show"), 50);
+        document.body.style.overflow = "hidden";
       }
-    });
-  }
 
-  acceptBtn.addEventListener("click", () => closeModal("accepted"));
-  rejectBtn.addEventListener("click", () => closeModal("rejected"));
+      function closeModal(choice) {
+        localStorage.setItem("cookieConsent", choice);
+        box.classList.remove("show");
+
+        
+        const transitionHandler = function(e) {
+          if (e.propertyName === "opacity") {
+            overlay.classList.add("hidden");
+            document.body.style.overflow = "";
+            box.removeEventListener("transitionend", transitionHandler);
+          }
+        }
+        box.addEventListener("transitionend", transitionHandler);
+      }
+
+      acceptBtn.addEventListener("click", () => closeModal("accepted"));
+      rejectBtn.addEventListener("click", () => closeModal("rejected"));
     });
   </script>
 

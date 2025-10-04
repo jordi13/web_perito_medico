@@ -133,7 +133,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1759564739" data-version="1759564739">
+  <link rel="stylesheet" href="/css/main.css?v=1759564892" data-version="1759564892">
 
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -815,28 +815,33 @@
       });
 
       
-      const overlay = document.getElementById("cookie-overlay");
-      const box = document.getElementById("cookie-box");
-      const acceptBtn = document.getElementById("accept-cookies");
-      const rejectBtn = document.getElementById("reject-cookies");
+     const overlay = document.getElementById("cookie-overlay");
+  const box = document.getElementById("cookie-box");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const rejectBtn = document.getElementById("reject-cookies");
 
-      if (!localStorage.getItem("cookieConsent")) {
-        overlay.classList.remove("hidden");
-        setTimeout(() => box.classList.add("show"), 50);
-        document.body.style.overflow = "hidden";
+  if (!localStorage.getItem("cookieConsent")) {
+    overlay.classList.remove("hidden");
+    setTimeout(() => box.classList.add("show"), 50);
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(choice) {
+    localStorage.setItem("cookieConsent", choice);
+    box.classList.remove("show");
+
+    
+    box.addEventListener("transitionend", function handler(e) {
+      if (e.propertyName === "opacity") {
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        box.removeEventListener("transitionend", handler);
       }
+    });
+  }
 
-      function closeModal(choice) {
-        localStorage.setItem("cookieConsent", choice);
-        box.classList.remove("show");
-        setTimeout(() => {
-          overlay.classList.add("hidden");
-          document.body.style.overflow = "";
-        }, 300);
-      }
-
-      acceptBtn.addEventListener("click", () => closeModal("accepted"));
-      rejectBtn.addEventListener("click", () => closeModal("rejected"));
+  acceptBtn.addEventListener("click", () => closeModal("accepted"));
+  rejectBtn.addEventListener("click", () => closeModal("rejected"));
     });
   </script>
 
