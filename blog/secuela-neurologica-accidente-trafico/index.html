@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759565017" data-version="1759565017">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759565769" data-version="1759565769">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -144,17 +144,15 @@
 
      
     #cookie-overlay {
-      position: fixed !important;
-      top: 0; left: 0; width: 100%; height: 100%;
+      position: fixed;
+      top:0; left:0; width:100%; height:100%;
       background-color: rgba(0,0,0,0.6);
-      display: flex;
+      display: none;  
       align-items: center;
       justify-content: center;
-      z-index: 2147483647 !important;
-      opacity: 1;
+      z-index: 99999;
     }
 
-     
     #cookie-box {
       background-color: #f3f3f3;
       padding: 1.5rem;
@@ -896,6 +894,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      
       new Swiper(".related-swiper", {
         slidesPerView: 1,
         spaceBetween: 24,
@@ -910,14 +909,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.visibility = 'visible';
       });
 
-      
       const overlay = document.getElementById("cookie-overlay");
       const box = document.getElementById("cookie-box");
       const acceptBtn = document.getElementById("accept-cookies");
       const rejectBtn = document.getElementById("reject-cookies");
 
       function showBanner() {
-        overlay.classList.remove("hidden");
+        overlay.style.display = "flex";
         setTimeout(() => box.classList.add("show"), 50);
         document.body.style.overflow = "hidden";
       }
@@ -926,9 +924,9 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem("cookieConsent", choice);
         box.classList.remove("show");
         setTimeout(() => {
-          overlay.classList.add("hidden");
+          overlay.style.display = "none";
           document.body.style.overflow = "";
-        }, 350); 
+        }, 350);
       }
 
       if (!localStorage.getItem("cookieConsent")) showBanner();
@@ -939,7 +937,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 
   
-  <div id="cookie-overlay" class="hidden">
+  <div id="cookie-overlay">
     <div id="cookie-box">
       <h3 class="text-xl font-bold mb-4"> Tu privacidad es importante </h3>
       <p class="text-sm mb-6">
