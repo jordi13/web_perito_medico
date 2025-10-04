@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <script>
     localStorage.setItem('darkMode', 'false');
     document.documentElement.classList.remove('dark');
@@ -135,20 +134,18 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759564937" data-version="1759564937">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759565017" data-version="1759565017">
 
-  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
-     
     body { visibility: hidden; }
     .dark body { visibility: hidden; }
 
      
     #cookie-overlay {
       position: fixed !important;
-      top:0; left:0; width:100%; height:100%;
+      top: 0; left: 0; width: 100%; height: 100%;
       background-color: rgba(0,0,0,0.6);
       display: flex;
       align-items: center;
@@ -157,10 +154,18 @@
       opacity: 1;
     }
 
+     
     #cookie-box {
+      background-color: #f3f3f3;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
       transform: scale(0.95);
       opacity: 0;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition: all 0.3s ease;
+      border: 1px solid #ccc;
     }
 
     #cookie-box.show {
@@ -897,7 +902,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      
       new Swiper(".related-swiper", {
         slidesPerView: 1,
         spaceBetween: 24,
@@ -908,7 +912,6 @@ document.addEventListener('DOMContentLoaded', function () {
         breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
       });
 
-      
       window.addEventListener('load', function() {
         document.body.style.visibility = 'visible';
       });
@@ -919,41 +922,35 @@ document.addEventListener('DOMContentLoaded', function () {
       const acceptBtn = document.getElementById("accept-cookies");
       const rejectBtn = document.getElementById("reject-cookies");
 
-      if (!localStorage.getItem("cookieConsent")) {
+      function showBanner() {
         overlay.classList.remove("hidden");
         setTimeout(() => box.classList.add("show"), 50);
         document.body.style.overflow = "hidden";
       }
 
-      function closeModal(choice) {
+      function hideBanner(choice) {
         localStorage.setItem("cookieConsent", choice);
         box.classList.remove("show");
-
-        
-        const transitionHandler = function(e) {
-          if (e.propertyName === "opacity") {
-            overlay.classList.add("hidden");
-            document.body.style.overflow = "";
-            box.removeEventListener("transitionend", transitionHandler);
-          }
-        }
-        box.addEventListener("transitionend", transitionHandler);
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+          document.body.style.overflow = "";
+        }, 350); 
       }
 
-      acceptBtn.addEventListener("click", () => closeModal("accepted"));
-      rejectBtn.addEventListener("click", () => closeModal("rejected"));
+      if (!localStorage.getItem("cookieConsent")) showBanner();
+
+      acceptBtn.addEventListener("click", () => hideBanner("accepted"));
+      rejectBtn.addEventListener("click", () => hideBanner("rejected"));
     });
   </script>
 
   
   <div id="cookie-overlay" class="hidden">
-    <div id="cookie-box" class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full text-center border border-border-primary">
-      <h3 class="text-xl font-bold mb-4 text-text-primary dark:text-text-primary">
-        Tu privacidad es importante
-      </h3>
-      <p class="text-sm text-text-secondary dark:text-text-tertiary mb-6">
+    <div id="cookie-box">
+      <h3 class="text-xl font-bold mb-4"> Tu privacidad es importante </h3>
+      <p class="text-sm mb-6">
         Este sitio utiliza cookies técnicas necesarias para su correcto funcionamiento.
-        <a href="/cookies" class="underline text-primary dark:text-primary-light ml-1">
+        <a href="/cookies" class="underline ml-1">
           Política de cookies
         </a>
       </p>
