@@ -135,7 +135,7 @@
     
     
     
-    <link rel="stylesheet" href="/css/main.css?v=1759564172" data-version="1759564172">
+    <link rel="stylesheet" href="/css/main.css?v=1759564321" data-version="1759564321">
 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -822,24 +822,20 @@
 
   if (!localStorage.getItem("cookieConsent")) {
     overlay.classList.remove("hidden");
-
     setTimeout(() => {
       box.classList.remove("opacity-0", "scale-95");
       box.classList.add("opacity-100", "scale-100");
     }, 50);
 
-    
     document.body.style.overflow = "hidden";
   }
 
   function closeModal(choice) {
     localStorage.setItem("cookieConsent", choice);
-
     box.classList.add("opacity-0", "scale-95");
-
     setTimeout(() => {
       overlay.classList.add("hidden");
-      document.body.style.overflow = ""; 
+      document.body.style.overflow = "";
     }, 300);
   }
 
@@ -854,7 +850,7 @@
 	
 	
 	
-	<div id="cookie-overlay" class="fixed inset-0 hidden bg-black bg-opacity-60 flex items-center justify-center z-[9999]">
+	<div id="cookie-overlay" class="fixed inset-0 hidden z-[2147483647] flex items-center justify-center bg-black bg-opacity-60">
   <div id="cookie-box"
        class="bg-bg-secondary dark:bg-bg-secondary p-6 rounded-xl shadow-lg max-w-lg w-full text-center border border-border-primary transform scale-95 opacity-0 transition-all duration-300">
     
