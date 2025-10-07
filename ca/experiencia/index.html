@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759854036" data-version="1759854036">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759854598" data-version="1759854598">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -1139,10 +1139,14 @@
         <div class="contact-card bg-bg dark:bg-bg p-8 rounded-lg shadow-lg border border-border-primary dark:border-border-primary card-hover">
 		 
 		<div class="text-center mb-8">
-		  <p class="text-lg font-semibold text-text-primary dark:text-text-primary flex items-center justify-center gap-2">
+		  <p class="text-xl font-semibold text-text-primary dark:text-text-primary flex items-center justify-center gap-2">
 			<i class="fas fa-phone-alt text-primary"></i>
 			Truca&#39;m al
-			<a href="tel:630%20049%20095" class="text-primary font-bold hover:underline">
+			<a 
+			  href="tel:630049095" 
+			  class="text-primary font-bold hover:underline"
+			  id="phone-link"
+			>
 			  630 049 095
 			</a>
 		  </p>
@@ -1286,6 +1290,12 @@
       setTimeout(() => {
         toast.remove();
       }, 4000);
+    }
+	const phoneLink = document.getElementById('phone-link');
+    
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+      phoneLink.addEventListener('click', e => e.preventDefault());
+      phoneLink.style.cursor = 'default';
     }
   });
 </script>
