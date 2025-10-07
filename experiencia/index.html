@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759567369" data-version="1759567369">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759834190" data-version="1759834190">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -1406,7 +1406,16 @@
           document.body.style.overflow = "";
         }, 500); 
       }
-
+	 
+	  window.openCookieSettings = function() {
+	  const overlay = document.getElementById("cookie-overlay");
+	  const box = document.getElementById("cookie-box");
+	  overlay.style.display = "flex";
+	  setTimeout(() => overlay.classList.add("show"), 50);
+	  setTimeout(() => box.classList.add("show"), 150);
+	  document.body.style.overflow = "hidden";
+	};
+	
       if (!localStorage.getItem("cookieConsent")) showBanner();
 
       acceptBtn.addEventListener("click", () => hideBanner("accepted"));

@@ -132,8 +132,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1759567126" data-version="1759567126">
-
+  <link rel="stylesheet" href="/css/main.css?v=1759834051" data-version="1759834051">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -145,12 +144,21 @@
       position: fixed;
       top:0; left:0; width:100%; height:100%;
       background-color: rgba(0,0,0,0.6);
-      display: none;  
+      backdrop-filter: blur(5px);  
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.5s ease;  
     }
 
+    #cookie-overlay.show {
+      opacity: 1;
+      display: flex;
+    }
+
+     
     #cookie-box {
       background-color: #f3f3f3;
       padding: 1.5rem;
@@ -160,7 +168,7 @@
       text-align: center;
       transform: scale(0.95);
       opacity: 0;
-      transition: all 0.3s ease;
+      transition: all 0.35s ease;
       border: 1px solid #ccc;
     }
 
@@ -824,19 +832,30 @@
 
       function showBanner() {
         overlay.style.display = "flex";
-        setTimeout(() => box.classList.add("show"), 50);
+        setTimeout(() => overlay.classList.add("show"), 50);
+        setTimeout(() => box.classList.add("show"), 150);
         document.body.style.overflow = "hidden";
       }
 
       function hideBanner(choice) {
         localStorage.setItem("cookieConsent", choice);
         box.classList.remove("show");
+        overlay.classList.remove("show");
         setTimeout(() => {
           overlay.style.display = "none";
           document.body.style.overflow = "";
-        }, 350);
+        }, 500); 
       }
-
+	 
+	  window.openCookieSettings = function() {
+	  const overlay = document.getElementById("cookie-overlay");
+	  const box = document.getElementById("cookie-box");
+	  overlay.style.display = "flex";
+	  setTimeout(() => overlay.classList.add("show"), 50);
+	  setTimeout(() => box.classList.add("show"), 150);
+	  document.body.style.overflow = "hidden";
+	};
+	
       if (!localStorage.getItem("cookieConsent")) showBanner();
 
       acceptBtn.addEventListener("click", () => hideBanner("accepted"));
