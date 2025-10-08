@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913525" data-version="1759913525">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913771" data-version="1759913771">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -244,12 +244,12 @@
         
         
         
-        <div class="relative group">
-          <button id="lang-toggle" class="flex items-center text-text-primary dark:text-text-primary">
+        <div class="relative" id="lang-menu">
+          <button id="lang-btn" class="flex items-center text-text-primary dark:text-text-primary focus:outline-none">
             <img src="/images/ca.png" class="w-5 h-5 mr-2" alt="lang flag">
             <i class="fas fa-chevron-down text-sm"></i>
           </button>
-          <div class="submenu absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[200] opacity-0 invisible transition-all duration-200 group-open:visible group-open:opacity-100">
+          <div id="lang-dropdown" class="absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[200] hidden">
             
               <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
                 Castellano
@@ -338,51 +338,36 @@
   
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const btn = document.getElementById("menu-btn");
-      const menu = document.getElementById("mobile-menu");
-      const langToggle = document.getElementById("lang-toggle");
-      const groups = document.querySelectorAll(".group");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const langBtn = document.getElementById("lang-btn");
+      const langDropdown = document.getElementById("lang-dropdown");
 
       
-      if (btn && menu) {
-        btn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          menu.classList.toggle("hidden");
-          if (!menu.classList.contains("hidden")) {
-            menu.style.opacity = 0;
-            requestAnimationFrame(() => {
-              menu.style.transition = "opacity 0.3s ease";
-              menu.style.opacity = 1;
-            });
-          } else {
-            menu.style.transition = "opacity 0.2s ease";
-            menu.style.opacity = 0;
-          }
-        });
-
-        
-        document.addEventListener("click", function (e) {
-          if (!menu.classList.contains("hidden") && !btn.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.add("hidden");
-          }
-        });
-      }
-
-      
-      if (langToggle) {
-        langToggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const parent = this.closest(".group");
-          parent.classList.toggle("open");
-        });
-      }
-
-      
-      document.addEventListener("click", function (e) {
-        groups.forEach(g => {
-          if (!g.contains(e.target)) g.classList.remove("open");
-        });
+      menuBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("hidden");
       });
+
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.classList.contains("hidden") && !menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          langDropdown.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!langDropdown.classList.contains("hidden") && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.classList.add("hidden");
+          }
+        });
+      }
     });
   </script>
 </nav>
@@ -517,6 +502,9 @@ L’informe mèdic pericial permetrà:</p>
       
         
         
+      
+        
+        
           
           
           
@@ -558,6 +546,21 @@ L’informe mèdic pericial permetrà:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
+              <a href="/ca/blog/guardar-pruebas-accidente/">
+                
+                <img src="/images/blog/pruebas-accidente.jpg" alt="Com es calcula la indemnització per lumbàlgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Quines proves mèdiques conservar després d’un accident de trànsit per a una valoració pericial correcta</h3>
+              </a>
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Després d’un accident de trànsit, conservar certes proves mèdiques i documentals pot marcar la diferència en la teva …</p>
+              <a href="/ca/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+                
+              </a>
+            </div>
+          </div>
+        
+          <div class="swiper-slide">
+            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/ca/blog/secuela-neurologica-accidente-trafico/">
                 
                 <img src="/images/blog/secuelas-neurologicas.jpg" alt="Com es calcula la indemnització per lumbàlgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
@@ -566,21 +569,6 @@ L’informe mèdic pericial permetrà:</p>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Les lesions neurològiques posttraumàtiques poden tenir un impacte greu i permanent en la vida del pacient. Revisem les …</p>
               <a href="/ca/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
-                
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/ca/blog/fractura-clavicula-accidente/">
-                
-                <img src="/images/blog/fractura-clavicula-accidente.jpg" alt="Com es calcula la indemnització per lumbàlgia després d’un accident de trànsit?" class="rounded-lg mb-4 object-cover w-full h-48">
-                
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Fractura de clavícula en un accident de trànsit: recuperació, seqüeles i indemnització</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La fractura de clavícula és una lesió freqüent en accidents de trànsit, sobretot en motoristes i ciclistes. Analitzem la …</p>
-              <a href="/ca/blog/fractura-clavicula-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
