@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913356" data-version="1759913356">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913525" data-version="1759913525">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -182,22 +182,20 @@
 </head>
 <body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
-  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-[100]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
 
       
-      <div class="flex items-center">
-        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
-          Dr. Blanch
-        </a>
-      </div>
+      <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
+        Dr. Blanch
+      </a>
 
       
       <div class="hidden lg:flex items-center space-x-2 mr-6">
-        <a href="tel:630049095" class="flex items-center text-primary text-lg font-semibold hover:text-primary-light transition-colors duration-200">
-          <i class="fas fa-phone-alt mr-2 text-primary"></i>
-          <span class="text-text-primary dark:text-text-primary">630 049 095</span>
+        <i class="fas fa-phone-alt text-primary text-lg"></i>
+        <a href="tel:630049095" class="text-primary font-semibold hover:no-underline">
+          630 049 095
         </a>
       </div>
 
@@ -205,362 +203,188 @@
       <div class="hidden lg:flex items-center space-x-8">
         
           
-            
-              <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre Mi</a>
-            
+            <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">
+              Sobre Mi
+            </a>
           
         
           
-            
-              <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">Servicios</a>
-            
+            <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">
+              Servicios
+            </a>
           
         
           
-            
-              <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacto</a>
-            
+            <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">
+              Contacto
+            </a>
           
         
           
-            
-              <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
-            
+            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">
+              Faqs
+            </a>
           
         
           
-            
-              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
-            
+            <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">
+              Experiencia
+            </a>
           
         
           
-            
-              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
-            
+            <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">
+              Blog
+            </a>
           
         
 
+        
+        
         
         
         
         <div class="relative group">
-          <button id="lang-toggle" type="button" class="nav-link inline-flex items-center text-text-primary dark:text-text-primary" aria-expanded="false" aria-label="Cambiar idioma">
-            
-            
-            
-            
-            <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
-            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+          <button id="lang-toggle" class="flex items-center text-text-primary dark:text-text-primary">
+            <img src="/images/es.png" class="w-5 h-5 mr-2" alt="lang flag">
+            <i class="fas fa-chevron-down text-sm"></i>
           </button>
-
-          <div id="lang-panel" class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-1 transition-all duration-150">
+          <div class="submenu absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[200] opacity-0 invisible transition-all duration-200 group-open:visible group-open:opacity-100">
             
+              <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
+                Castellano
+              </a>
             
-              
-              
-                
-                
-                
-                
-                
-                
-                
-                
-                  
-                    
-                      
-                      
-                    
-                  
-                
-                <a href="/ca/blog/fractura-clavicula-accidente/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors duration-150">
-                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
-                </a>
-              
-            
-              
-              
-            
-              
-              
-                
-                
-                
-                
-                
-                
-                
-                
-                  
-                    
-                  
-                
-                <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors duration-150">
-                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
-                </a>
-              
+              <a href="/ca/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
+                Català
+              </a>
             
           </div>
         </div>
         
-
-        
-        <div class="flex items-center space-x-4" data-animation="social">
-          
-          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
-          
-        </div>
       </div>
 
       
       <div class="lg:hidden flex items-center space-x-4">
         
-        <a href="tel:630049095" class="text-primary text-2xl" aria-label="Llamar">
+        <a href="tel:630049095" class="text-primary text-2xl">
           <i class="fas fa-phone-alt"></i>
         </a>
 
         
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary" aria-expanded="false" aria-controls="mobile-menu">
-          <i class="fas fa-bars text-2xl"></i>
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary text-2xl">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-bg dark:bg-bg shadow-xl border-t border-border-primary z-[999]">
+    <div class="px-4 py-4 space-y-2">
       
         
-          <a href="/#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/#about" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Sobre Mi
           </a>
         
-        
       
         
-          <a href="/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/#services" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Servicios
           </a>
         
-        
       
         
-          <a href="/#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/#contact" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Contacto
           </a>
         
-        
       
         
-          <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/#faqs" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Faqs
           </a>
         
-        
       
         
-          <a href="/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/experiencia/" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Experiencia
           </a>
         
-        
       
         
-          <a href="/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
+          <a href="/blog/" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
             Blog
           </a>
         
+      
+
+      
+      <div class="border-t border-border-primary pt-3 mt-3 flex justify-center space-x-4">
         
-      
-
-      
-      
-      
-      <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
-        <div class="flex items-center space-x-3">
-          
-          
-            
-            
-              
-              		
-              
-              
-
-              
-              
-              
-                
-                  
-                    
-                    
-                  
-                
-              
-
-              <a href="/ca/blog/fractura-clavicula-accidente/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català">
-                <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
-              </a>
-            
-          
-            
-            
-          
-            
-            
-              
-              		
-              
-              
-
-              
-              
-              
-                
-                  
-                
-              
-
-              <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano">
-                <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
-              </a>
-            
-          
-        </div>
-      </div>
-      
-
-      
-      <div class="flex items-center space-x-6 px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2" data-animation="social">
-        <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-          <i class="fab fa-linkedin-in text-2xl"></i>
-        </a>
+          <a href="/">
+            <img src="/images/es.png" class="w-5 h-5" alt="Castellano">
+          </a>
+        
+          <a href="/ca/">
+            <img src="/images/ca.png" class="w-5 h-5" alt="Català">
+          </a>
+        
       </div>
     </div>
   </div>
 
   
-  <style>
-    .group.open > .submenu {
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: translateY(0) !important;
-    }
-  </style>
-
-  
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const langToggle = document.getElementById("lang-toggle");
+      const groups = document.querySelectorAll(".group");
 
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const isHidden = mobileMenu.classList.contains('hidden');
-        mobileMenu.classList.toggle('hidden');
-        menuBtn.setAttribute('aria-expanded', String(isHidden));
+      
+      if (btn && menu) {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          menu.classList.toggle("hidden");
+          if (!menu.classList.contains("hidden")) {
+            menu.style.opacity = 0;
+            requestAnimationFrame(() => {
+              menu.style.transition = "opacity 0.3s ease";
+              menu.style.opacity = 1;
+            });
+          } else {
+            menu.style.transition = "opacity 0.2s ease";
+            menu.style.opacity = 0;
+          }
+        });
 
         
-        if (!mobileMenu.classList.contains('hidden')) {
-          mobileMenu.style.opacity = 0;
-          mobileMenu.style.transform = 'translateY(-10px)';
-          requestAnimationFrame(() => {
-            mobileMenu.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            mobileMenu.style.opacity = 1;
-            mobileMenu.style.transform = 'translateY(0)';
-          });
-        } else {
-          mobileMenu.style.transition = 'opacity 0.2s ease';
-          mobileMenu.style.opacity = 0;
-          setTimeout(() => {
-            mobileMenu.style.transform = '';
-            mobileMenu.style.transition = '';
-            mobileMenu.style.opacity = '';
-          }, 200);
-        }
-      });
-    }
-
-    
-    document.addEventListener('click', function (event) {
-      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-        const btn = document.getElementById('menu-btn');
-        if (!mobileMenu.contains(event.target) && btn && !btn.contains(event.target)) {
-          mobileMenu.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        }
+        document.addEventListener("click", function (e) {
+          if (!menu.classList.contains("hidden") && !btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+          }
+        });
       }
-    });
 
-    
-    document.querySelectorAll('.submenu-toggle').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const group = btn.closest('.group');
-        const isOpen = group.classList.contains('open');
-        document.querySelectorAll('.group.open').forEach(g => g.classList.remove('open'));
-        group.classList.toggle('open', !isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
+      
+      if (langToggle) {
+        langToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const parent = this.closest(".group");
+          parent.classList.toggle("open");
+        });
+      }
+
+      
+      document.addEventListener("click", function (e) {
+        groups.forEach(g => {
+          if (!g.contains(e.target)) g.classList.remove("open");
+        });
       });
     });
-
-    
-    const langToggle = document.getElementById('lang-toggle');
-    if (langToggle) {
-      langToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        const group = langToggle.closest('.group');
-        const isOpen = group.classList.contains('open');
-        document.querySelectorAll('.group.open').forEach(g => g.classList.remove('open'));
-        group.classList.toggle('open', !isOpen);
-        langToggle.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-
-    
-    document.addEventListener('click', function (e) {
-      document.querySelectorAll('.group.open').forEach(g => {
-        if (!g.contains(e.target)) g.classList.remove('open');
-      });
-    });
-
-    
-    const sectionLinks = document.querySelectorAll('.section-link');
-    const homePath = '\/';
-    sectionLinks.forEach(link => {
-      link.addEventListener('click', function (ev) {
-        ev.preventDefault();
-        const section = this.getAttribute('data-section');
-        const isHomePage =
-          window.location.pathname === homePath ||
-          window.location.pathname === homePath + 'index.html' ||
-          window.location.pathname === homePath.replace(/\/$/, '');
-        if (isHomePage) {
-          const target = document.querySelector(section);
-          if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
-        } else {
-          window.location.href = homePath + section;
-        }
-      });
-    });
-
-    
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', function () {
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-          mobileMenu.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  });
-</script>
-
+  </script>
 </nav>
 
   <div class="w-full h-16"></div>
@@ -705,9 +529,6 @@
       
         
         
-      
-        
-        
           
           
           
@@ -753,14 +574,14 @@
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuela-neurologica-accidente-trafico/">
+              <a href="/blog/secuelas-psicologicas-accidente/">
                 
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-psicologicas.jpg" alt="Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
-              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
+              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
