@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759908891" data-version="1759908891">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913164" data-version="1759913164">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -184,74 +184,81 @@
 
   <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
+    <div class="flex justify-between h-16 items-center">
+
+      
       <div class="flex items-center">
-        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">Dr. Blanch</a>
+        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
+          Dr. Blanch
+        </a>
       </div>
+
+      
+      <div class="hidden lg:flex items-center space-x-2 mr-6">
+        <a href="tel:630049095" class="flex items-center text-primary text-lg font-semibold hover:text-primary-light transition-colors duration-200">
+          <i class="fas fa-phone-alt mr-2 text-primary"></i>
+          <span class="text-text-primary dark:text-text-primary">630 049 095</span>
+        </a>
+      </div>
+
+      
       <div class="hidden lg:flex items-center space-x-8">
         
           
-                      
             
-            <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre Mi</a>
-          
-          
-        
-          
-                      
+              <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre Mi</a>
             
-            <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">Servicios</a>
-          
           
         
           
-                      
             
-            <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacto</a>
-          
-          
-        
-          
-                      
+              <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">Servicios</a>
             
-            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
-          
           
         
           
-                      
             
-            <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
-          
-          
-        
-          
-                      
+              <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacto</a>
             
-            <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
-          
           
         
+          
+            
+              <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+            
+          
         
+          
+            
+              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+            
+          
         
+          
+            
+              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+            
+          
         
-        
-        
-        
+
         
         
         
         <div class="relative group">
-          <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
-			<img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
+          <button id="lang-toggle" type="button" class="nav-link inline-flex items-center text-text-primary dark:text-text-primary" aria-expanded="false" aria-label="Cambiar idioma">
+            
+            
+            
+            
+            <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
             <i class="fas fa-chevron-down ml-1 text-sm"></i>
-          </a>
-          <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible">
+          </button>
+
+          <div id="lang-panel" class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-1 transition-all duration-150">
             
             
               
               
-                
                 
                 
                 
@@ -267,8 +274,7 @@
                     
                   
                 
-                
-                <a href="/ca/nav/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
+                <a href="/ca/nav/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors duration-150">
                   <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
                 </a>
               
@@ -286,13 +292,11 @@
                 
                 
                 
-                
                   
                     
                   
                 
-                
-                <a href="/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
+                <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors duration-150">
                   <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
                 </a>
               
@@ -308,15 +312,18 @@
             <i class="fab fa-linkedin-in text-xl"></i>
           </a>
           
-         
         </div>
-        
-       
       </div>
+
+      
       <div class="lg:hidden flex items-center space-x-4">
         
-       
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary">
+        <a href="tel:630049095" class="text-primary text-2xl" aria-label="Llamar">
+          <i class="fas fa-phone-alt"></i>
+        </a>
+
+        
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary" aria-expanded="false" aria-controls="mobile-menu">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
@@ -328,7 +335,6 @@
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       
         
-          
           <a href="/#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Sobre Mi
           </a>
@@ -336,7 +342,6 @@
         
       
         
-          
           <a href="/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Servicios
           </a>
@@ -344,7 +349,6 @@
         
       
         
-          
           <a href="/#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Contacto
           </a>
@@ -352,7 +356,6 @@
         
       
         
-          
           <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Faqs
           </a>
@@ -360,7 +363,6 @@
         
       
         
-          
           <a href="/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Experiencia
           </a>
@@ -368,13 +370,13 @@
         
       
         
-          
           <a href="/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
             Blog
           </a>
         
         
       
+
       
       
       
@@ -388,9 +390,7 @@
               		
               
               
-              
-              
-              
+
               
               
               
@@ -401,10 +401,8 @@
                   
                 
               
-			  
-			
-              
-              <a href="/ca/nav/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català (has translation)">
+
+              <a href="/ca/nav/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català">
                 <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
               </a>
             
@@ -418,9 +416,7 @@
               		
               
               
-              
-              
-              
+
               
               
               
@@ -428,10 +424,8 @@
                   
                 
               
-			  
-			
-              
-              <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano (go to home)">
+
+              <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano">
                 <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
               </a>
             
@@ -451,146 +445,118 @@
 
   
   <style>
-    .group.open .submenu {
+    .group.open > .submenu {
       opacity: 1 !important;
       visibility: visible !important;
+      transform: translateY(0) !important;
     }
   </style>
 
   
   <script>
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('Navigation script loaded');
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function (e) {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+      }
+
+      
+      document.querySelectorAll('.submenu-toggle').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const group = btn.closest('.group');
+          const isOpen = group.classList.contains('open');
+
+          
+          document.querySelectorAll('.group.open').forEach(g => {
+            if (g !== group) {
+              g.classList.remove('open');
+              const tb = g.querySelector('.submenu-toggle');
+              if (tb) tb.setAttribute('aria-expanded','false');
+            }
+          });
+
+          group.classList.toggle('open', !isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      
+      const langToggle = document.getElementById('lang-toggle');
+      if (langToggle) {
+        langToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const group = langToggle.closest('.group');
+          const isOpen = group.classList.contains('open');
+
+          
+          document.querySelectorAll('.group.open').forEach(g => {
+            if (g !== group) g.classList.remove('open');
+          });
+
+          group.classList.toggle('open', !isOpen);
+          langToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      
+      document.addEventListener('click', function (e) {
+        
+        document.querySelectorAll('.group.open').forEach(g => {
+          if (!g.contains(e.target)) {
+            g.classList.remove('open');
+            const tb = g.querySelector('.submenu-toggle');
+            if (tb) tb.setAttribute('aria-expanded','false');
+          }
+        });
+
+        
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          const btn = document.getElementById('menu-btn');
+          if (!mobileMenu.contains(e.target) && btn && !btn.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+            if (btn) btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+
       
       const sectionLinks = document.querySelectorAll('.section-link');
-      console.log('Found section links:', sectionLinks.length);
       const homePath = '\/';
-      
       sectionLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          console.log('Section link clicked:', this.getAttribute('data-section'));
-          
+        link.addEventListener('click', function (ev) {
+          ev.preventDefault();
           const section = this.getAttribute('data-section');
           const isHomePage = window.location.pathname === homePath || window.location.pathname === homePath + 'index.html' || window.location.pathname === homePath.replace(/\/$/, '');
-          console.log('Is home page:', isHomePage);
-          
           if (isHomePage) {
-            
-            const targetElement = document.querySelector(section);
-            console.log('Target element found:', !!targetElement);
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: 'instant',
-                block: 'start'
-              });
+            const target = document.querySelector(section);
+            if (target) {
+              target.scrollIntoView({ behavior: 'instant', block: 'start' });
             }
           } else {
-            
-            console.log('Navigating to:', homePath + section);
             window.location.href = homePath + section;
           }
         });
       });
+
       
-      
-      function handleHashScroll() {
-        console.log('Checking for hash:', window.location.hash);
-        if (window.location.hash) {
-          const targetElement = document.querySelector(window.location.hash);
-          console.log('Hash target element found:', !!targetElement);
-          if (targetElement) {
-            
-            setTimeout(() => {
-              console.log('Scrolling to hash target');
-              targetElement.scrollIntoView({
-                behavior: 'instant',
-                block: 'start'
-              });
-            }, 100);
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
           }
-        }
-      }
-      
-      
-      handleHashScroll();
-      
-      
-      setTimeout(handleHashScroll, 500);
-      setTimeout(handleHashScroll, 1000);
-      
-      
-      window.addEventListener('hashchange', function() {
-        console.log('Hash changed to:', window.location.hash);
-        handleHashScroll();
-      });
-      
-      
-      window.addEventListener('load', function() {
-        console.log('Window loaded, checking hash');
-        setTimeout(handleHashScroll, 200);
+        });
       });
     });
-    
-    
-    document.querySelectorAll('.group > a.nav-link, .group > button.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const group = this.closest('.group');
-        const isOpen = group.classList.contains('open');
-
-        
-        document.querySelectorAll('.group').forEach(g => g.classList.remove('open'));
-
-        
-        if (!isOpen) {
-          group.classList.add('open');
-        }
-      });
-
-      document.addEventListener('click', function(event) {
-        const group = link.closest('.group');
-        if (!group.contains(event.target)) {
-          group.classList.remove('open');
-        }
-		
-		const menu = document.getElementById('mobile-menu');
-		const button = document.getElementById('menu-btn');
-
-		if (!menu.classList.contains('hidden')) {
-        if (!menu.contains(event.target) && !button.contains(event.target)) {
-          menu.classList.add('hidden');
-        }
-      }
-		
-      });
-    });
-
-    
-    function toggleDarkMode() {
-      
-	  
-	  const isDark= true;
-      localStorage.setItem('darkMode', isDark);
-    }
-
-   
-   
-
-    
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        document.getElementById('mobile-menu').classList.add('hidden');
-      });
-    });
-
-
   </script>
 </nav>
-
-
-
 
   <div class="w-full h-16"></div>
 
