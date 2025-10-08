@@ -132,7 +132,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1759913535" data-version="1759913535">
+  <link rel="stylesheet" href="/css/main.css?v=1759913964" data-version="1759913964">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -180,7 +180,7 @@
 </head>
 <body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
-  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-[100]">
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-[9999] relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
 
@@ -242,12 +242,12 @@
         
         
         
-        <div class="relative group">
-          <button id="lang-toggle" class="flex items-center text-text-primary dark:text-text-primary">
+        <div class="relative" id="lang-menu">
+          <button id="lang-btn" class="flex items-center text-text-primary dark:text-text-primary focus:outline-none">
             <img src="/images/es.png" class="w-5 h-5 mr-2" alt="lang flag">
             <i class="fas fa-chevron-down text-sm"></i>
           </button>
-          <div class="submenu absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[200] opacity-0 invisible transition-all duration-200 group-open:visible group-open:opacity-100">
+          <div id="lang-dropdown" class="absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[10000] hidden border border-border-primary">
             
               <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
                 Castellano
@@ -278,7 +278,7 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-bg dark:bg-bg shadow-xl border-t border-border-primary z-[999]">
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-bg dark:bg-bg shadow-xl border-t border-border-primary z-[9998]">
     <div class="px-4 py-4 space-y-2">
       
         
@@ -336,51 +336,36 @@
   
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const btn = document.getElementById("menu-btn");
-      const menu = document.getElementById("mobile-menu");
-      const langToggle = document.getElementById("lang-toggle");
-      const groups = document.querySelectorAll(".group");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const langBtn = document.getElementById("lang-btn");
+      const langDropdown = document.getElementById("lang-dropdown");
 
       
-      if (btn && menu) {
-        btn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          menu.classList.toggle("hidden");
-          if (!menu.classList.contains("hidden")) {
-            menu.style.opacity = 0;
-            requestAnimationFrame(() => {
-              menu.style.transition = "opacity 0.3s ease";
-              menu.style.opacity = 1;
-            });
-          } else {
-            menu.style.transition = "opacity 0.2s ease";
-            menu.style.opacity = 0;
-          }
-        });
-
-        
-        document.addEventListener("click", function (e) {
-          if (!menu.classList.contains("hidden") && !btn.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.add("hidden");
-          }
-        });
-      }
-
-      
-      if (langToggle) {
-        langToggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const parent = this.closest(".group");
-          parent.classList.toggle("open");
-        });
-      }
-
-      
-      document.addEventListener("click", function (e) {
-        groups.forEach(g => {
-          if (!g.contains(e.target)) g.classList.remove("open");
-        });
+      menuBtn?.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("hidden");
       });
+
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.classList.contains("hidden") && !menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          langDropdown.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!langDropdown.classList.contains("hidden") && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.classList.add("hidden");
+          }
+        });
+      }
     });
   </script>
 </nav>

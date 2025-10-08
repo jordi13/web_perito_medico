@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759913771" data-version="1759913771">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1759914541" data-version="1759914541">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -182,60 +182,59 @@
 </head>
 <body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
-  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-[100]">
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
-
       
-      <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
-        Dr. Blanch
-      </a>
-
-      
-      <div class="hidden lg:flex items-center space-x-2 mr-6">
-        <i class="fas fa-phone-alt text-primary text-lg"></i>
-        <a href="tel:630049095" class="text-primary font-semibold hover:no-underline">
-          630 049 095
-        </a>
+      <div class="flex items-center">
+        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">Dr. Blanch</a>
       </div>
 
       
       <div class="hidden lg:flex items-center space-x-8">
         
+        <div class="flex-shrink-0 flex items-center">
+          <a href="tel:630-049-095" class="flex items-center text-text-primary dark:text-text-primary font-semibold hover:text-text-accent transition-colors">
+            <i class="fas fa-phone-alt mr-2"></i> 630 049 095
+          </a>
+        </div>
+
+        
+        
           
-            <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">
-              Sobre Mi
-            </a>
+            
+              <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre Mi</a>
+            
           
         
           
-            <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">
-              Servicios
-            </a>
+            
+              <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">Servicios</a>
+            
           
         
           
-            <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">
-              Contacto
-            </a>
+            
+              <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacto</a>
+            
           
         
           
-            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">
-              Faqs
-            </a>
+            
+              <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
+            
           
         
           
-            <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">
-              Experiencia
-            </a>
+            
+              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+            
           
         
           
-            <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">
-              Blog
-            </a>
+            
+              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+            
           
         
 
@@ -244,130 +243,271 @@
         
         
         
-        <div class="relative" id="lang-menu">
-          <button id="lang-btn" class="flex items-center text-text-primary dark:text-text-primary focus:outline-none">
-            <img src="/images/es.png" class="w-5 h-5 mr-2" alt="lang flag">
-            <i class="fas fa-chevron-down text-sm"></i>
-          </button>
-          <div id="lang-dropdown" class="absolute right-0 mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[200] hidden">
+        
+        
+        
+        <div class="relative group">
+          <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
+            <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
+            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+          </a>
+          <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible">
             
-              <a href="/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
-                Castellano
-              </a>
             
-              <a href="/ca/" class="block px-4 py-2 text-sm text-text-primary dark:text-text-primary hover:bg-bg-secondary">
-                Català
-              </a>
+              
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                  
+                    
+                      
+                      
+                    
+                  
+                
+                <a href="/ca/tags/cervicalgia/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
+                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+                </a>
+              
+            
+              
+              
+            
+              
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                  
+                    
+                  
+                
+                <a href="/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
+                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+                </a>
+              
             
           </div>
         </div>
         
+
+        
+        <div class="flex items-center space-x-4" data-animation="social">
+          
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          
+        </div>
       </div>
 
       
       <div class="lg:hidden flex items-center space-x-4">
         
-        <a href="tel:630049095" class="text-primary text-2xl">
-          <i class="fas fa-phone-alt"></i>
+        <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary">
+          <i class="fas fa-phone-alt text-2xl"></i>
         </a>
 
-        
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary text-2xl">
-          <i class="fas fa-bars"></i>
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary">
+          <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
     </div>
   </div>
 
   
-  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-bg dark:bg-bg shadow-xl border-t border-border-primary z-[999]">
-    <div class="px-4 py-4 space-y-2">
+  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       
         
-          <a href="/#about" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Sobre Mi
-          </a>
+          <a href="/#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Sobre Mi</a>
         
-      
-        
-          <a href="/#services" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Servicios
-          </a>
         
       
         
-          <a href="/#contact" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Contacto
-          </a>
+          <a href="/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Servicios</a>
+        
         
       
         
-          <a href="/#faqs" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Faqs
-          </a>
+          <a href="/#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Contacto</a>
+        
         
       
         
-          <a href="/experiencia/" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Experiencia
-          </a>
+          <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Faqs</a>
+        
         
       
         
-          <a href="/blog/" class="block px-3 py-2 text-base text-text-primary dark:text-text-primary">
-            Blog
-          </a>
+          <a href="/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Experiencia</a>
+        
+        
+      
+        
+          <a href="/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Blog</a>
+        
         
       
 
       
-      <div class="border-t border-border-primary pt-3 mt-3 flex justify-center space-x-4">
-        
-          <a href="/">
-            <img src="/images/es.png" class="w-5 h-5" alt="Castellano">
-          </a>
-        
-          <a href="/ca/">
-            <img src="/images/ca.png" class="w-5 h-5" alt="Català">
-          </a>
-        
+      
+      
+      <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
+        <div class="flex items-center space-x-3">
+          
+          
+            
+            
+              
+              		
+              
+              
+              
+              
+              
+              
+                
+                  
+                    
+                    
+                  
+                
+              
+              <a href="/ca/tags/cervicalgia/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català">
+                <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+              </a>
+            
+          
+            
+            
+          
+            
+            
+              
+              		
+              
+              
+              
+              
+              
+              
+                
+                  
+                
+              
+              <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano">
+                <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+              </a>
+            
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="flex items-center space-x-6 px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2" data-animation="social">
+        <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+          <i class="fab fa-linkedin-in text-2xl"></i>
+        </a>
       </div>
     </div>
   </div>
 
   
+  <style>
+    .group.open .submenu {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+     
+    .lg\\:flex > .flex-shrink-0 a,
+    .lg\\:hidden > a,
+    #menu-btn {
+      display: flex;
+      align-items: center;
+    }
+    #menu-btn, .lg\\:hidden > a {
+      height: 2rem;
+    }
+  </style>
+
+  
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const langBtn = document.getElementById("lang-btn");
-      const langDropdown = document.getElementById("lang-dropdown");
-
+    document.addEventListener('DOMContentLoaded', function() {
+      const sectionLinks = document.querySelectorAll('.section-link');
+      const homePath = '\/';
       
-      menuBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.addEventListener("click", function (e) {
-        if (!mobileMenu.classList.contains("hidden") && !menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-          mobileMenu.classList.add("hidden");
-        }
-      });
-
-      
-      if (langBtn && langDropdown) {
-        langBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          langDropdown.classList.toggle("hidden");
-        });
-
-        document.addEventListener("click", function (e) {
-          if (!langDropdown.classList.contains("hidden") && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
-            langDropdown.classList.add("hidden");
+      sectionLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const section = this.getAttribute('data-section');
+          const isHomePage = window.location.pathname === homePath || window.location.pathname === homePath + 'index.html' || window.location.pathname === homePath.replace(/\/$/, '');
+          if (isHomePage) {
+            const targetElement = document.querySelector(section);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
+          } else {
+            window.location.href = homePath + section;
           }
         });
+      });
+
+      function handleHashScroll() {
+        if (window.location.hash) {
+          const targetElement = document.querySelector(window.location.hash);
+          if (targetElement) {
+            setTimeout(() => {
+              targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }, 100);
+          }
+        }
       }
+
+      handleHashScroll();
+      setTimeout(handleHashScroll, 500);
+      setTimeout(handleHashScroll, 1000);
+      window.addEventListener('hashchange', handleHashScroll);
+      window.addEventListener('load', () => setTimeout(handleHashScroll, 200));
+
+      
+      document.querySelectorAll('.group > a.nav-link, .group > button.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const group = this.closest('.group');
+          const isOpen = group.classList.contains('open');
+          document.querySelectorAll('.group').forEach(g => g.classList.remove('open'));
+          if (!isOpen) group.classList.add('open');
+
+          document.addEventListener('click', function(event) {
+            if (!group.contains(event.target)) group.classList.remove('open');
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('menu-btn');
+            if (!menu.classList.contains('hidden')) {
+              if (!menu.contains(event.target) && !button.contains(event.target)) menu.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
     });
   </script>
 </nav>
