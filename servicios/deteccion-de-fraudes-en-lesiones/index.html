@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    localStorage.setItem('darkMode', 'false');
+    document.documentElement.classList.remove('dark');
+  </script>
+
+  <script>
+  (function () {
+    
+    const stored = localStorage.getItem('darkMode');
+
+    if (stored === 'true') {
+      document.documentElement.classList.add('dark');
+    } else if (stored === 'false') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
+    }
+  })();
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<title>
+  
+    Detección de fraudes en lesiones | Dr. Blanch
+  
+</title>
+
+
+<meta name="description" content="Análisis médico pericial para identificar lesiones simuladas o exageradas en reclamaciones de seguros o procesos judiciales." />
+<meta name="author" content="Jordi Blanch" />
+<link rel="canonical" href="https://jaumeblanch.com/servicios/deteccion-de-fraudes-en-lesiones/" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Detección de fraudes en lesiones | Dr. Blanch" />
+<meta property="og:description" content="Análisis médico pericial para identificar lesiones simuladas o exageradas en reclamaciones de seguros o procesos judiciales." />
+<meta property="og:url" content="https://jaumeblanch.com/servicios/deteccion-de-fraudes-en-lesiones/" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Dr. Blanch" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Detección de fraudes en lesiones | Dr. Blanch" />
+<meta name="twitter:description" content="Análisis médico pericial para identificar lesiones simuladas o exageradas en reclamaciones de seguros o procesos judiciales." />
+<meta name="twitter:image" content="" />
+
+
+<link rel="icon" href="/images/favicon.ico" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+
+  <style>
+:root {
+   
+  --color-primary: #095bb0;          
+  --color-primary-light: #3a7cc0;    
+  --color-primary-dark: #07498d;     
+  --color-primary-lighter: #cedeef;  
+
+  --color-second: #004182;         
+  --color-second-light: #33679b;   
+  --color-second-dark: #003468;
+  --color-second-lighter: #ccd9e6;
+  
+  --color-third: #8c8c8c;          
+  --color-third-light: #a3a3a3;
+  --color-third-dark: #707070;
+  --color-third-lighter: #e8e8e8;
+
+   
+  --color-gray-50: #f3f7fb;
+  --color-gray-100: #e6eff7;
+  --color-gray-300: #cedeef;
+  --color-gray-400: #b5cee7;
+  --color-gray-500: #9dbddf;
+  --color-gray-600: #052d58;
+  --color-gray-700: #05376a;
+  --color-gray-800: #07498d;
+  --color-gray-900: #08529e;
+
+   
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+   
+  --color-shadow-light: rgba(0, 0, 0, 0.1);
+  --color-shadow-lighter: rgba(0, 0, 0, 0.05);
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+  
+    
+   
+  --color-text-muted: var(--color-gray-500);
+  --color-border-secondary: var(--color-gray-300);
+  --color-success: var(--color-second);
+
+   
+  --color-bg: var(--color-white);
+  --color-bg-secondary: var(--color-gray-100);
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-border: var(--color-gray-300);
+
+}
+
+ 
+.dark {
+  --color-bg: #052d58;
+  --color-bg-secondary: #031b35;
+  --color-bg-tertiary: #042446;
+  --color-text-primary: var(--color-gray-50);
+  --color-text-secondary: var(--color-gray-300);
+  --color-border: var(--color-gray-700);
+  --color-text-muted: var(--color-gray-400);
+  --color-border-secondary: var(--color-gray-600); 
+}
+</style>
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760111902" data-version="1760111902">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    body { visibility: hidden; }
+    .dark body { visibility: hidden; }
+
+     
+    #cookie-overlay {
+      position: fixed;
+      top:0; left:0; width:100%; height:100%;
+      background-color: rgba(0,0,0,0.6);
+      backdrop-filter: blur(5px);  
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.5s ease;  
+    }
+
+    #cookie-overlay.show {
+      opacity: 1;
+      display: flex;
+    }
+
+     
+    #cookie-box {
+      background-color: #f3f3f3;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      transform: scale(0.95);
+      opacity: 0;
+      transition: all 0.35s ease;
+      border: 1px solid #ccc;
+    }
+
+    #cookie-box.show {
+      transform: scale(1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
+
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50" role="navigation" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <div class="flex items-center">
+        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
+          Dr. Blanch
+        </a>
+      </div>
+
+      
+      <div class="hidden lg:flex items-center space-x-8">
+        
+        <div class="flex-shrink-0 flex items-center">
+          <a href="tel:630-049-095" class="flex items-center text-text-primary dark:text-text-primary font-semibold hover:text-text-accent transition-colors">
+            <i class="fas fa-phone-alt mr-2"></i> 630 049 095
+          </a>
+        </div>
+
+        
+        
+          
+          
+            <div class="relative group">
+              <a href="/#services" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-haspopup="true" aria-expanded="false">
+                Servicios
+                <i class="fas fa-chevron-down ml-2 text-sm"></i>
+              </a>
+
+              
+              <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[16rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+                
+                  <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Valoración de lesiones en accidentes de tráfico</a>
+                  <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Informes médicos periciales en accidentes laborales</a>
+                  <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Valoración de secuelas físicas y neurológicas</a>
+                  <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Valoración médica para reclamaciones y seguros</a>
+                  <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Asistencia en juicios como perito médico</a>
+                  <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="block px-4 py-2 text-sm hover:bg-bg-secondary dark:hover:bg-bg-secondary text-text-primary dark:text-text-primary">Detección de fraudes en lesiones</a>
+                
+              </div>
+            </div>
+
+          
+        
+          
+          
+            
+              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+            
+          
+        
+          
+          
+            
+              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+            
+          
+        
+
+        
+        
+        
+          
+          
+          
+          
+          <div class="relative group">
+            <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
+              <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
+              <i class="fas fa-chevron-down ml-1 text-sm"></i>
+            </a>
+            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+              
+              
+                
+                
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a href="/ca/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
+                    <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+                  </a>
+                
+              
+                
+                
+              
+                
+                
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a href="/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
+                    <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+                  </a>
+                
+              
+            </div>
+          </div>
+        
+
+        
+        <div class="flex items-center space-x-4" data-animation="social">
+          
+            <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+          
+        </div>
+      </div>
+
+      
+      <div class="lg:hidden flex items-center space-x-4">
+        
+        <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary" aria-label="Llamar">
+          <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      
+      <div class="px-3 py-2 border-b border-border-primary">
+        <p class="px-3 py-1 text-sm font-semibold text-text-primary">Servicios médicos periciales</p>
+        <div class="mt-2 space-y-1">
+          
+            <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
+            <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
+            <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Valoración de secuelas físicas y neurológicas</a>
+            <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Valoración médica para reclamaciones y seguros</a>
+            <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Asistencia en juicios como perito médico</a>
+            <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="block px-3 py-2 rounded-md text-base font-medium text-text-primary hover:bg-bg-secondary dark:hover:bg-bg-secondary">Detección de fraudes en lesiones</a>
+          
+        </div>
+      </div>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a href="/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Experiencia</a>
+          
+
+          
+        
+      
+        
+          
+            <a href="/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Blog</a>
+          
+
+          
+        
+      
+
+      
+      
+      
+        <div class="px-3 py-2 border-t border-border-primary">
+          <div class="flex items-center space-x-3">
+            
+            
+              
+              
+                
+                
+                
+                
+                <a href="/ca/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català">
+                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+                </a>
+              
+            
+              
+              
+            
+              
+              
+                
+                
+                
+                
+                <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano">
+                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+                </a>
+              
+            
+          </div>
+        </div>
+      
+
+      <div class="flex items-center px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2">
+        
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125 mr-4">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <style>
+     
+    nav .submenu { z-index: 99999; }
+
+     
+    nav .submenu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+      transition: opacity .18s ease, transform .18s ease, visibility .18s;
+    }
+    nav .group:hover > .submenu,
+    nav .group.open > .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+     
+    nav .submenu a { z-index: 100000; position: relative; display:block; }
+
+     
+    .submenu.min-w-16rem { min-width: 16rem; }
+  </style>
+
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('nav');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation(); 
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  
+  document.addEventListener('click', function (e) {
+    if (
+      mobileMenu &&
+      !mobileMenu.classList.contains('hidden') &&
+      !mobileMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  
+  const groups = document.querySelectorAll('.group');
+  groups.forEach(group => {
+    const trigger = group.querySelector('a.nav-link');
+    if (trigger) {
+      trigger.addEventListener('click', function (e) {
+        
+        if (group.querySelector('.submenu')) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = group.classList.contains('open');
+          groups.forEach(g => g.classList.remove('open'));
+          if (!isOpen) group.classList.add('open');
+        }
+      });
+    }
+  });
+
+  
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.group')) {
+      groups.forEach(g => g.classList.remove('open'));
+    }
+  });
+
+  
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function () {
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+</script>
+
+</nav>
+
+  <div class="w-full h-16"></div>
+
+  <main class="flex-grow">
+    
+<section id="service-header" class="py-16 bg-bg-secondary dark:bg-bg-tertiary border-t border-border-primary" data-animate>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-heading text-text-primary dark:text-text-primary mb-6">
+      Detección de fraudes en lesiones
+    </h1>
+    
+    <p class="text-lg text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto italic">
+      Análisis médico pericial para identificar lesiones simuladas o exageradas en reclamaciones de seguros o procesos judiciales.
+    </p>
+    
+  </div>
+</section>
+
+<section id="service-content" class="py-12 bg-bg dark:bg-bg border-t border-border-primary" data-animate>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 prose prose-lg dark:prose-invert">
+    <h2 id="detección-de-fraudes-en-lesiones">Detección de fraudes en lesiones</h2>
+<p>En el ámbito médico pericial, la detección de fraudes es esencial para garantizar la <strong>veracidad de las reclamaciones</strong> por lesiones.</p>
+<p>A través de una evaluación médica rigurosa, se pueden identificar <strong>incoherencias clínicas</strong>, simulaciones o exageraciones intencionadas.</p>
+<h2 id="aplicaciones">Aplicaciones</h2>
+<ul>
+<li>Reclamaciones de seguros.</li>
+<li>Procesos judiciales por accidentes.</li>
+<li>Evaluaciones laborales o de incapacidad.</li>
+</ul>
+<p>El objetivo es siempre preservar la objetividad, evitando perjuicios económicos o judiciales derivados de informes falsos o imprecisos.</p>
+
+  </div>
+</section>
+
+
+  
+<section id="faqs" class="py-12 bg-bg-secondary dark:bg-bg-tertiary border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+      <h2 class="text-3xl font-bold text-center mb-6 font-heading text-text-primary dark:text-text-primary">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-lg text-center mb-12 text-text-secondary dark:text-text-tertiary italic">
+        Encuentra respuestas rápidas sobre los servicios médicos periciales, plazos y funcionamiento de los informes médicos legales.
+      </p>
+
+      <div class="space-y-4 max-w-4xl mx-auto">
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Qué es un informe médico pericial?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Es un documento elaborado por un médico especialista en valoración del daño corporal que analiza de forma objetiva las lesiones y secuelas sufridas, con validez legal en procesos judiciales o extrajudiciales.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Cuánto tarda en elaborarse un informe médico pericial?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                El plazo habitual depende de la complejidad del caso. Generalmente, entre 7 y 15 días tras la exploración médica y la recopilación de la documentación.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Qué documentación necesito aportar?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Se recomienda aportar informes hospitalarios, pruebas diagnósticas (radiografías, TAC, resonancias), comunicados de baja laboral y cualquier documento médico relacionado con las lesiones.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Puedo solicitar un informe como particular o solo a través de un abogado?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Cualquier persona que haya sufrido lesiones en un accidente puede solicitar un informe. Sin embargo, los abogados suelen facilitar y agilizar el proceso legal.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿El perito médico puede acudir a juicio?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Sí, el perito médico no solo elabora el informe, sino que también puede ratificarlo y defenderlo ante el juez o tribunal en caso de ser necesario.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Qué tipos de accidentes cubre la valoración médica?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Accidentes de tráfico, accidentes laborales, lesiones deportivas, caídas y cualquier situación donde exista un daño corporal a evaluar.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿El informe pericial es válido para reclamaciones a aseguradoras?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                Sí, los informes periciales médicos tienen plena validez frente a compañías de seguros y son una herramienta clave para reclamar indemnizaciones justas.
+              </p>
+            </div>
+          </div>
+        
+          <div class="bg-bg dark:bg-bg rounded-xl shadow-md border border-border-primary dark:border-border-primary faq-item card-hover overflow-hidden" data-animate>
+            
+            <button class="faq-question w-full flex justify-between items-center px-6 py-4 text-left text-lg font-heading font-bold text-primary dark:text-primary-light focus:outline-none">
+              <span><i class="fas mr-2 text-primary"></i> ¿Cuál es el coste de un informe médico pericial?</span>
+              <i class="fas ml-2 fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            
+            <div class="faq-answer hidden px-6">
+              <p class="text-text-secondary dark:text-text-tertiary py-4 leading-relaxed">
+                El precio depende de la complejidad del caso y del tipo de lesiones. Antes de la primera visita se informa siempre del presupuesto antes de iniciar el proceso.
+              </p>
+            </div>
+          </div>
+        
+      </div>
+    
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqs = document.querySelectorAll(".faq-item");
+
+    faqs.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      const icon = question.querySelector(".fa-chevron-down");
+
+      question.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+
+        
+        faqs.forEach((el) => {
+          el.classList.remove("open");
+          el.querySelector(".faq-answer").classList.add("hidden");
+          el.querySelector(".fa-chevron-down").classList.remove("rotate-180");
+        });
+
+        
+        if (!isOpen) {
+          item.classList.add("open");
+          answer.classList.remove("hidden");
+          icon.classList.add("rotate-180");
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-question i.rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>
+
+
+
+
+<section id="contact" class="py-12 bg-bg dark:bg-bg border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12 font-heading text-text-primary dark:text-text-primary">Contacta</h2>
+
+    <div class="flex flex-col lg:flex-row justify-center gap-12">
+      
+      <div class="lg:w-1/2">
+        <div class="contact-card bg-bg dark:bg-bg p-8 rounded-lg shadow-lg border border-border-primary dark:border-border-primary card-hover">
+
+          
+          <div class="mb-8">
+            <p class="text-xl text-text-primary dark:text-text-primary text-center items-center justify-start mb-3">
+              <i class="fas fa-phone-alt text-primary mr-2"></i>
+              Llámame al 
+              <span class="ml-2 text-primary font-bold">
+                <a
+                  href="tel:630049095"
+                  id="phone-link"
+                  class="hover:no-underline select-none"
+                >
+                  630 049 095
+                </a>
+              </span>
+            </p>
+            <div class="text-center items-center justify-start my-6">
+              <span class="border-t border-border-primary w-1/4"></span>
+              <span class="mx-4 text-sm text-text-secondary dark:text-text-tertiary">o si lo prefieres </span>
+              <span class="border-t border-border-primary w-1/4"></span>
+            </div>
+          </div>
+
+          <h3 class="text-xl text-center text-text-primary dark:text-text-primary mb-6">Envíame un mensaje</h3>
+
+          <form id="contact-form" action="https://formspree.io/f/xrbandjb" method="POST" class="space-y-6">
+            <input type="text" name="_gotcha" style="display:none">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="flex-1">
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-text-secondary mb-1">Nombre</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-border-primary dark:border-border-primary rounded-lg focus:ring-primary focus:border-primary dark:bg-bg dark:text-text-primary" required>
+              </div>
+              <div class="flex-1">
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-text-secondary mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-border-primary dark:border-border-primary rounded-lg focus:ring-primary focus:border-primary dark:bg-bg dark:text-text-primary" required>
+              </div>
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-text-secondary mb-1">Asunto</label>
+              <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-border-primary dark:border-border-primary rounded-lg focus:ring-primary focus:border-primary dark:bg-bg dark:text-text-primary" required>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-text-secondary mb-1">Mensaje</label>
+              <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-border-primary dark:border-border-primary rounded-lg focus-ring-primary border-primary dark:bg-bg dark:text-text-primary" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="bg-gradient-primary text-white px-6 py-3 rounded-lg font-medium shadow-lg button-hover">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      
+      <div class="lg:w-1/2">
+        
+        <div class="contact-card bg-bg dark:bg-bg p-8 rounded-lg shadow-lg border border-border-primary dark:border-border-primary h-full card-hover">
+          <h3 class="text-xl text-center font-semibold mb-6 text-text-primary dark:text-text-primary">Información de contacto</h3>
+          <div class="space-y-4 text-gray-700 dark:text-text-secondary">
+            <p><strong>¿Necesitas un perito médico en Barcelona?</strong><br>Solicita una cita para una valoración médica rigurosa en casos de accidentes de tráfico, accidentes laborales o reclamaciones legales. Recibirás un informe pericial claro, objetivo y útil para tu caso.</p>
+            <p><strong>Colaboración con abogados y despachos</strong><br>Trabajo con abogados y bufetes en la preparación de informes médicos periciales, asistencia a juicios y valoración del daño corporal. Ofrezco soporte especializado para reforzar la defensa de tus clientes.</p>
+            <p><strong>Atención personalizada a pacientes</strong><br>Pacientes particulares también pueden contactar para una valoración médica independiente y profesional de lesiones, secuelas o patologías derivadas de accidentes.</p>
+          </div>
+          <br>
+          <div class="space-y-4">
+            
+            <div class="flex items-start">
+              <div class="bg-primary-lighter dark:bg-primary-dark p-3 rounded-full mr-4">
+                <i class="fab fa-linkedin-in text-primary dark:text-primary-light"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-text-primary dark:text-text-primary">LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" class="text-primary dark:text-white">Conéctame en LinkedIn</a>
+              </div>
+            </div>
+            
+
+            
+            <div class="flex items-start">
+              <div class="bg-second-lighter dark:bg-second-dark p-3 rounded-full mr-4">
+                <i class="fas fa-map-marker-alt text-second dark:text-second-light"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-text-primary dark:text-text-primary">Ubicación</h4>
+                <p class="text-gray-700 dark:text-text-tertiary">Barcelona, Cataluña</p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-medium mb-3 text-text-primary dark:text-text-primary">Áreas de intervención médica pericial</h4>
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="collab-tag px-3 py-1 rounded-full text-sm">Informes periciales</span>
+              
+              <span class="collab-tag px-3 py-1 rounded-full text-sm">Asistencia a juicios</span>
+              
+              <span class="collab-tag px-3 py-1 rounded-full text-sm">Valoración del daño corporal</span>
+              
+              <span class="collab-tag px-3 py-1 rounded-full text-sm">Peritaje médico</span>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const phoneLink = document.getElementById('phone-link');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          showToast('✅ ¡Gracias! Me pondré en contacto contigo pronto.');
+          form.reset();
+        } else {
+          showToast('❌ Error: por favor, inténtalo de nuevo.');
+        }
+      } catch (error) {
+        console.error(error);
+        showToast('⚠️ Error al enviar el mensaje.');
+      }
+    });
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.textContent = message;
+      toast.className = 'fixed bottom-6 right-6 bg-second dark:bg-second-light text-white px-4 py-2 rounded shadow-lg';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    
+    if (!/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+      phoneLink.addEventListener('click', e => e.preventDefault());
+      phoneLink.style.cursor = 'default';
+    }
+  });
+</script>
+
+
+  </main>
+
+  
+<footer class="bg-bg-secondary dark:bg-bg-secondary text-text-primary py-12 border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+
+      
+      <div class="mb-6 md:mb-0 md:w-1/2 flex flex-col md:items-start md:text-left">
+        <a href="/#home" class="text-2xl font-bold font-heading text-text-primary dark:text-text-primary">
+          Dr. Blanch
+        </a>
+        <p class="text-lg text-text-secondary dark:text-text-tertiary italic mt-2">
+          Número colegiado 20360
+        </p>
+        <p class="text-lg text-text-secondary dark:text-text-tertiary italic mt-2">
+          Médico perito acreditado en valoración del daño corporal al servicio de pacientes y profesionales del derecho.
+        </p>
+        <p class="text-text-secondary dark:text-text-tertiary mt-2 flex md:justify-start">
+          <i class="fas fa-map-marker-alt mr-2"></i>Barcelona, Cataluña
+        </p>
+      </div>
+
+      
+      <div class="flex flex-col items-end space-y-4">
+
+        
+        <div class="flex flex-wrap gap-2 justify-end">
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Informes periciales
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Asistencia a juicios
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Valoración del daño corporal
+          </span>
+          
+          
+          <span class="bg-bg dark:bg-bg text-text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+            Peritaje médico
+          </span>
+          
+        </div>
+		
+		
+        <div class="flex space-x-4 text-sm text-text-secondary dark:text-text-tertiary text-center">
+          <a href="/aviso-legal" class="hover:underline">
+            Aviso legal
+          </a>
+          <a href="/privacidad" class="hover:underline">
+            Política de privacidad
+          </a>
+          <a href="/cookies" class="hover:underline">
+            Política de cookies
+          </a>
+        </div>
+
+        
+      </div>
+
+    </div>
+
+    
+    <div class="mt-8 pt-8 border-t border-border-primary text-center text-text-secondary dark:text-text-muted text-sm">
+		
+      <p>© 2025 | Jaume Blanch</p>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+  
+    
+    
+  
+  <script src="/js/scripts.min.d456a175ad33e888eac2eabeb4b419b74f46295e8b2b27347d6a16fce86fafa4.js"></script>
+  <script src="/js/gsap-animations.min.7c09ec69561f8e8a36142b62361853a5fdf9c36a696809a814fb48594baa4752.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      new Swiper(".related-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
+      });
+
+      window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+      });
+
+      const overlay = document.getElementById("cookie-overlay");
+      const box = document.getElementById("cookie-box");
+      const acceptBtn = document.getElementById("accept-cookies");
+      const rejectBtn = document.getElementById("reject-cookies");
+
+      function showBanner() {
+        overlay.style.display = "flex";
+        setTimeout(() => overlay.classList.add("show"), 50);
+        setTimeout(() => box.classList.add("show"), 150);
+        document.body.style.overflow = "hidden";
+      }
+
+      function hideBanner(choice) {
+        localStorage.setItem("cookieConsent", choice);
+        box.classList.remove("show");
+        overlay.classList.remove("show");
+        setTimeout(() => {
+          overlay.style.display = "none";
+          document.body.style.overflow = "";
+        }, 500); 
+      }
+	 
+	  window.openCookieSettings = function() {
+	  const overlay = document.getElementById("cookie-overlay");
+	  const box = document.getElementById("cookie-box");
+	  overlay.style.display = "flex";
+	  setTimeout(() => overlay.classList.add("show"), 50);
+	  setTimeout(() => box.classList.add("show"), 150);
+	  document.body.style.overflow = "hidden";
+	};
+	
+      if (!localStorage.getItem("cookieConsent")) showBanner();
+
+      acceptBtn.addEventListener("click", () => hideBanner("accepted"));
+      rejectBtn.addEventListener("click", () => hideBanner("rejected"));
+    });
+  </script>
+
+  
+  <div id="cookie-overlay">
+    <div id="cookie-box">
+      <h3 class="text-xl font-bold mb-4"> Tu privacidad es importante </h3>
+      <p class="text-sm mb-6">
+        Este sitio utiliza cookies técnicas necesarias para su correcto funcionamiento.
+        <a href="/cookies" class="underline ml-1">
+          Política de cookies
+        </a>
+      </p>
+      <div class="flex justify-center gap-4">
+        <button id="accept-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+          Aceptar
+        </button>
+        <button id="reject-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+          Rechazar
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
