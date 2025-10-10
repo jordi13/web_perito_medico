@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760124555" data-version="1760124555">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760125007" data-version="1760125007">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -290,7 +290,7 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out transform scale-y-0 origin-top">
+  <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
       
@@ -299,7 +299,7 @@
           <span>Servicios</span>
           <i id="icon-servicios" class="fas fa-chevron-down ml-1 transition-transform duration-300"></i>
         </button>
-        <div id="submenu-servicios" class="hidden flex flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out transform origin-top scale-y-0 opacity-0">
+        <div id="submenu-servicios" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
           
             <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
             <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
@@ -355,25 +355,6 @@
     </div>
   </div>
 
-  <style>
-    nav .submenu {
-      z-index: 99999;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(6px);
-      transition: opacity .18s ease, transform .18s ease, visibility .18s;
-    }
-    nav .group.open > .submenu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    #submenu-servicios.show {
-      transform: scaleY(1);
-      opacity: 1;
-    }
-  </style>
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const menuBtn = document.getElementById('menu-btn');
@@ -384,62 +365,34 @@
       const groups = document.querySelectorAll('.group');
 
       
-      const toggleMenu = () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.style.transform = isHidden ? 'scaleY(1)' : 'scaleY(0)';
-        const expanded = !isHidden;
-        menuBtn.setAttribute('aria-expanded', expanded);
-        document.body.style.overflow = expanded ? 'hidden' : '';
-      };
-
-      menuBtn.addEventListener('click', toggleMenu);
-
-      
-      groups.forEach(group => {
-        const trigger = group.querySelector('a[data-menu]');
-        if (trigger) {
-          trigger.addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
-            const isOpen = group.classList.contains('open');
-            groups.forEach(g => g.classList.remove('open'));
-            if (!isOpen) group.classList.add('open');
-          });
-        }
-      });
-
-      
-      document.addEventListener('click', e => {
-        if (!e.target.closest('.group')) {
-          groups.forEach(g => g.classList.remove('open'));
-        }
+      menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !expanded);
+        mobileMenu.style.maxHeight = expanded ? '0' : mobileMenu.scrollHeight + 'px';
       });
 
       
       toggleServicios.addEventListener('click', () => {
-        const open = submenuServicios.classList.contains('show');
-        submenuServicios.classList.toggle('hidden', open);
-        submenuServicios.classList.toggle('show', !open);
+        const open = submenuServicios.style.maxHeight && submenuServicios.style.maxHeight !== '0px';
+        submenuServicios.style.maxHeight = open ? '0' : submenuServicios.scrollHeight + 'px';
         iconServicios.classList.toggle('rotate-180', !open);
       });
 
       
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024) {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.style.transform = 'scaleY(0)';
-          document.body.style.overflow = '';
-        }
+      groups.forEach(group => {
+        const trigger = group.querySelector('a[data-menu]');
+        trigger.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = group.classList.contains('open');
+          groups.forEach(g => g.classList.remove('open'));
+          if (!isOpen) group.classList.add('open');
+        });
       });
 
       
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.style.transform = 'scaleY(0)';
-          document.body.style.overflow = '';
-        });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.group')) groups.forEach(g => g.classList.remove('open'));
       });
     });
   </script>
@@ -579,6 +532,9 @@ Esto permite:</p>
       
         
         
+      
+        
+        
           
           
           
@@ -602,14 +558,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuela-neurologica-accidente-trafico/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
+              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -632,14 +588,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuela-neurologica-accidente-trafico/">
+              <a href="/blog/guardar-pruebas-accidente/">
                 
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
-              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
+              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
