@@ -132,7 +132,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1760120444" data-version="1760120444">
+  <link rel="stylesheet" href="/css/main.css?v=1760120898" data-version="1760120898">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -255,6 +255,13 @@
             </div>
           </div>
         
+
+        
+        
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+        
       </div>
 
       
@@ -272,6 +279,7 @@
   
   <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999]">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
       
       <div class="px-3 py-2 border-b border-border-primary">
         <p class="px-3 py-1 text-sm font-semibold text-text-primary">Serveis mèdics pericials</p>
@@ -301,7 +309,7 @@
       
 
       
-      <div class="px-3 py-3 border-t border-border-primary">
+      <div class="px-3 py-3 border-t border-border-primary flex items-center justify-between">
         <div class="flex items-center space-x-3">
           
           
@@ -310,6 +318,11 @@
             <a href="/ca/" class="px-2 py-1 text-sm text-text-primary hover:bg-bg-secondary rounded">Català</a>
           
         </div>
+        
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+        
       </div>
     </div>
   </div>
@@ -317,96 +330,45 @@
   <style>
     nav .submenu { z-index: 99999; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
     nav .group:hover > .submenu, nav .group.open > .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
-     
     #mobile-menu { box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
-     
     #menu-btn { -webkit-tap-highlight-color: transparent; }
   </style>
 
   <script>
-    (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        try {
-          const menuBtn = document.getElementById('menu-btn');
-          const mobileMenu = document.getElementById('mobile-menu');
-          const groups = Array.from(document.querySelectorAll('.group'));
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const groups = document.querySelectorAll('.group');
 
-          const toggleMobileMenu = function (e) {
-            e && e.stopPropagation();
-            if (!mobileMenu) return;
-            const opened = !mobileMenu.classList.contains('hidden');
-            if (opened) {
-              mobileMenu.classList.add('hidden');
-              menuBtn && menuBtn.setAttribute('aria-expanded', 'false');
-              document.body.style.overflow = '';
-            } else {
-              mobileMenu.classList.remove('hidden');
-              menuBtn && menuBtn.setAttribute('aria-expanded', 'true');
-              
-              document.body.style.overflow = 'hidden';
-            }
-          };
+      function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+        const expanded = !mobileMenu.classList.contains('hidden');
+        menuBtn.setAttribute('aria-expanded', expanded);
+        document.body.style.overflow = expanded ? 'hidden' : '';
+      }
 
-          if (menuBtn) {
-            menuBtn.addEventListener('click', toggleMobileMenu);
-            menuBtn.addEventListener('touchstart', function (ev) { ev.preventDefault(); toggleMobileMenu(ev); }, { passive: false });
-          }
+      menuBtn.addEventListener('click', toggleMenu);
+      
+      menuBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        toggleMenu();
+      }, { passive: false });
 
-          
-          window.addEventListener('resize', function () {
-            if (window.innerWidth >= 1024 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-              mobileMenu.classList.add('hidden');
-              if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-              document.body.style.overflow = '';
-            }
-          });
-
-          
-          groups.forEach(group => {
-            const anchor = group.querySelector('a.nav-link');
-            if (!anchor) return;
-            anchor.addEventListener('click', function (ev) {
-              
-              if (!group.querySelector('.submenu')) return;
-              ev.preventDefault();
-              ev.stopPropagation();
-              const isOpen = group.classList.contains('open');
-              groups.forEach(g => g.classList.remove('open'));
-              if (!isOpen) group.classList.add('open');
-            });
-          });
-
-          
-          document.addEventListener('click', function (ev) {
-            if (!ev.target.closest('nav')) {
-              groups.forEach(g => g.classList.remove('open'));
-            }
-            if (!ev.target.closest('#mobile-menu') && !ev.target.closest('#menu-btn')) {
-              if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-              }
-            }
-          });
-
-          
-          document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function () {
-              if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-              }
-            });
-          });
-
-        } catch (err) {
-          
-          console.error('Nav script error:', err);
+      
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+          mobileMenu.classList.add('hidden');
+          document.body.style.overflow = '';
         }
       });
-    })();
+
+      
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('nav')) {
+          groups.forEach(g => g.classList.remove('open'));
+        }
+      });
+    });
   </script>
 </nav>
 
