@@ -132,7 +132,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1760111130" data-version="1760111130">
+  <link rel="stylesheet" href="/css/main.css?v=1760111916" data-version="1760111916">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -436,79 +436,72 @@
     .submenu.min-w-16rem { min-width: 16rem; }
   </style>
 
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('nav');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const nav = document.querySelector('nav');
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', (e) => {
-          const opened = !mobileMenu.classList.contains('hidden');
-          if (opened) {
-            mobileMenu.classList.add('hidden');
-            menuBtn.setAttribute('aria-expanded', 'false');
-          } else {
-            mobileMenu.classList.remove('hidden');
-            menuBtn.setAttribute('aria-expanded', 'true');
-          }
-        });
-      }
-
-      
-      document.addEventListener('click', function (e) {
-        const clickedGroupLink = e.target.closest('.group > a.nav-link, .group > a.nav-link *');
-        const anyOpenGroups = document.querySelectorAll('.group.open');
-
-        
-        if (clickedGroupLink) {
-          const anchor = clickedGroupLink.closest('.group').querySelector('a.nav-link');
-          
-          e.preventDefault();
-
-          const group = anchor.closest('.group');
-          const isOpen = group.classList.contains('open');
-
-          
-          anyOpenGroups.forEach(g => g.classList.remove('open'));
-
-          
-          if (!isOpen) group.classList.add('open');
-          return;
-        }
-
-        
-
-        
-        if (!e.target.closest('nav')) {
-          anyOpenGroups.forEach(g => g.classList.remove('open'));
-          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-          }
-          return;
-        }
-
-        
-        const clickInsideGroup = !!e.target.closest('.group');
-        if (!clickInsideGroup) {
-          anyOpenGroups.forEach(g => g.classList.remove('open'));
-        }
-      });
-
-      
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', function () {
-          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation(); 
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
     });
-  </script>
+  }
+
+  
+  document.addEventListener('click', function (e) {
+    if (
+      mobileMenu &&
+      !mobileMenu.classList.contains('hidden') &&
+      !mobileMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  
+  const groups = document.querySelectorAll('.group');
+  groups.forEach(group => {
+    const trigger = group.querySelector('a.nav-link');
+    if (trigger) {
+      trigger.addEventListener('click', function (e) {
+        
+        if (group.querySelector('.submenu')) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = group.classList.contains('open');
+          groups.forEach(g => g.classList.remove('open'));
+          if (!isOpen) group.classList.add('open');
+        }
+      });
+    }
+  });
+
+  
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.group')) {
+      groups.forEach(g => g.classList.remove('open'));
+    }
+  });
+
+  
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function () {
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+</script>
+
 </nav>
 
   <div class="w-full h-16"></div>
