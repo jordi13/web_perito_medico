@@ -135,7 +135,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760122791" data-version="1760122791">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760123352" data-version="1760123352">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -291,23 +291,23 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999]">
+  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
       
       <div class="px-3 py-2">
-        <button id="toggle-servicios" class="w-full flex justify-start items-center space-x-2 text-base font-semibold text-text-primary hover:bg-bg-secondary">
-          <i id="icon-servicios" class="fas fa-chevron-right transition-transform duration-200"></i>
+        <button id="toggle-servicios" class="w-full flex justify-between items-center text-base font-semibold text-text-primary hover:bg-bg-secondary">
           <span>Serveis</span>
+          <i id="icon-servicios" class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
         </button>
-        <div id="submenu-servicios" class="hidden flex flex-col mt-1 space-y-1 pb-2">
+        <div id="submenu-servicios" class="hidden flex flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out transform origin-top scale-y-0 opacity-0">
           
-            <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Valoració de lesions en accidents de trànsit</a>
-            <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Informes mèdics pericials en accidents laborals</a>
-            <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Valoració de seqüeles físiques i neurològiques</a>
-            <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Valoració mèdica per a reclamacions i assegurances</a>
-            <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Assistència en judicis com a perit metge</a>
-            <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block px-8 py-2 text-text-primary hover:bg-bg-secondary">Detecció de fraus en lesions</a>
+            <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de lesions en accidents de trànsit</a>
+            <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes mèdics pericials en accidents laborals</a>
+            <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de seqüeles físiques i neurològiques</a>
+            <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració mèdica per a reclamacions i assegurances</a>
+            <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Assistència en judicis com a perit metge</a>
+            <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detecció de fraus en lesions</a>
           
         </div>
       </div>
@@ -334,7 +334,7 @@
             
             
             <a href="/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
-              <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
+              <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block mr-1" />
               <span>Castellano</span>
             </a>
           
@@ -342,7 +342,7 @@
             
             
             <a href="/ca/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
-              <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
+              <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block mr-1" />
               <span>Català</span>
             </a>
           
@@ -361,8 +361,7 @@
     nav .group:hover > .submenu, nav .group.open > .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
     #mobile-menu { box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
     #menu-btn { -webkit-tap-highlight-color: transparent; }
-    #submenu-servicios a { transition: background 0.2s ease; }
-    .rotate-180 { transform: rotate(90deg); }
+    #submenu-servicios.show { transform: scaleY(1); opacity: 1; }
   </style>
 
   <script>
@@ -374,36 +373,33 @@
       const iconServicios = document.getElementById('icon-servicios');
 
       function toggleMenu() {
-        if (!mobileMenu) return;
         mobileMenu.classList.toggle('hidden');
         const expanded = !mobileMenu.classList.contains('hidden');
         menuBtn.setAttribute('aria-expanded', expanded);
         document.body.style.overflow = expanded ? 'hidden' : '';
       }
 
-      if (menuBtn) {
-        menuBtn.addEventListener('click', toggleMenu);
-        menuBtn.addEventListener('touchstart', (e) => {
-          e.preventDefault();
-          toggleMenu();
-        }, { passive: false });
-      }
+      menuBtn.addEventListener('click', toggleMenu);
+      menuBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        toggleMenu();
+      }, { passive: false });
 
       
-      if (toggleServicios) {
-        toggleServicios.addEventListener('click', () => {
-          submenuServicios.classList.toggle('hidden');
-          iconServicios.classList.toggle('rotate-180');
-        });
-      }
+      toggleServicios.addEventListener('click', () => {
+        const open = submenuServicios.classList.contains('show');
+        submenuServicios.classList.toggle('hidden', open);
+        submenuServicios.classList.toggle('show', !open);
+        iconServicios.classList.toggle('rotate-180', !open);
+      });
 
       
       window.addEventListener('resize', () => {
         const isDesktop = window.innerWidth >= 1024;
         if (isDesktop) {
           mobileMenu.classList.add('hidden');
+          submenuServicios.classList.remove('show');
           document.body.style.overflow = '';
-        } else {
           menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -411,11 +407,9 @@
       
       document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuBtn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          }
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
         });
       });
     });
