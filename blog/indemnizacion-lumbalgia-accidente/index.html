@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760123973" data-version="1760123973">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760124555" data-version="1760124555">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -282,7 +282,7 @@
         <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary" aria-label="Llamar">
           <i class="fas fa-phone-alt text-2xl"></i>
         </a>
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
@@ -290,7 +290,7 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out">
+  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out transform scale-y-0 origin-top">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
       
@@ -368,8 +368,6 @@
       visibility: visible;
       transform: translateY(0);
     }
-    #mobile-menu { box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
-    #menu-btn { -webkit-tap-highlight-color: transparent; }
     #submenu-servicios.show {
       transform: scaleY(1);
       opacity: 1;
@@ -387,8 +385,10 @@
 
       
       const toggleMenu = () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
         mobileMenu.classList.toggle('hidden');
-        const expanded = !mobileMenu.classList.contains('hidden');
+        mobileMenu.style.transform = isHidden ? 'scaleY(1)' : 'scaleY(0)';
+        const expanded = !isHidden;
         menuBtn.setAttribute('aria-expanded', expanded);
         document.body.style.overflow = expanded ? 'hidden' : '';
       };
@@ -428,6 +428,7 @@
       window.addEventListener('resize', () => {
         if (window.innerWidth >= 1024) {
           mobileMenu.classList.add('hidden');
+          mobileMenu.style.transform = 'scaleY(0)';
           document.body.style.overflow = '';
         }
       });
@@ -436,6 +437,7 @@
       document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
+          mobileMenu.style.transform = 'scaleY(0)';
           document.body.style.overflow = '';
         });
       });
@@ -573,12 +575,6 @@ El informe médico pericial permitirá:</p>
       
         
         
-      
-        
-        
-      
-        
-        
           
           
           
@@ -617,14 +613,14 @@ El informe médico pericial permitirá:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuela-neurologica-accidente-trafico/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
+              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -632,14 +628,14 @@ El informe médico pericial permitirá:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/fractura-clavicula-accidente/">
+              <a href="/blog/secuelas-psicologicas-accidente/">
                 
-                <img src="/images/blog/fractura-clavicula-accidente.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La fractura de clavícula es una lesión frecuente en accidentes de tráfico, especialmente en motoristas y ciclistas. …</p>
-              <a href="/blog/fractura-clavicula-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
+              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
