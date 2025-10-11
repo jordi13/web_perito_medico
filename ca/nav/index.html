@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760126516" data-version="1760126516">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760167192" data-version="1760167192">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -182,12 +182,14 @@
 </head>
 <body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
-  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50" role="navigation" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
       
       <div class="flex items-center">
-        <a href="/ca/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">Dr. Blanch</a>
+        <a href="/ca/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
+          Dr. Blanch
+        </a>
       </div>
 
       
@@ -202,9 +204,22 @@
         
         
           
-            
-              <a href="/ca/#services" class="nav-link text-text-primary dark:text-text-primary">Serveis</a>
-            
+            <div class="relative group">
+              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer" data-menu="services">
+                Serveis
+                <i class="fas fa-chevron-down ml-1 text-sm"></i>
+              </a>
+              <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[16rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+                
+                  <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoració de lesions en accidents de trànsit</a>
+                  <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Informes mèdics pericials en accidents laborals</a>
+                  <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoració de seqüeles físiques i neurològiques</a>
+                  <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoració mèdica per a reclamacions i assegurances</a>
+                  <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Assistència en judicis com a perit metge</a>
+                  <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Detecció de fraus en lesions</a>
+                
+              </div>
+            </div>
           
         
           
@@ -223,85 +238,51 @@
         
         
         
-        
-        
-        
-        
-        
-        <div class="relative group">
-          <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
-            <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />
-            <i class="fas fa-chevron-down ml-1 text-sm"></i>
-          </a>
-          <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible">
-            
-            
-              
+          
+          
+          
+          
+          <div class="relative group">
+            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer" data-menu="lang">
+              <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />
+              <i class="fas fa-chevron-down ml-1 text-sm"></i>
+            </a>
+            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
               
                 
                 
                 
-                
-                
-                
-                
-                
-                  
-                    
-                  
-                
-                <a href="/ca/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
-                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
+                <a href="/" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-secondary flex items-center gap-2">
+                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
+                  Castellano
                 </a>
               
-            
-              
-              
-            
-              
-              
                 
                 
                 
-                
-                
-                
-                
-                
-                  
-                    
-                      
-                      
-                    
-                  
-                
-                <a href="/nav/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
-                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
+                <a href="/ca/" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-secondary flex items-center gap-2">
+                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
+                  Català
                 </a>
               
-            
+            </div>
           </div>
-        </div>
         
 
         
-        <div class="flex items-center space-x-4" data-animation="social">
-          
+        
           <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
             <i class="fab fa-linkedin-in text-xl"></i>
           </a>
-          
-        </div>
+        
       </div>
 
       
       <div class="lg:hidden flex items-center space-x-4">
-        
-        <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary">
+        <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary" aria-label="Llamar">
           <i class="fas fa-phone-alt text-2xl"></i>
         </a>
-
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary">
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
@@ -309,171 +290,114 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
+  <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
+      
+      <div class="px-3 py-2">
+        <button id="toggle-servicios" class="w-full flex justify-between items-center text-base font-semibold text-text-primary hover:bg-bg-secondary">
+          <span>Serveis</span>
+          <i id="icon-servicios" class="fas fa-chevron-down ml-1 transition-transform duration-300"></i>
+        </button>
+        <div id="submenu-servicios" class="max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+          
+            <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de lesions en accidents de trànsit</a>
+            <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes mèdics pericials en accidents laborals</a>
+            <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de seqüeles físiques i neurològiques</a>
+            <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració mèdica per a reclamacions i assegurances</a>
+            <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Assistència en judicis com a perit metge</a>
+            <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detecció de fraus en lesions</a>
+          
+        </div>
+      </div>
+
+      
       
         
-          <a href="/ca/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Serveis</a>
+      
         
+          <a href="/ca/experiencia/" class="block px-3 py-2 text-base text-text-primary hover:bg-bg-secondary">Experiència</a>
         
       
         
-          <a href="/ca/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Experiència</a>
-        
-        
-      
-        
-          <a href="/ca/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">Blog</a>
-        
+          <a href="/ca/blog/" class="block px-3 py-2 text-base text-text-primary hover:bg-bg-secondary">Blog</a>
         
       
 
       
-      
-      
-      <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
+      <div class="px-3 py-3 border-t border-border-primary flex items-center justify-between">
         <div class="flex items-center space-x-3">
           
           
             
             
-              
-              		
-              
-              
-              
-              
-              
-              
-                
-                  
-                
-              
-              <a href="/ca/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Català">
-                <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
-              </a>
             
+            <a href="/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+              <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
+              <span>Castellano</span>
+            </a>
           
             
             
-          
             
-            
-              
-              		
-              
-              
-              
-              
-              
-              
-                
-                  
-                    
-                    
-                  
-                
-              
-              <a href="/nav/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Castellano">
-                <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
-              </a>
-            
+            <a href="/ca/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+              <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
+              <span>Català</span>
+            </a>
           
         </div>
-      </div>
-      
-
-      
-      <div class="flex items-center space-x-6 px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2" data-animation="social">
-        <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-          <i class="fab fa-linkedin-in text-2xl"></i>
-        </a>
+        
+          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+        
       </div>
     </div>
   </div>
 
-  
-  <style>
-    .group.open .submenu {
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-     
-    .lg\\:flex > .flex-shrink-0 a,
-    .lg\\:hidden > a,
-    #menu-btn {
-      display: flex;
-      align-items: center;
-    }
-    #menu-btn, .lg\\:hidden > a {
-      height: 2rem;
-    }
-  </style>
-
-  
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const sectionLinks = document.querySelectorAll('.section-link');
-      const homePath = '\/ca\/';
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const toggleServicios = document.getElementById('toggle-servicios');
+      const submenuServicios = document.getElementById('submenu-servicios');
+      const iconServicios = document.getElementById('icon-servicios');
+      const groups = document.querySelectorAll('.group');
+
       
-      sectionLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const section = this.getAttribute('data-section');
-          const isHomePage = window.location.pathname === homePath || window.location.pathname === homePath + 'index.html' || window.location.pathname === homePath.replace(/\/$/, '');
-          if (isHomePage) {
-            const targetElement = document.querySelector(section);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
-            }
-          } else {
-            window.location.href = homePath + section;
-          }
-        });
+      menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        const open = !expanded;
+        menuBtn.setAttribute('aria-expanded', open);
+        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0';
+        mobileMenu.style.opacity = open ? '1' : '0';
+        document.body.style.overflow = open ? 'hidden' : '';
+        mobileMenu.offsetHeight; 
       });
 
-      function handleHashScroll() {
-        if (window.location.hash) {
-          const targetElement = document.querySelector(window.location.hash);
-          if (targetElement) {
-            setTimeout(() => {
-              targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
-            }, 100);
-          }
-        }
-      }
-
-      handleHashScroll();
-      setTimeout(handleHashScroll, 500);
-      setTimeout(handleHashScroll, 1000);
-      window.addEventListener('hashchange', handleHashScroll);
-      window.addEventListener('load', () => setTimeout(handleHashScroll, 200));
+      
+      toggleServicios.addEventListener('click', () => {
+        const open = submenuServicios.style.maxHeight && submenuServicios.style.maxHeight !== '0px';
+        submenuServicios.style.maxHeight = open ? '0' : submenuServicios.scrollHeight + 'px';
+        submenuServicios.style.opacity = open ? '0' : '1';
+        iconServicios.classList.toggle('rotate-180', !open);
+      });
 
       
-      document.querySelectorAll('.group > a.nav-link, .group > button.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
+      groups.forEach(group => {
+        const trigger = group.querySelector('a[data-menu]');
+        trigger.addEventListener('click', e => {
           e.preventDefault();
-          const group = this.closest('.group');
+          e.stopPropagation();
           const isOpen = group.classList.contains('open');
-          document.querySelectorAll('.group').forEach(g => g.classList.remove('open'));
+          groups.forEach(g => g.classList.remove('open'));
           if (!isOpen) group.classList.add('open');
-
-          document.addEventListener('click', function(event) {
-            if (!group.contains(event.target)) group.classList.remove('open');
-            const menu = document.getElementById('mobile-menu');
-            const button = document.getElementById('menu-btn');
-            if (!menu.classList.contains('hidden')) {
-              if (!menu.contains(event.target) && !button.contains(event.target)) menu.classList.add('hidden');
-            }
-          });
         });
       });
 
       
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', function() {
-          document.getElementById('mobile-menu').classList.add('hidden');
-        });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.group')) groups.forEach(g => g.classList.remove('open'));
       });
     });
   </script>
