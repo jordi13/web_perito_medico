@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760207539" data-version="1760207539">
+  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760208584" data-version="1760208584">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -524,7 +524,6 @@ a[data-menu="lang"] i.rotate-180 {
 
 <section id="faqs" class="border-t border-border-primary bg-bg dark:bg-bg-secondary" data-animate>
   
-
 <section id="faqs" class="py-12 bg-bg-secondary dark:bg-bg-tertiary border-t border-border-primary" data-animate>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -537,9 +536,13 @@ a[data-menu="lang"] i.rotate-180 {
     
 
     
+    
+
+    
       <h2 class="text-3xl font-bold text-center mb-6 font-heading text-text-primary dark:text-text-primary">
         Detecció de fraus en lesions
       </h2>
+
       
 
       <div class="space-y-4 max-w-4xl mx-auto">
@@ -573,11 +576,9 @@ a[data-menu="lang"] i.rotate-180 {
   </div>
 </section>
 
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const faqs = document.querySelectorAll(".faq-item");
-
     faqs.forEach((item) => {
       const question = item.querySelector(".faq-question");
       const answer = item.querySelector(".faq-answer");
@@ -585,15 +586,11 @@ a[data-menu="lang"] i.rotate-180 {
 
       question.addEventListener("click", () => {
         const isOpen = item.classList.contains("open");
-
-        
         faqs.forEach((el) => {
           el.classList.remove("open");
           el.querySelector(".faq-answer").classList.add("hidden");
           el.querySelector(".fa-chevron-down").classList.remove("rotate-180");
         });
-
-        
         if (!isOpen) {
           item.classList.add("open");
           answer.classList.remove("hidden");
@@ -609,7 +606,6 @@ a[data-menu="lang"] i.rotate-180 {
     transform: rotate(180deg);
   }
 </style>
-
 
 </section>
 
