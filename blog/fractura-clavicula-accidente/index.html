@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760179969" data-version="1760179969">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760180378" data-version="1760180378">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -209,7 +209,8 @@
                 Servicios
                 <i class="fas fa-chevron-down ml-1 text-sm"></i>
               </a>
-              <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[16rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+			  <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[28rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+
                 
                   <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoración de lesiones en accidentes de tráfico</a>
                   <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Informes médicos periciales en accidentes laborales</a>
@@ -355,51 +356,80 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const toggleServicios = document.getElementById("toggle-servicios");
-      const submenuServicios = document.getElementById("submenu-servicios");
-      const iconServicios = document.getElementById("icon-servicios");
-      const groups = document.querySelectorAll(".group");
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const toggleServicios = document.getElementById("toggle-servicios");
+  const submenuServicios = document.getElementById("submenu-servicios");
+  const iconServicios = document.getElementById("icon-servicios");
+  const groups = document.querySelectorAll(".group");
+
+  
+  menuBtn.addEventListener("click", () => {
+    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+    const open = !expanded;
+    menuBtn.setAttribute("aria-expanded", open);
+    mobileMenu.classList.toggle("hidden", !open);
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0";
+    mobileMenu.style.opacity = open ? "1" : "0";
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  
+  toggleServicios.addEventListener("click", () => {
+    const isOpen = !submenuServicios.classList.contains("hidden");
+    submenuServicios.classList.toggle("hidden", isOpen);
+    iconServicios.classList.toggle("rotate-180", !isOpen);
+  });
+
+  
+  groups.forEach((group) => {
+    const trigger = group.querySelector("a[data-menu]");
+    const submenu = group.querySelector(".submenu");
+
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = group.classList.contains("open");
 
       
-      menuBtn.addEventListener("click", () => {
-        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-        const open = !expanded;
-        menuBtn.setAttribute("aria-expanded", open);
-        mobileMenu.classList.toggle("hidden", !open);
-        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0";
-        mobileMenu.style.opacity = open ? "1" : "0";
-        document.body.style.overflow = open ? "hidden" : "";
+      groups.forEach((g) => {
+        g.classList.remove("open");
+        const sub = g.querySelector(".submenu");
+        if (sub) {
+          sub.classList.add("opacity-0", "invisible", "translate-y-2");
+          sub.classList.remove("opacity-100", "visible", "translate-y-0");
+        }
       });
 
-      
-      toggleServicios.addEventListener("click", () => {
-        const isOpen = !submenuServicios.classList.contains("hidden");
-        submenuServicios.classList.toggle("hidden", isOpen);
-        iconServicios.classList.toggle("rotate-180", !isOpen);
-      });
-
-      
-      groups.forEach((group) => {
-        const trigger = group.querySelector("a[data-menu]");
-        trigger.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const isOpen = group.classList.contains("open");
-          groups.forEach((g) => g.classList.remove("open"));
-          if (!isOpen) group.classList.add("open");
-        });
-      });
-
-      
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".group")) groups.forEach((g) => g.classList.remove("open"));
-      });
+      if (!isOpen) {
+        group.classList.add("open");
+        if (submenu) {
+          submenu.classList.remove("opacity-0", "invisible", "translate-y-2");
+          submenu.classList.add("opacity-100", "visible", "translate-y-0");
+        }
+      }
     });
-  </script>
+  });
+
+  
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".group")) {
+      groups.forEach((g) => {
+        g.classList.remove("open");
+        const sub = g.querySelector(".submenu");
+        if (sub) {
+          sub.classList.add("opacity-0", "invisible", "translate-y-2");
+          sub.classList.remove("opacity-100", "visible", "translate-y-0");
+        }
+      });
+    }
+  });
+});
+</script>
+
 </nav>
 
   <div class="w-full h-16"></div>
@@ -541,6 +571,9 @@
       
       
       
+      
+        
+        
       
         
         
