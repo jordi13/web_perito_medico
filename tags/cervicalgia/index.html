@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760180517" data-version="1760180517">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760186961" data-version="1760186961">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -209,15 +209,14 @@
                 Servicios
                 <i class="fas fa-chevron-down ml-1 text-sm"></i>
               </a>
-<div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 w-[28rem] opacity-0 invisible transform translate-y-2 transition-all duration-200 grid grid-cols-2 gap-2">
-
+              <div class="submenu services absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                 
-                  <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoración de lesiones en accidentes de tráfico</a>
-                  <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Informes médicos periciales en accidentes laborales</a>
-                  <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoración de secuelas físicas y neurológicas</a>
-                  <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoración médica para reclamaciones y seguros</a>
-                  <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Asistencia en juicios como perito médico</a>
-                  <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Detección de fraudes en lesiones</a>
+                  <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="submenu-item">Valoración de lesiones en accidentes de tráfico</a>
+                  <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="submenu-item">Informes médicos periciales en accidentes laborales</a>
+                  <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="submenu-item">Valoración de secuelas físicas y neurológicas</a>
+                  <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="submenu-item">Valoración médica para reclamaciones y seguros</a>
+                  <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="submenu-item">Asistencia en juicios como perito médico</a>
+                  <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="submenu-item">Detección de fraudes en lesiones</a>
                 
               </div>
             </div>
@@ -248,12 +247,12 @@
               <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
               <i class="fas fa-chevron-down ml-1 text-sm"></i>
             </a>
-            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-200">
+            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
               
                 
                 
                 
-                <a href="/" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-secondary flex items-center gap-2">
+                <a href="/" class="submenu-item flex items-center gap-2">
                   <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
                   Castellano
                 </a>
@@ -261,7 +260,7 @@
                 
                 
                 
-                <a href="/ca/" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-secondary flex items-center gap-2">
+                <a href="/ca/" class="submenu-item flex items-center gap-2">
                   <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
                   Català
                 </a>
@@ -293,7 +292,6 @@
   
   <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
       
       <div class="px-3 py-2">
         <button id="toggle-servicios" class="w-full flex justify-between items-center text-base font-semibold text-text-primary hover:bg-bg-secondary">
@@ -356,14 +354,13 @@
     </div>
   </div>
 
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const toggleServicios = document.getElementById("toggle-servicios");
   const submenuServicios = document.getElementById("submenu-servicios");
   const iconServicios = document.getElementById("icon-servicios");
-  const groups = document.querySelectorAll(".group");
 
   
   menuBtn.addEventListener("click", () => {
@@ -371,8 +368,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const open = !expanded;
     menuBtn.setAttribute("aria-expanded", open);
     mobileMenu.classList.toggle("hidden", !open);
-    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0";
-    mobileMenu.style.opacity = open ? "1" : "0";
     document.body.style.overflow = open ? "hidden" : "";
   });
 
@@ -382,54 +377,24 @@ document.addEventListener("DOMContentLoaded", function () {
     submenuServicios.classList.toggle("hidden", isOpen);
     iconServicios.classList.toggle("rotate-180", !isOpen);
   });
-
-  
-  groups.forEach((group) => {
-    const trigger = group.querySelector("a[data-menu]");
-    const submenu = group.querySelector(".submenu");
-
-    trigger.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const isOpen = group.classList.contains("open");
-
-      
-      groups.forEach((g) => {
-        g.classList.remove("open");
-        const sub = g.querySelector(".submenu");
-        if (sub) {
-          sub.classList.add("opacity-0", "invisible", "translate-y-2");
-          sub.classList.remove("opacity-100", "visible", "translate-y-0");
-        }
-      });
-
-      if (!isOpen) {
-        group.classList.add("open");
-        if (submenu) {
-          submenu.classList.remove("opacity-0", "invisible", "translate-y-2");
-          submenu.classList.add("opacity-100", "visible", "translate-y-0");
-        }
-      }
-    });
-  });
-
-  
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".group")) {
-      groups.forEach((g) => {
-        g.classList.remove("open");
-        const sub = g.querySelector(".submenu");
-        if (sub) {
-          sub.classList.add("opacity-0", "invisible", "translate-y-2");
-          sub.classList.remove("opacity-100", "visible", "translate-y-0");
-        }
-      });
-    }
-  });
 });
 </script>
 
+<style>
+.submenu.services {
+  width: 23rem;
+  left: -5rem;
+}
+.submenu-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+.submenu-item:hover {
+  color: var(--color-primary);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+</style>
 </nav>
 
   <div class="w-full h-16"></div>
