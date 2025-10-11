@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760171086" data-version="1760171086">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760171855" data-version="1760171855">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -209,7 +209,7 @@
                 Servicios
                 <i class="fas fa-chevron-down ml-1 text-sm"></i>
               </a>
-              <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[9999] min-w-[16rem] opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out">
+              <div class="submenu absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[9999] min-w-[16rem] opacity-0 invisible transform translate-y-2 transition-all duration-200 ease-in-out">
                 
                   <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Valoración de lesiones en accidentes de tráfico</a>
                   <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-4 py-2 text-sm hover:bg-bg-secondary text-text-primary">Informes médicos periciales en accidentes laborales</a>
@@ -247,7 +247,7 @@
               <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-1 inline-block" />
               <i class="fas fa-chevron-down text-sm ml-1"></i>
             </a>
-            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[9999] min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out">
+            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-[9999] min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-200 ease-in-out">
               
                 
                 
@@ -290,16 +290,15 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+  <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[9999] max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
       
       <div>
         <button id="toggle-servicios" class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold text-text-primary hover:bg-bg-secondary">
           Servicios
           <i id="icon-servicios" class="fas fa-chevron-down text-sm ml-1 transition-transform duration-200"></i>
         </button>
-        <div id="submenu-servicios" class="hidden flex flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out transform origin-top opacity-0">
+        <div id="submenu-servicios" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
           
             <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-5 py-2 text-text-primary hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
             <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-5 py-2 text-text-primary hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
@@ -355,77 +354,63 @@
     </div>
   </div>
 
-  <style>
-    nav .submenu { z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(6px); transition: all 0.25s ease; }
-    nav .group.open > .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
-    #mobile-menu.show { max-height: 100vh; overflow: auto; }
-    #submenu-servicios.open { opacity: 1 !important; transform: scaleY(1); }
-  </style>
-
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const toggleServicios = document.getElementById('toggle-servicios');
-      const submenuServicios = document.getElementById('submenu-servicios');
-      const iconServicios = document.getElementById('icon-servicios');
-      const groups = document.querySelectorAll('.group');
-
-      const toggleMobileMenu = () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('show');
-        const expanded = !mobileMenu.classList.contains('hidden');
-        menuBtn.setAttribute('aria-expanded', expanded);
-        document.body.style.overflow = expanded ? 'hidden' : '';
-      };
-
-      const initMenuListeners = () => {
-        if (!menuBtn.hasAttribute('data-init')) {
-          menuBtn.addEventListener('click', toggleMobileMenu);
-          menuBtn.addEventListener('touchstart', e => { e.preventDefault(); toggleMobileMenu(); }, { passive: false });
-          menuBtn.setAttribute('data-init', 'true');
-        }
-      };
-
-      initMenuListeners();
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const toggleServicios = document.getElementById("toggle-servicios");
+      const submenuServicios = document.getElementById("submenu-servicios");
+      const iconServicios = document.getElementById("icon-servicios");
+      const groups = document.querySelectorAll(".group");
 
       
-      if (toggleServicios) {
-        toggleServicios.addEventListener('click', () => {
-          const hidden = submenuServicios.classList.contains('hidden');
-          submenuServicios.classList.toggle('hidden');
-          iconServicios.classList.toggle('rotate-180');
-          setTimeout(() => submenuServicios.classList.toggle('open', hidden), 10);
-        });
-      }
+      menuBtn.addEventListener("click", function() {
+        const isOpen = mobileMenu.classList.toggle("open");
+        mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0";
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
 
       
-      window.addEventListener('resize', () => {
-        const w = window.innerWidth;
-        if (w >= 1024) {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('show');
-          document.body.style.overflow = '';
-        } else {
-          initMenuListeners(); 
+      toggleServicios.addEventListener("click", function() {
+        const isHidden = submenuServicios.style.maxHeight === "0px" || !submenuServicios.style.maxHeight;
+        submenuServicios.style.maxHeight = isHidden ? submenuServicios.scrollHeight + "px" : "0";
+        iconServicios.classList.toggle("rotate-180");
+      });
+
+      
+      groups.forEach(group => {
+        const trigger = group.querySelector("a[data-menu]");
+        const submenu = group.querySelector(".submenu");
+        if (trigger && submenu) {
+          trigger.addEventListener("click", e => {
+            e.preventDefault();
+            const isOpen = group.classList.contains("open");
+            document.querySelectorAll(".group").forEach(g => g.classList.remove("open"));
+            document.querySelectorAll(".submenu").forEach(s => {
+              s.style.opacity = "0";
+              s.style.visibility = "hidden";
+              s.style.transform = "translateY(8px)";
+            });
+            if (!isOpen) {
+              group.classList.add("open");
+              submenu.style.opacity = "1";
+              submenu.style.visibility = "visible";
+              submenu.style.transform = "translateY(0)";
+            }
+          });
         }
       });
 
       
-      groups.forEach(g => {
-        const trigger = g.querySelector('a[data-menu]');
-        if (!trigger) return;
-        trigger.addEventListener('click', e => {
-          e.preventDefault();
-          e.stopPropagation();
-          const isOpen = g.classList.contains('open');
-          groups.forEach(el => el.classList.remove('open'));
-          if (!isOpen) g.classList.add('open');
-        });
-      });
-
-      document.addEventListener('click', e => {
-        if (!e.target.closest('.group')) groups.forEach(el => el.classList.remove('open'));
+      document.addEventListener("click", e => {
+        if (!e.target.closest(".group")) {
+          document.querySelectorAll(".submenu").forEach(s => {
+            s.style.opacity = "0";
+            s.style.visibility = "hidden";
+            s.style.transform = "translateY(8px)";
+          });
+          document.querySelectorAll(".group").forEach(g => g.classList.remove("open"));
+        }
       });
     });
   </script>
