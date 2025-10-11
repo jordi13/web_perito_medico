@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760171855" data-version="1760171855">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760172240" data-version="1760172240">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -290,8 +290,9 @@
   </div>
 
   
-  <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[9999] max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+  <div id="mobile-menu" class="lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[9999] max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
       
       <div>
         <button id="toggle-servicios" class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold text-text-primary hover:bg-bg-secondary">
@@ -361,38 +362,51 @@
       const toggleServicios = document.getElementById("toggle-servicios");
       const submenuServicios = document.getElementById("submenu-servicios");
       const iconServicios = document.getElementById("icon-servicios");
-      const groups = document.querySelectorAll(".group");
+
+      function openMobileMenu(open) {
+        if (open) {
+          mobileMenu.classList.add("open");
+          mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+          document.body.style.overflow = "hidden";
+        } else {
+          mobileMenu.classList.remove("open");
+          mobileMenu.style.maxHeight = "0";
+          document.body.style.overflow = "";
+        }
+      }
 
       
-      menuBtn.addEventListener("click", function() {
-        const isOpen = mobileMenu.classList.toggle("open");
-        mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0";
-        document.body.style.overflow = isOpen ? "hidden" : "";
+      menuBtn.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.contains("open");
+        openMobileMenu(!isOpen);
       });
 
       
-      toggleServicios.addEventListener("click", function() {
-        const isHidden = submenuServicios.style.maxHeight === "0px" || !submenuServicios.style.maxHeight;
-        submenuServicios.style.maxHeight = isHidden ? submenuServicios.scrollHeight + "px" : "0";
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) openMobileMenu(false);
+      });
+
+      
+      toggleServicios.addEventListener("click", () => {
+        const isOpen = submenuServicios.style.maxHeight && submenuServicios.style.maxHeight !== "0px";
+        submenuServicios.style.maxHeight = isOpen ? "0" : submenuServicios.scrollHeight + "px";
         iconServicios.classList.toggle("rotate-180");
       });
 
       
-      groups.forEach(group => {
+      document.querySelectorAll(".group").forEach(group => {
         const trigger = group.querySelector("a[data-menu]");
         const submenu = group.querySelector(".submenu");
         if (trigger && submenu) {
           trigger.addEventListener("click", e => {
             e.preventDefault();
-            const isOpen = group.classList.contains("open");
-            document.querySelectorAll(".group").forEach(g => g.classList.remove("open"));
+            const open = submenu.style.opacity === "1";
             document.querySelectorAll(".submenu").forEach(s => {
               s.style.opacity = "0";
               s.style.visibility = "hidden";
               s.style.transform = "translateY(8px)";
             });
-            if (!isOpen) {
-              group.classList.add("open");
+            if (!open) {
               submenu.style.opacity = "1";
               submenu.style.visibility = "visible";
               submenu.style.transform = "translateY(0)";
@@ -401,7 +415,6 @@
         }
       });
 
-      
       document.addEventListener("click", e => {
         if (!e.target.closest(".group")) {
           document.querySelectorAll(".submenu").forEach(s => {
@@ -409,7 +422,6 @@
             s.style.visibility = "hidden";
             s.style.transform = "translateY(8px)";
           });
-          document.querySelectorAll(".group").forEach(g => g.classList.remove("open"));
         }
       });
     });
