@@ -135,7 +135,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760170733" data-version="1760170733">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760171086" data-version="1760171086">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -293,6 +293,8 @@
   
   <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
+      
       <div>
         <button id="toggle-servicios" class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold text-text-primary hover:bg-bg-secondary">
           Serveis
@@ -311,6 +313,7 @@
       </div>
 
       
+      
         
       
         
@@ -322,6 +325,7 @@
         
       
 
+      
       <div class="px-3 py-3 border-t border-border-primary flex items-center justify-between">
         <div class="flex items-center space-x-3">
           
@@ -353,26 +357,10 @@
   </div>
 
   <style>
-    nav .submenu {
-      z-index: 9999;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(8px);
-      transition: all 0.25s ease;
-    }
-    nav .group.open > .submenu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    #mobile-menu.show {
-      max-height: 100vh;
-      overflow: auto;
-    }
-    #submenu-servicios.open {
-      opacity: 1 !important;
-      transform: scaleY(1);
-    }
+    nav .submenu { z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(6px); transition: all 0.25s ease; }
+    nav .group.open > .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
+    #mobile-menu.show { max-height: 100vh; overflow: auto; }
+    #submenu-servicios.open { opacity: 1 !important; transform: scaleY(1); }
   </style>
 
   <script>
@@ -384,47 +372,35 @@
       const iconServicios = document.getElementById('icon-servicios');
       const groups = document.querySelectorAll('.group');
 
-      function toggleMobileMenu() {
+      const toggleMobileMenu = () => {
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('show');
         const expanded = !mobileMenu.classList.contains('hidden');
         menuBtn.setAttribute('aria-expanded', expanded);
         document.body.style.overflow = expanded ? 'hidden' : '';
-      }
+      };
 
-      menuBtn.addEventListener('click', toggleMobileMenu);
-      menuBtn.addEventListener('touchstart', e => {
-        e.preventDefault();
-        toggleMobileMenu();
-      }, { passive: false });
+      const initMenuListeners = () => {
+        if (!menuBtn.hasAttribute('data-init')) {
+          menuBtn.addEventListener('click', toggleMobileMenu);
+          menuBtn.addEventListener('touchstart', e => { e.preventDefault(); toggleMobileMenu(); }, { passive: false });
+          menuBtn.setAttribute('data-init', 'true');
+        }
+      };
 
+      initMenuListeners();
+
+      
       if (toggleServicios) {
         toggleServicios.addEventListener('click', () => {
-          const isHidden = submenuServicios.classList.contains('hidden');
+          const hidden = submenuServicios.classList.contains('hidden');
           submenuServicios.classList.toggle('hidden');
           iconServicios.classList.toggle('rotate-180');
-          setTimeout(() => {
-            submenuServicios.classList.toggle('open', isHidden);
-          }, 10);
+          setTimeout(() => submenuServicios.classList.toggle('open', hidden), 10);
         });
       }
 
-      groups.forEach(group => {
-        const trigger = group.querySelector('a[data-menu]');
-        if (!trigger) return;
-        trigger.addEventListener('click', e => {
-          e.preventDefault();
-          e.stopPropagation();
-          const isOpen = group.classList.contains('open');
-          groups.forEach(g => g.classList.remove('open'));
-          if (!isOpen) group.classList.add('open');
-        });
-      });
-
-      document.addEventListener('click', e => {
-        if (!e.target.closest('.group')) groups.forEach(g => g.classList.remove('open'));
-      });
-
+      
       window.addEventListener('resize', () => {
         const w = window.innerWidth;
         if (w >= 1024) {
@@ -432,12 +408,25 @@
           mobileMenu.classList.remove('show');
           document.body.style.overflow = '';
         } else {
-          
-          if (!menuBtn.hasAttribute('data-init')) {
-            menuBtn.addEventListener('click', toggleMobileMenu);
-            menuBtn.setAttribute('data-init', 'true');
-          }
+          initMenuListeners(); 
         }
+      });
+
+      
+      groups.forEach(g => {
+        const trigger = g.querySelector('a[data-menu]');
+        if (!trigger) return;
+        trigger.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = g.classList.contains('open');
+          groups.forEach(el => el.classList.remove('open'));
+          if (!isOpen) g.classList.add('open');
+        });
+      });
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.group')) groups.forEach(el => el.classList.remove('open'));
       });
     });
   </script>
