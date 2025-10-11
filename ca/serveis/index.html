@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <script>
     localStorage.setItem('darkMode', 'false');
     document.documentElement.classList.remove('dark');
@@ -36,13 +36,13 @@
 
 <meta name="description" content="" />
 <meta name="author" content="Jordi Blanch" />
-<link rel="canonical" href="https://jaumeblanch.com/ca/serveis/" />
+<link rel="canonical" href="http://localhost:1313/ca/serveis/" />
 
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Serveis | Dr. Blanch" />
 <meta property="og:description" content="" />
-<meta property="og:url" content="https://jaumeblanch.com/ca/serveis/" />
+<meta property="og:url" content="http://localhost:1313/ca/serveis/" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -132,9 +132,7 @@
 
   
   
-    
-  
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760192557" data-version="1760192557">
+  <link rel="stylesheet" href="/css/main.css?v=1760201675" data-version="1760201675">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -205,18 +203,18 @@
         
           
             <div class="relative">
-              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer" data-menu="services">
+              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer group" data-menu="services">
                 Serveis
-                <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
               </a>
               <div id="subMenuServices" class="submenu services invisible absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
                 
-                  <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="submenu-item">Valoració de lesions en accidents de trànsit</a>
-                  <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="submenu-item">Informes mèdics pericials en accidents laborals</a>
-                  <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="submenu-item">Valoració de seqüeles físiques i neurològiques</a>
-                  <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="submenu-item">Valoració mèdica per a reclamacions i assegurances</a>
-                  <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="submenu-item">Assistència en judicis com a perit metge</a>
-                  <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="submenu-item">Detecció de fraus en lesions</a>
+                  <a href="/ca/valoracio-de-lesions-en-accidents-de-trafic/" class="submenu-item">Valoració de lesions en accidents de trànsit</a>
+                  <a href="/ca/informes-medics-pericials-en-accidents-laborals/" class="submenu-item">Informes mèdics pericials en accidents laborals</a>
+                  <a href="/ca/valoracio-de-sequeles-fisiques-i-neurologiques/" class="submenu-item">Valoració de seqüeles físiques i neurològiques</a>
+                  <a href="/ca/valoracio-medica-per-a-reclamacions-i-assegurances/" class="submenu-item">Valoració mèdica per a reclamacions i assegurances</a>
+                  <a href="/ca/assistencia-en-judicis-com-a-perit-metge/" class="submenu-item">Assistència en judicis com a perit metge</a>
+                  <a href="/ca/deteccio-de-fraus-en-lesions/" class="submenu-item">Detecció de fraus en lesions</a>
                 
               </div>
             </div>
@@ -224,13 +222,19 @@
         
           
             
-              <a href="/ca/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiència</a>
+              <a href="/ca/experiencia/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Experiència
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             
           
         
           
             
-              <a href="/ca/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+              <a href="/ca/blog/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Blog
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             
           
         
@@ -243,16 +247,16 @@
           
           
           <div class="relative">
-            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer" data-menu="lang">
+            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer group" data-menu="lang">
               <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />
-              <i class="fas fa-chevron-down ml-1 text-sm"></i>
+              <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
             </a>
             <div id="subMenuLang" class="submenu language invisible absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
               
                 
                 
                 
-                <a href="/" class="submenu-item flex items-center gap-2">
+                <a href="/" class="submenu-item flex items-center gap-1">
                   <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
                   Castellano
                 </a>
@@ -260,7 +264,7 @@
                 
                 
                 
-                <a href="/ca/" class="submenu-item flex items-center gap-2">
+                <a href="/ca/" class="submenu-item flex items-center gap-1">
                   <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
                   Català
                 </a>
@@ -268,7 +272,6 @@
             </div>
           </div>
         
-
       </div>
 
       
@@ -284,7 +287,7 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out">
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out rounded-b-xl">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       
       <div class="px-3 py-2">
@@ -294,12 +297,12 @@
         </button>
         <div id="submenu-servicios" class="hidden flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out">
           
-            <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de lesions en accidents de trànsit</a>
-            <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes mèdics pericials en accidents laborals</a>
-            <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de seqüeles físiques i neurològiques</a>
-            <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració mèdica per a reclamacions i assegurances</a>
-            <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Assistència en judicis com a perit metge</a>
-            <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detecció de fraus en lesions</a>
+            <a href="/ca/valoracio-de-lesions-en-accidents-de-trafic/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de lesions en accidents de trànsit</a>
+            <a href="/ca/informes-medics-pericials-en-accidents-laborals/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes mèdics pericials en accidents laborals</a>
+            <a href="/ca/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració de seqüeles físiques i neurològiques</a>
+            <a href="/ca/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoració mèdica per a reclamacions i assegurances</a>
+            <a href="/ca/assistencia-en-judicis-com-a-perit-metge/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Assistència en judicis com a perit metge</a>
+            <a href="/ca/deteccio-de-fraus-en-lesions/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detecció de fraus en lesions</a>
           
         </div>
       </div>
@@ -325,7 +328,7 @@
             
             
             
-            <a href="/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+            <a href="/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
               <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
               <span>Castellano</span>
             </a>
@@ -333,13 +336,12 @@
             
             
             
-            <a href="/ca/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+            <a href="/ca/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
               <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
               <span>Català</span>
             </a>
           
         </div>
-        
       </div>
     </div>
   </div>
@@ -351,14 +353,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleServicios = document.getElementById("toggle-servicios");
   const submenuServicios = document.getElementById("submenu-servicios");
   const iconServicios = document.getElementById("icon-servicios");
+  const body = document.body;
 
   
-  menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     const expanded = menuBtn.getAttribute("aria-expanded") === "true";
     const open = !expanded;
     menuBtn.setAttribute("aria-expanded", open);
     mobileMenu.classList.toggle("hidden", !open);
-    document.body.style.overflow = open ? "hidden" : "";
+    body.style.overflow = open ? "hidden" : "";
+  });
+
+  
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.classList.contains("hidden") && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
+      mobileMenu.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+      body.style.overflow = "";
+    }
   });
 
   
@@ -377,17 +390,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupHover(link, menu) {
     if (!link || !menu) return;
     let hoverTimeout;
+    const icon = link.querySelector("i");
 
     function showMenu() {
       clearTimeout(hoverTimeout);
-      menu.classList.remove("invisible", "opacity-0", "translate-y-2");
-      menu.classList.add("visible", "opacity-100", "translate-y-0");
+      hoverTimeout = setTimeout(() => {
+        menu.classList.remove("invisible", "opacity-0", "translate-y-2");
+        menu.classList.add("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.add("rotate-180");
+      }, 100);
     }
 
     function hideMenu() {
+      clearTimeout(hoverTimeout);
       hoverTimeout = setTimeout(() => {
         menu.classList.add("invisible", "opacity-0", "translate-y-2");
         menu.classList.remove("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.remove("rotate-180");
       }, 150);
     }
 
@@ -406,22 +425,55 @@ document.addEventListener("DOMContentLoaded", function () {
 .submenu.services {
   width: 23rem;
   left: -5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
+
 .submenu.language {
   left: -4rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
+
+ 
 .submenu-item {
   display: block;
   padding: 0.5rem 1rem;
-  transition: all 0.2s ease;
+  position: relative;
+  color: var(--text-primary);  
+  transition: background-color 0.4s ease;
 }
+
+ 
+.submenu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(120, 120, 120, 0.25);  
+  transition: width 0.6s ease;
+}
+
+.submenu-item:hover::after {
+  width: 100%;
+}
+
+ 
 .submenu-item:hover {
-  color: var(--color-primary);
-  background-color: rgba(59, 130, 246, 0.1);
+  background-color: rgba(59, 130, 246, 0.08);  
+}
+
+ 
+#icon-servicios.rotate-180,
+a[data-menu="services"] i.rotate-180,
+a[data-menu="lang"] i.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 </style>
+
+
+
 </nav>
 
   <div class="w-full h-16"></div>
@@ -441,207 +493,17 @@ document.addEventListener("DOMContentLoaded", function () {
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       
-      <a href="/ca/serveis/assistencia-en-judicis-com-a-perit-metge/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Assistència en judicis com a perit mèdic
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Intervenció professional en processos judicials com a perit mèdic per oferir valoracions mèdiques objectives i fonamentades davant del tribunal.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
-      <a href="/ca/serveis/deteccio-de-fraus-en-lesions/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Detecció de fraus en lesions
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Avaluació mèdica pericial per identificar lesions simulades o exagerades en reclamacions de segurs o processos judicials.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
-      <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Informes mèdics pericials en accidents laborals
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Elaboració d’informes mèdics pericials per determinar l’abast de les lesions i les seqüeles derivades d’un accident laboral.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
-      <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Valoració de lesions en accidents de trànsit
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Avaluació mèdica independent per determinar la gravetat de les lesions i seqüeles després d’un accident de trànsit.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
-      <a href="/ca/serveis/valoracio-de-sequeles-fisiques-i-neurologiques/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Valoració de seqüeles físiques i neurològiques
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Avaluació mèdica especialitzada per determinar les seqüeles físiques o neurològiques després d’un accident o malaltia greu.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
-      <a href="/ca/serveis/valoracio-medica-per-a-reclamacions-i-assegurances/" class="block group">
-        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
-          
-          
-          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
-            <i class="fas fa-project-diagram text-4xl text-primary"></i>
-          </div>
-          
-          
-          <div class="p-6">
-            
-            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
-              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Valoració mèdica per a reclamacions i assegurances
-            </h2>
-            
-            
-            
-            <p class="text-text-secondary dark:text-text-secondary mb-4 leading-relaxed text-sm">Elaboració d’informes mèdics independents per a reclamacions davant d’asseguradores o processos judicials.</p>
-            
-            
-            
-            
-            
-            
-            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span></span>
-              <i class="fas fa-chevron-right ml-2"></i>
-            </div>
-          </div>
-        </article>
-      </a>
-      
     </div>
     
     
+    
+    <div class="text-center py-12">
+      <div class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl p-8 max-w-md mx-auto">
+        <i class="fas fa-folder-open text-4xl text-text-tertiary dark:text-text-tertiary mb-4"></i>
+        <h3 class="text-lg font-semibold text-text-secondary dark:text-text-secondary mb-2">No items yet</h3>
+        <p class="text-text-tertiary dark:text-text-tertiary text-sm">Content will appear here once you add pages to this section.</p>
+      </div>
+    </div>
     
   </div>
 </section>
@@ -729,11 +591,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
   
   
-    
-    
-  
-  <script src="/js/scripts.min.d456a175ad33e888eac2eabeb4b419b74f46295e8b2b27347d6a16fce86fafa4.js"></script>
-  <script src="/js/gsap-animations.min.7c09ec69561f8e8a36142b62361853a5fdf9c36a696809a814fb48594baa4752.js"></script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/gsap-animations.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

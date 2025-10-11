@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760192557" data-version="1760192557">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760201782" data-version="1760201782">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -205,18 +205,18 @@
         
           
             <div class="relative">
-              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer" data-menu="services">
+              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer group" data-menu="services">
                 Servicios
-                <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
               </a>
               <div id="subMenuServices" class="submenu services invisible absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
                 
-                  <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="submenu-item">Valoración de lesiones en accidentes de tráfico</a>
-                  <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="submenu-item">Informes médicos periciales en accidentes laborales</a>
-                  <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="submenu-item">Valoración de secuelas físicas y neurológicas</a>
-                  <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="submenu-item">Valoración médica para reclamaciones y seguros</a>
-                  <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="submenu-item">Asistencia en juicios como perito médico</a>
-                  <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="submenu-item">Detección de fraudes en lesiones</a>
+                  <a href="/valoracion-de-lesiones-en-accidentes-de-trafico/" class="submenu-item">Valoración de lesiones en accidentes de tráfico</a>
+                  <a href="/informes-medicos-periciales-en-accidentes-laborales/" class="submenu-item">Informes médicos periciales en accidentes laborales</a>
+                  <a href="/valoracion-de-secuelas-fisicas-y-neurologicas/" class="submenu-item">Valoración de secuelas físicas y neurológicas</a>
+                  <a href="/valoracion-medica-para-reclamaciones-y-seguros/" class="submenu-item">Valoración médica para reclamaciones y seguros</a>
+                  <a href="/asistencia-en-juicios-como-perito-medico/" class="submenu-item">Asistencia en juicios como perito médico</a>
+                  <a href="/deteccion-de-fraudes-en-lesiones/" class="submenu-item">Detección de fraudes en lesiones</a>
                 
               </div>
             </div>
@@ -224,13 +224,19 @@
         
           
             
-              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
+              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Experiencia
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             
           
         
           
             
-              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
+              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Blog
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             
           
         
@@ -243,16 +249,16 @@
           
           
           <div class="relative">
-            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer" data-menu="lang">
+            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer group" data-menu="lang">
               <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
-              <i class="fas fa-chevron-down ml-1 text-sm"></i>
+              <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
             </a>
             <div id="subMenuLang" class="submenu language invisible absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
               
                 
                 
                 
-                <a href="/" class="submenu-item flex items-center gap-2">
+                <a href="/" class="submenu-item flex items-center gap-1">
                   <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
                   Castellano
                 </a>
@@ -260,7 +266,7 @@
                 
                 
                 
-                <a href="/ca/" class="submenu-item flex items-center gap-2">
+                <a href="/ca/" class="submenu-item flex items-center gap-1">
                   <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
                   Català
                 </a>
@@ -268,7 +274,6 @@
             </div>
           </div>
         
-
       </div>
 
       
@@ -284,7 +289,7 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out">
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out rounded-b-xl">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       
       <div class="px-3 py-2">
@@ -294,12 +299,12 @@
         </button>
         <div id="submenu-servicios" class="hidden flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out">
           
-            <a href="/servicios/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
-            <a href="/servicios/informes-medicos-periciales-en-accidentes-laborales/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
-            <a href="/servicios/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de secuelas físicas y neurológicas</a>
-            <a href="/servicios/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración médica para reclamaciones y seguros</a>
-            <a href="/servicios/asistencia-en-juicios-como-perito-medico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Asistencia en juicios como perito médico</a>
-            <a href="/servicios/deteccion-de-fraudes-en-lesiones/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detección de fraudes en lesiones</a>
+            <a href="/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
+            <a href="/informes-medicos-periciales-en-accidentes-laborales/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
+            <a href="/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de secuelas físicas y neurológicas</a>
+            <a href="/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración médica para reclamaciones y seguros</a>
+            <a href="/asistencia-en-juicios-como-perito-medico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Asistencia en juicios como perito médico</a>
+            <a href="/deteccion-de-fraudes-en-lesiones/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detección de fraudes en lesiones</a>
           
         </div>
       </div>
@@ -325,7 +330,7 @@
             
             
             
-            <a href="/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+            <a href="/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
               <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" />
               <span>Castellano</span>
             </a>
@@ -333,13 +338,12 @@
             
             
             
-            <a href="/ca/" class="flex items-center space-x-2 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+            <a href="/ca/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
               <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" />
               <span>Català</span>
             </a>
           
         </div>
-        
       </div>
     </div>
   </div>
@@ -351,14 +355,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleServicios = document.getElementById("toggle-servicios");
   const submenuServicios = document.getElementById("submenu-servicios");
   const iconServicios = document.getElementById("icon-servicios");
+  const body = document.body;
 
   
-  menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     const expanded = menuBtn.getAttribute("aria-expanded") === "true";
     const open = !expanded;
     menuBtn.setAttribute("aria-expanded", open);
     mobileMenu.classList.toggle("hidden", !open);
-    document.body.style.overflow = open ? "hidden" : "";
+    body.style.overflow = open ? "hidden" : "";
+  });
+
+  
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.classList.contains("hidden") && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
+      mobileMenu.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+      body.style.overflow = "";
+    }
   });
 
   
@@ -377,17 +392,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupHover(link, menu) {
     if (!link || !menu) return;
     let hoverTimeout;
+    const icon = link.querySelector("i");
 
     function showMenu() {
       clearTimeout(hoverTimeout);
-      menu.classList.remove("invisible", "opacity-0", "translate-y-2");
-      menu.classList.add("visible", "opacity-100", "translate-y-0");
+      hoverTimeout = setTimeout(() => {
+        menu.classList.remove("invisible", "opacity-0", "translate-y-2");
+        menu.classList.add("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.add("rotate-180");
+      }, 100);
     }
 
     function hideMenu() {
+      clearTimeout(hoverTimeout);
       hoverTimeout = setTimeout(() => {
         menu.classList.add("invisible", "opacity-0", "translate-y-2");
         menu.classList.remove("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.remove("rotate-180");
       }, 150);
     }
 
@@ -406,22 +427,55 @@ document.addEventListener("DOMContentLoaded", function () {
 .submenu.services {
   width: 23rem;
   left: -5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
+
 .submenu.language {
   left: -4rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
+
+ 
 .submenu-item {
   display: block;
   padding: 0.5rem 1rem;
-  transition: all 0.2s ease;
+  position: relative;
+  color: var(--text-primary);  
+  transition: background-color 0.4s ease;
 }
+
+ 
+.submenu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(120, 120, 120, 0.25);  
+  transition: width 0.6s ease;
+}
+
+.submenu-item:hover::after {
+  width: 100%;
+}
+
+ 
 .submenu-item:hover {
-  color: var(--color-primary);
-  background-color: rgba(59, 130, 246, 0.1);
+  background-color: rgba(59, 130, 246, 0.08);  
+}
+
+ 
+#icon-servicios.rotate-180,
+a[data-menu="services"] i.rotate-180,
+a[data-menu="lang"] i.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 </style>
+
+
+
 </nav>
 
   <div class="w-full h-16"></div>
@@ -566,6 +620,12 @@ document.addEventListener("DOMContentLoaded", function () {
       
         
         
+      
+        
+        
+      
+        
+        
           
           
           
@@ -611,14 +671,14 @@ document.addEventListener("DOMContentLoaded", function () {
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuelas-psicologicas-accidente/">
+              <a href="/blog/secuela-neurologica-accidente-trafico/">
                 
-                <img src="/images/blog/secuelas-psicologicas.jpg" alt="Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-neurologicas.jpg" alt="Fractura de clavícula tras un accidente de tráfico: recuperación, secuelas e indemnización" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
-              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
+              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
