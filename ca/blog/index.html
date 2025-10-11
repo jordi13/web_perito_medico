@@ -132,7 +132,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.css?v=1760167864" data-version="1760167864">
+  <link rel="stylesheet" href="/css/main.css?v=1760168560" data-version="1760168560">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -368,8 +368,6 @@
         const open = !expanded;
         menuBtn.setAttribute("aria-expanded", open);
         mobileMenu.classList.toggle("hidden", !open);
-        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0";
-        mobileMenu.style.opacity = open ? "1" : "0";
         document.body.style.overflow = open ? "hidden" : "";
       });
 
@@ -383,6 +381,7 @@
       
       groups.forEach((group) => {
         const trigger = group.querySelector("a[data-menu]");
+        if (!trigger) return;
         trigger.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -395,6 +394,14 @@
       
       document.addEventListener("click", (e) => {
         if (!e.target.closest(".group")) groups.forEach((g) => g.classList.remove("open"));
+      });
+
+      
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          mobileMenu.classList.add("hidden");
+          document.body.style.overflow = "";
+        }
       });
     });
   </script>
