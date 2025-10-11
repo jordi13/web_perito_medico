@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760167853" data-version="1760167853">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760168501" data-version="1760168501">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -370,8 +370,6 @@
         const open = !expanded;
         menuBtn.setAttribute("aria-expanded", open);
         mobileMenu.classList.toggle("hidden", !open);
-        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + "px" : "0";
-        mobileMenu.style.opacity = open ? "1" : "0";
         document.body.style.overflow = open ? "hidden" : "";
       });
 
@@ -385,6 +383,7 @@
       
       groups.forEach((group) => {
         const trigger = group.querySelector("a[data-menu]");
+        if (!trigger) return;
         trigger.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -397,6 +396,14 @@
       
       document.addEventListener("click", (e) => {
         if (!e.target.closest(".group")) groups.forEach((g) => g.classList.remove("open"));
+      });
+
+      
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          mobileMenu.classList.add("hidden");
+          document.body.style.overflow = "";
+        }
       });
     });
   </script>
@@ -559,14 +566,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuela-neurologica-accidente-trafico/">
+              <a href="/blog/guardar-pruebas-accidente/">
                 
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas neurológicas tras un accidente de tráfico: diagnóstico y valoración médica</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Las lesiones neurológicas post-traumáticas pueden tener un impacto grave y permanente en la vida del paciente. Revisamos …</p>
-              <a href="/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
+              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -589,14 +596,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuelas-psicologicas-accidente/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
+              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
