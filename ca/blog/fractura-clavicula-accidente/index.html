@@ -134,7 +134,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760186961" data-version="1760186961">
+  <link rel="stylesheet" href="/css/main.min.f460f3baecf33089140385598ade28342b5edb51ad4a8142bf66b26d2f1cb2e5.css?v=1760192557" data-version="1760192557">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -204,12 +204,12 @@
         
         
           
-            <div class="relative group">
+            <div class="relative">
               <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer" data-menu="services">
                 Serveis
                 <i class="fas fa-chevron-down ml-1 text-sm"></i>
               </a>
-              <div class="submenu services absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+              <div id="subMenuServices" class="submenu services invisible absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
                 
                   <a href="/ca/serveis/valoracio-de-lesions-en-accidents-de-trafic/" class="submenu-item">Valoració de lesions en accidents de trànsit</a>
                   <a href="/ca/serveis/informes-medics-pericials-en-accidents-laborals/" class="submenu-item">Informes mèdics pericials en accidents laborals</a>
@@ -242,12 +242,12 @@
           
           
           
-          <div class="relative group">
+          <div class="relative">
             <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer" data-menu="lang">
               <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />
               <i class="fas fa-chevron-down ml-1 text-sm"></i>
             </a>
-            <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+            <div id="subMenuLang" class="submenu language invisible absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
               
                 
                 
@@ -269,12 +269,6 @@
           </div>
         
 
-        
-        
-          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
-        
       </div>
 
       
@@ -346,10 +340,6 @@
           
         </div>
         
-          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
-        
       </div>
     </div>
   </div>
@@ -377,6 +367,38 @@ document.addEventListener("DOMContentLoaded", function () {
     submenuServicios.classList.toggle("hidden", isOpen);
     iconServicios.classList.toggle("rotate-180", !isOpen);
   });
+
+  
+  const serviceLink = document.querySelector('a[data-menu="services"]');
+  const subMenuServices = document.getElementById("subMenuServices");
+  const langLink = document.querySelector('a[data-menu="lang"]');
+  const subMenuLang = document.getElementById("subMenuLang");
+
+  function setupHover(link, menu) {
+    if (!link || !menu) return;
+    let hoverTimeout;
+
+    function showMenu() {
+      clearTimeout(hoverTimeout);
+      menu.classList.remove("invisible", "opacity-0", "translate-y-2");
+      menu.classList.add("visible", "opacity-100", "translate-y-0");
+    }
+
+    function hideMenu() {
+      hoverTimeout = setTimeout(() => {
+        menu.classList.add("invisible", "opacity-0", "translate-y-2");
+        menu.classList.remove("visible", "opacity-100", "translate-y-0");
+      }, 150);
+    }
+
+    link.addEventListener("mouseenter", showMenu);
+    link.addEventListener("mouseleave", hideMenu);
+    menu.addEventListener("mouseenter", showMenu);
+    menu.addEventListener("mouseleave", hideMenu);
+  }
+
+  setupHover(serviceLink, subMenuServices);
+  setupHover(langLink, subMenuLang);
 });
 </script>
 
@@ -384,6 +406,11 @@ document.addEventListener("DOMContentLoaded", function () {
 .submenu.services {
   width: 23rem;
   left: -5rem;
+  transition: all 0.3s ease-in-out;
+}
+.submenu.language {
+  left: -4rem;
+  transition: all 0.3s ease-in-out;
 }
 .submenu-item {
   display: block;
@@ -584,14 +611,14 @@ document.addEventListener("DOMContentLoaded", function () {
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/ca/blog/secuela-neurologica-accidente-trafico/">
+              <a href="/ca/blog/guardar-pruebas-accidente/">
                 
-                <img src="/images/blog/secuelas-neurologicas.jpg" alt="Fractura de clavícula en un accident de trànsit: recuperació, seqüeles i indemnització" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/pruebas-accidente.jpg" alt="Fractura de clavícula en un accident de trànsit: recuperació, seqüeles i indemnització" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Seqüeles neurològiques després d’un accident de trànsit: diagnòstic i valoració mèdica</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Quines proves mèdiques conservar després d’un accident de trànsit per a una valoració pericial correcta</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Les lesions neurològiques posttraumàtiques poden tenir un impacte greu i permanent en la vida del pacient. Revisem les …</p>
-              <a href="/ca/blog/secuela-neurologica-accidente-trafico/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Després d’un accident de trànsit, conservar certes proves mèdiques i documentals pot marcar la diferència en la teva …</p>
+              <a href="/ca/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
