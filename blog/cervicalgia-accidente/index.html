@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <script>
-    
+     
     localStorage.setItem('darkMode', 'false');
     document.documentElement.classList.remove('dark');
   </script>
@@ -137,8 +137,17 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760859209" data-version="1760859209">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760862652" data-version="1760862652">
+
+  
+  
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
      
@@ -212,14 +221,11 @@
     "latitude": "41.39861551097948",
     "longitude": "2.146082093992859"
   },
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Barcelona"
-  },
+  "areaServed": { "@type": "AdministrativeArea", "name": "Barcelona" },
   "openingHoursSpecification": [
-  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
-  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00" }
-],
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00" }
+  ],
   "priceRange": "Consultar",
   "sameAs": [
     "https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/",
@@ -705,9 +711,6 @@ Esto permite:</p>
       
         
         
-      
-        
-        
           
           
           
@@ -739,6 +742,21 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
+              <a href="/blog/secuelas-psicologicas-accidente/">
+                
+                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
+              </a>
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
+              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+                
+              </a>
+            </div>
+          </div>
+        
+          <div class="swiper-slide">
+            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
               <a href="/blog/indemnizacion-lumbalgia-accidente/">
                 
                 <img src="/images/blog/lumbalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
@@ -747,21 +765,6 @@ Esto permite:</p>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La lumbalgia es otra de las lesiones frecuentes en accidentes de tráfico. Explicamos su recuperación, secuelas posibles …</p>
               <a href="/blog/indemnizacion-lumbalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
-                
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
-                
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
-                
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -914,20 +917,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      
+       
       document.body.classList.add('ready');
 
-      
-      new Swiper(".related-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        loop: true,
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
-      });
+       
+      if (typeof Swiper !== 'undefined') {
+        new Swiper(".related-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: { delay: 4000, disableOnInteraction: false },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+          breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
+        });
+      }
 
+       
       const overlay = document.getElementById("cookie-overlay");
       const box = document.getElementById("cookie-box");
       const acceptBtn = document.getElementById("accept-cookies");
@@ -952,7 +958,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 350);
       }
 
-      
+       
       if (!localStorage.getItem("cookieConsent")) {
         const idleShow = () => showBanner();
         if ("requestIdleCallback" in window) {
@@ -964,6 +970,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       acceptBtn?.addEventListener("click", () => hideBanner("accepted"));
       rejectBtn?.addEventListener("click", () => hideBanner("rejected"));
+
+       
+      window.openCookieSettings = function () {
+        overlay.style.display = "flex";
+        requestAnimationFrame(() => {
+          overlay.classList.add("show");
+          box.classList.add("show");
+        });
+      };
     });
   </script>
 
@@ -973,9 +988,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <h3 class="text-xl font-bold mb-4"> Tu privacidad es importante </h3>
       <p class="text-sm mb-6">
         Este sitio utiliza cookies técnicas necesarias para su correcto funcionamiento.
-        <a href="/cookies" class="underline ml-1">
-          Política de cookies
-        </a>
+        <a href="/cookies" class="underline ml-1">Política de cookies</a>
       </p>
       <div class="flex justify-center gap-4">
         <button id="accept-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
