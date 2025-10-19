@@ -64,15 +64,8 @@
 
 
   
-<link rel="preload"
-          as="image"
-          href="/images/jaume-blanch-400.webp"
-          imagesrcset="/images/jaume-blanch-400.webp%20400w,%20/images/jaume-blanch-800.webp%20800w"
-          imagesizes="(max-width: 768px) 200px, (max-width: 1024px) 400px, 400px"
-          fetchpriority="high">
+  <link rel="preload" as="image" href="/images/jaume-blanch-400.webp" fetchpriority="high">
 
-
-  
   <style>
 :root {
    
@@ -144,31 +137,28 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760855756" data-version="1760855756">
+  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760857198" data-version="1760857198">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
-    body { visibility: hidden; }
-    .dark body { visibility: hidden; }
+     
+    .preload-fade { opacity: 0; transition: opacity .2s ease; }
+    .preload-fade.ready { opacity: 1; }
 
      
     #cookie-overlay {
       position: fixed;
       top:0; left:0; width:100%; height:100%;
       background-color: rgba(0,0,0,0.6);
-      backdrop-filter: blur(5px);  
+      backdrop-filter: blur(5px);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 99999;
       opacity: 0;
-      transition: opacity 0.5s ease;  
+      transition: opacity 0.5s ease;
     }
-
-    #cookie-overlay.show {
-      opacity: 1;
-      display: flex;
-    }
+    #cookie-overlay.show { opacity: 1; display: flex; }
 
      
     #cookie-box {
@@ -183,11 +173,7 @@
       transition: all 0.35s ease;
       border: 1px solid #ccc;
     }
-
-    #cookie-box.show {
-      transform: scale(1);
-      opacity: 1;
-    }
+    #cookie-box.show { transform: scale(1); opacity: 1; }
   </style>
   
   <script type="application/ld+json">
@@ -248,15 +234,13 @@
   "sameAs": [
     "https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/", 
     "https://maps.google.com/?cid=3257840267415238052",
-	"https://www.doctoralia.es/jaume-blanch-delclos/medico-general/barcelona"
+    "https://www.doctoralia.es/jaume-blanch-delclos/medico-general/barcelona"
   ]
 }
 </script>
-
-
 </head>
-<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
+<body class="preload-fade bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
   <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50" role="navigation" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
@@ -765,14 +749,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/indemnizacion-lumbalgia-accidente/">
+              <a href="/blog/guardar-pruebas-accidente/">
                 
-                <img src="/images/blog/lumbalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La lumbalgia es otra de las lesiones frecuentes en accidentes de tráfico. Explicamos su recuperación, secuelas posibles …</p>
-              <a href="/blog/indemnizacion-lumbalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
+              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -795,14 +779,14 @@ Esto permite:</p>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/guardar-pruebas-accidente/">
+              <a href="/blog/secuelas-psicologicas-accidente/">
                 
-                <img src="/images/blog/pruebas-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
                 
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Qué pruebas médicas guardar tras un accidente de tráfico para una correcta valoración pericial</h3>
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
               </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Después de un accidente de tráfico, conservar ciertas pruebas médicas y documentales puede marcar la diferencia en tu …</p>
-              <a href="/blog/guardar-pruebas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
+              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -933,13 +917,16 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
   
-  <script src="/js/scripts.min.d456a175ad33e888eac2eabeb4b419b74f46295e8b2b27347d6a16fce86fafa4.js"></script>
-  <script src="/js/gsap-animations.min.7c09ec69561f8e8a36142b62361853a5fdf9c36a696809a814fb48594baa4752.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/scripts.min.d456a175ad33e888eac2eabeb4b419b74f46295e8b2b27347d6a16fce86fafa4.js" defer></script>
+  <script src="/js/gsap-animations.min.7c09ec69561f8e8a36142b62361853a5fdf9c36a696809a814fb48594baa4752.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      
+      document.body.classList.add('ready');
+
       
       new Swiper(".related-swiper", {
         slidesPerView: 1,
@@ -949,10 +936,6 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: { el: ".swiper-pagination", clickable: true },
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
-      });
-
-      window.addEventListener('load', function() {
-        document.body.style.visibility = 'visible';
       });
 
       const overlay = document.getElementById("cookie-overlay");
@@ -974,22 +957,21 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
           overlay.style.display = "none";
           document.body.style.overflow = "";
-        }, 500); 
+        }, 500);
       }
-	 
-	  window.openCookieSettings = function() {
-	  const overlay = document.getElementById("cookie-overlay");
-	  const box = document.getElementById("cookie-box");
-	  overlay.style.display = "flex";
-	  setTimeout(() => overlay.classList.add("show"), 50);
-	  setTimeout(() => box.classList.add("show"), 150);
-	  document.body.style.overflow = "hidden";
-	};
-	
+
+      
+      window.openCookieSettings = function() {
+        overlay.style.display = "flex";
+        setTimeout(() => overlay.classList.add("show"), 50);
+        setTimeout(() => box.classList.add("show"), 150);
+        document.body.style.overflow = "hidden";
+      };
+
       if (!localStorage.getItem("cookieConsent")) showBanner();
 
-      acceptBtn.addEventListener("click", () => hideBanner("accepted"));
-      rejectBtn.addEventListener("click", () => hideBanner("rejected"));
+      acceptBtn?.addEventListener("click", () => hideBanner("accepted"));
+      rejectBtn?.addEventListener("click", () => hideBanner("rejected"));
     });
   </script>
 
