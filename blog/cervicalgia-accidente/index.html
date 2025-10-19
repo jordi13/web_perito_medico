@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <script>
+    
     localStorage.setItem('darkMode', 'false');
     document.documentElement.classList.remove('dark');
   </script>
@@ -33,15 +34,15 @@
   
 </title>
 
+<meta name="description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos …" />
 
-<meta name="description" content="" />
 <meta name="author" content="Jordi Blanch" />
 <link rel="canonical" href="https://jaumeblanch.com/blog/cervicalgia-accidente/" />
 
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico? | Dr. Blanch" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos periciales especializados en accidentes de …" />
 <meta property="og:url" content="https://jaumeblanch.com/blog/cervicalgia-accidente/" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="1200" />
@@ -51,7 +52,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico? | Dr. Blanch" />
-<meta name="twitter:description" content="" />
+<meta name="twitter:description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos periciales especializados en accidentes de …" />
 <meta name="twitter:image" content="" />
 
 
@@ -63,7 +64,6 @@
 
 
 
-  
   <link rel="preload" as="image" href="/images/jaume-blanch-400.webp" fetchpriority="high">
 
   <style>
@@ -137,7 +137,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760857198" data-version="1760857198">
+  <link rel="stylesheet" href="/css/main.min.d9762370cb9bd88a6b2546f67fbc7a446204e8ea1fa24a381276b24b4effb932.css?v=1760859209" data-version="1760859209">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
@@ -148,33 +148,33 @@
      
     #cookie-overlay {
       position: fixed;
-      top:0; left:0; width:100%; height:100%;
-      background-color: rgba(0,0,0,0.6);
-      backdrop-filter: blur(5px);
+      inset: 0;
+      background-color: rgba(0,0,0,.5);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 99999;
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity .35s ease;
+      will-change: opacity;
     }
-    #cookie-overlay.show { opacity: 1; display: flex; }
+    #cookie-overlay.show { display: flex; opacity: 1; }
 
-     
     #cookie-box {
       background-color: #f3f3f3;
       padding: 1.5rem;
       border-radius: 1rem;
-      max-width: 500px;
-      width: 90%;
+      max-width: 500px; width: 90%;
       text-align: center;
-      transform: scale(0.95);
+      transform: translateY(6px);
       opacity: 0;
-      transition: all 0.35s ease;
+      transition: transform .35s ease, opacity .35s ease;
       border: 1px solid #ccc;
+      will-change: transform, opacity;
     }
-    #cookie-box.show { transform: scale(1); opacity: 1; }
+    #cookie-box.show { transform: translateY(0); opacity: 1; }
   </style>
+
   
   <script type="application/ld+json">
 {
@@ -217,22 +217,12 @@
     "name": "Barcelona"
   },
   "openingHoursSpecification": [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "09:00",
-    "closes": "13:00"
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "16:00",
-    "closes": "20:00"
-  }
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00" }
 ],
   "priceRange": "Consultar",
   "sameAs": [
-    "https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/", 
+    "https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/",
     "https://maps.google.com/?cid=3257840267415238052",
     "https://www.doctoralia.es/jaume-blanch-delclos/medico-general/barcelona"
   ]
@@ -715,11 +705,6 @@ Esto permite:</p>
       
         
         
-          
-          
-          
-          
-        
       
         
         
@@ -730,6 +715,11 @@ Esto permite:</p>
         
       
         
+        
+          
+          
+          
+          
         
       
         
@@ -746,6 +736,21 @@ Esto permite:</p>
     
     <div class="swiper related-slider">
       <div class="swiper-wrapper">
+        
+          <div class="swiper-slide">
+            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
+              <a href="/blog/indemnizacion-lumbalgia-accidente/">
+                
+                <img src="/images/blog/lumbalgia-accidente.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
+                
+                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">¿Cómo se calcula la indemnización por lumbalgia tras un accidente de tráfico?</h3>
+              </a>
+              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La lumbalgia es otra de las lesiones frecuentes en accidentes de tráfico. Explicamos su recuperación, secuelas posibles …</p>
+              <a href="/blog/indemnizacion-lumbalgia-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
+                
+              </a>
+            </div>
+          </div>
         
           <div class="swiper-slide">
             <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
@@ -772,21 +777,6 @@ Esto permite:</p>
               </a>
               <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">La fractura de clavícula es una lesión frecuente en accidentes de tráfico, especialmente en motoristas y ciclistas. …</p>
               <a href="/blog/fractura-clavicula-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
-                
-              </a>
-            </div>
-          </div>
-        
-          <div class="swiper-slide">
-            <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col">
-              <a href="/blog/secuelas-psicologicas-accidente/">
-                
-                <img src="/images/blog/secuelas-psicologicas.jpg" alt="¿Cuánto tarda la recuperación de una cervicalgia tras un accidente de tráfico?" class="rounded-lg mb-4 object-cover w-full h-48">
-                
-                <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-2">Secuelas psicológicas tras un accidente de tráfico: cómo se valoran médicamente</h3>
-              </a>
-              <p class="text-text-secondary dark:text-text-tertiary text-sm leading-relaxed mb-4">Los accidentes de tráfico no solo dejan lesiones físicas. El daño psicológico como la ansiedad o el trastorno de estrés …</p>
-              <a href="/blog/secuelas-psicologicas-accidente/" class="mt-auto text-primary dark:text-primary-light font-semibold hover:underline">
                 
               </a>
             </div>
@@ -945,9 +935,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       function showBanner() {
         overlay.style.display = "flex";
-        setTimeout(() => overlay.classList.add("show"), 50);
-        setTimeout(() => box.classList.add("show"), 150);
-        document.body.style.overflow = "hidden";
+        requestAnimationFrame(() => {
+          overlay.classList.add("show");
+          box.classList.add("show");
+          document.body.style.overflow = "hidden";
+        });
       }
 
       function hideBanner(choice) {
@@ -957,18 +949,18 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
           overlay.style.display = "none";
           document.body.style.overflow = "";
-        }, 500);
+        }, 350);
       }
 
       
-      window.openCookieSettings = function() {
-        overlay.style.display = "flex";
-        setTimeout(() => overlay.classList.add("show"), 50);
-        setTimeout(() => box.classList.add("show"), 150);
-        document.body.style.overflow = "hidden";
-      };
-
-      if (!localStorage.getItem("cookieConsent")) showBanner();
+      if (!localStorage.getItem("cookieConsent")) {
+        const idleShow = () => showBanner();
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(idleShow, { timeout: 2500 });
+        } else {
+          setTimeout(idleShow, 1800);
+        }
+      }
 
       acceptBtn?.addEventListener("click", () => hideBanner("accepted"));
       rejectBtn?.addEventListener("click", () => hideBanner("rejected"));
