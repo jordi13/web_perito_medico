@@ -6,20 +6,29 @@
     localStorage.setItem('darkMode', 'false');
     document.documentElement.classList.remove('dark');
   </script>
+
   
-  
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WF4444SC');</script>
-  
-  
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5KV5RJ5E5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag(){ dataLayer.push(arguments); }
 
-    gtag('config', 'G-X5KV5RJ5E5');
+    
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted', 
+      security_storage: 'granted'       
+    });
+    
   </script>
+  
+
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WF4444SC');</script>
+  
+
   
 
   <script>
@@ -76,7 +85,6 @@
 
 
 <link rel="preload" as="image" href="/images/jaume-blanch-400.webp" fetchpriority="high">
-
 
   <style>
 :root {
@@ -149,7 +157,7 @@
   
     
   
-  <link rel="stylesheet" href="/css/main.min.bed14f689d6c7d2d307bea11c85c164a65424be417098d7124fa1e447549eb28.css?v=1762608484" data-version="1762608484">
+  <link rel="stylesheet" href="/css/main.min.bed14f689d6c7d2d307bea11c85c164a65424be417098d7124fa1e447549eb28.css?v=1762620622" data-version="1762620622">
 
   
   
@@ -172,7 +180,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
-
     #cookie-overlay {
       position: fixed;
       inset: 0;
@@ -237,7 +244,7 @@
   
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF4444SC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
-  
+
   <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50" role="navigation" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
@@ -687,15 +694,38 @@ a[data-menu="lang"] i.rotate-180 {
         setTimeout(() => { overlay.style.display = "none"; document.body.style.overflow = ""; }, 350);
       }
 
+      
+      function consentAcceptAll() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+        dataLayer.push({ event: 'consent_updated', consent_status: 'accept_all' });
+      }
+
+      function consentRejectAll() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied'
+        });
+        dataLayer.push({ event: 'consent_updated', consent_status: 'reject_all' });
+      }
+
       if (!localStorage.getItem("cookieConsent")) {
         const idleShow = () => showBanner();
         if ("requestIdleCallback" in window) requestIdleCallback(idleShow, { timeout: 2500 });
         else setTimeout(idleShow, 1800);
       }
 
-      acceptBtn?.addEventListener("click", () => hideBanner("accepted"));
-      rejectBtn?.addEventListener("click", () => hideBanner("rejected"));
+      
+      acceptBtn?.addEventListener("click", () => { consentAcceptAll(); hideBanner("accepted"); });
+      rejectBtn?.addEventListener("click", () => { consentRejectAll(); hideBanner("rejected"); });
 
+      
       window.openCookieSettings = function () {
         overlay.style.display = "flex";
         requestAnimationFrame(() => { overlay.classList.add("show"); box.classList.add("show"); });
