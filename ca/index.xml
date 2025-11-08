@@ -128,11 +128,11 @@
       <description></description>
     </item>
     <item>
-      <title>Política de Cookies</title>
-      <link>https://jaumeblanch.com/ca/cookies/</link>
+      <title>Política de galetes</title>
+      <link>https://jaumeblanch.com/ca/galetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jaumeblanch.com/ca/cookies/</guid>
-      <description>&lt;h2 id=&#34;política-de-cookies&#34;&gt;Política de Cookies&lt;/h2&gt;&#xA;&lt;p&gt;Aquest lloc web utilitza &lt;strong&gt;cookies tècniques essencials&lt;/strong&gt; per al seu correcte funcionament (navegació, idioma, seguretat).&lt;/p&gt;&#xA;&lt;p&gt;Actualment &lt;strong&gt;no s’empren cookies de tercers&lt;/strong&gt; (com Google Analytics o xarxes socials).&lt;/p&gt;&#xA;&lt;h3 id=&#34;què-són-les-cookies&#34;&gt;Què són les cookies?&lt;/h3&gt;&#xA;&lt;p&gt;Són petits arxius que s’emmagatzemen al navegador de l’usuari per optimitzar l’experiència de navegació.&lt;/p&gt;&#xA;&lt;h3 id=&#34;gestió-de-cookies&#34;&gt;Gestió de cookies&lt;/h3&gt;&#xA;&lt;p&gt;L’usuari pot configurar el seu navegador per bloquejar o eliminar les cookies en qualsevol moment.&lt;/p&gt;&#xA;&lt;button onclick=&#34;openCookieSettings()&#34; class=&#34;px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90&#34;&gt;&#xA;  Configurar cookies&#xA;&lt;/button&gt;</description>
+      <guid>https://jaumeblanch.com/ca/galetes/</guid>
+      <description>&lt;h2 id=&#34;política-de-galetes&#34;&gt;Política de galetes&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Darrera actualització:&lt;/strong&gt; 08/11/2025&lt;/p&gt;&#xA;&lt;p&gt;En aquest lloc web (jaumeblanch.com) fem servir &lt;strong&gt;galetes tècniques essencials&lt;/strong&gt; per al funcionament, i &lt;strong&gt;galetes analítiques&lt;/strong&gt; (prèvia autorització) mitjançant &lt;strong&gt;Google Tag Manager (GTM)&lt;/strong&gt; que activa &lt;strong&gt;Google Analytics&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Essencials (necessàries):&lt;/strong&gt; permeten la navegació, la seguretat, l’idioma o recordar el teu consentiment. No requereixen autorització.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Analítiques (opcionals):&lt;/strong&gt; ens ajuden a mesurar visites i a millorar el lloc. &lt;strong&gt;Només es carreguen si les acceptes.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;button onclick=&#34;openCookieSettings()&#34; class=&#34;px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90&#34;&gt;&#xA;  Configura les galetes&#xA;&lt;/button&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;què-són-les-galetes&#34;&gt;Què són les galetes?&lt;/h3&gt;&#xA;&lt;p&gt;Són fitxers petits que es desen al navegador i permeten, per exemple, recordar preferències o obtenir estadístiques d’ús.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Política de Privacitat</title>
