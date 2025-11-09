@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <script>
+     
+    localStorage.setItem('darkMode', 'false');
+    document.documentElement.classList.remove('dark');
+  </script>
+
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
     
-    <script>
-        
-        localStorage.setItem('darkMode', 'false');
-        document.documentElement.classList.remove('dark');
-    </script>
-    <script>
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted', 
+      security_storage: 'granted'       
+    });
+    
+  </script>
+  
+
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WF4444SC');</script>
+  
+
+  
+
+  <script>
   (function () {
     
     const stored = localStorage.getItem('darkMode');
@@ -34,15 +58,15 @@
   
 </title>
 
+<meta name="description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos …" />
 
-<meta name="description" content="" />
 <meta name="author" content="Jordi Blanch" />
 <link rel="canonical" href="http://localhost:1313/tags/accident-de-tr%C3%A0nsit/" />
 
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Accident De Trànsit | Dr. Blanch" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos periciales especializados en accidentes de …" />
 <meta property="og:url" content="http://localhost:1313/tags/accident-de-tr%C3%A0nsit/" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="1200" />
@@ -52,21 +76,17 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Accident De Trànsit | Dr. Blanch" />
-<meta name="twitter:description" content="" />
+<meta name="twitter:description" content="Soy médico perito en Barcelona con más de 30 años de experiencia en medicina general, urgencias y valoración del daño corporal. Ofrezco informes médicos periciales especializados en accidentes de …" />
 <meta name="twitter:image" content="" />
 
 
 <link rel="icon" href="/images/favicon.ico" />
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
+<link rel="preload" as="image" href="/images/jaume-blanch-400.webp" fetchpriority="high">
 
-
-    
-    
-    <style>
+  <style>
 :root {
    
   --color-primary: #095bb0;          
@@ -132,161 +152,197 @@
 }
 </style>
 
-    
-    
-    
-    <link rel="stylesheet" href="/css/main.css?v=1758732418" data-version="1758732418">
 
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  
+  <link rel="stylesheet" href="/css/main.css?v=1762687677" data-version="1762687677">
 
-    <style>
-         
-        body {
-            visibility: hidden;
-        }
-        .dark body {
-            visibility: hidden;
-        }
-    </style>
+  
+  
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+  
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    #cookie-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity .35s ease;
+      will-change: opacity;
+    }
+    #cookie-overlay.show { display: flex; opacity: 1; }
+
+    #cookie-box {
+      background-color: #f3f3f3;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      max-width: 500px; width: 90%;
+      text-align: center;
+      transform: translateY(6px);
+      opacity: 0;
+      transition: transform .35s ease, opacity .35s ease;
+      border: 1px solid #ccc;
+      will-change: transform, opacity;
+    }
+    #cookie-box.show { transform: translateY(0); opacity: 1; }
+  </style>
+
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://jaumeblanch.com/#organization",
+  "name": "Jaume Blanch – Valoración médica pericial en Barcelona",
+  "url": "https://jaumeblanch.com",
+  "logo": "https://jaumeblanch.com/images/favicon.png",
+  "image": "https://jaumeblanch.com/images/jaume-blanch.jpg",
+  "description": "El Dr. Jaume Blanch es médico pericial especializado en la valoración médica de lesiones, secuelas y daño corporal. Ofrece informes médico-legales independientes y objetivos para abogados, aseguradoras y pacientes en Barcelona.",
+  "slogan": "Valoración médica pericial independiente en Barcelona",
+  "founder": { "@type": "Person", "name": "Dr. Jaume Blanch", "jobTitle": "Médico pericial", "url": "https://jaumeblanch.com" },
+  "contactPoint": { "@type": "ContactPoint", "telephone": "+34 630 049 095", "contactType": "Atención con cita previa", "availableLanguage": ["Spanish", "Catalan"], "areaServed": "Barcelona, España" },
+  "address": { "@type": "PostalAddress", "streetAddress": "Carrer d'Aribau, 255, 1º1ª", "addressLocality": "Barcelona", "postalCode": "08021", "addressCountry": "ES" },
+  "geo": { "@type": "GeoCoordinates", "latitude": "41.39861551097948", "longitude": "2.146082093992859" },
+  "areaServed": { "@type": "AdministrativeArea", "name": "Barcelona" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00" }
+  ],
+  "priceRange": "Consultar",
+  "sameAs": [
+    "https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/",
+    "https://maps.google.com/?cid=3257840267415238052",
+    "https://www.doctoralia.es/jaume-blanch-delclos/medico-general/barcelona"
+  ]
+}
+</script>
 </head>
-<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
 
-    <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50">
+<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary flex flex-col min-h-screen transition-colors duration-200">
+  
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF4444SC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+  <nav class="fixed w-full bg-bg dark:bg-bg shadow-md z-50" role="navigation" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
+    <div class="flex justify-between h-16 items-center">
+      
       <div class="flex items-center">
-        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">Dr. Blanch</a>
+        <a href="/" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">
+          Dr. Blanch
+        </a>
       </div>
+
+      
       <div class="hidden lg:flex items-center space-x-8">
         
-          
-                      
-            
-            <a href="/#about" class="nav-link text-text-primary dark:text-text-primary">Sobre Mi</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/#services" class="nav-link text-text-primary dark:text-text-primary">Servicios</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/#contact" class="nav-link text-text-primary dark:text-text-primary">Contacto</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/#faqs" class="nav-link text-text-primary dark:text-text-primary">Faqs</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary">Experiencia</a>
-          
-          
-        
-          
-                      
-            
-            <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary">Blog</a>
-          
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="relative group">
-          <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
-			<img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />
-            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+        <div class="flex-shrink-0 flex items-center">
+          <a href="tel:630-049-095" class="flex items-center text-text-primary dark:text-text-primary font-semibold hover:text-text-accent transition-colors">
+            <i class="fas fa-phone-alt mr-2"></i> 630 049 095
           </a>
-          <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 invisible">
-            
-            
-              
-              
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                  
-                    
-                      
-                      
-                    
-                  
-                
-                
-                <a href="/ca/tags/accident-de-tr%C3%A0nsit/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary ">
-                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
-                </a>
-              
-            
-              
-              
-            
-              
-              
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                  
-                    
-                  
-                
-                
-                <a href="/" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary font-semibold">
-                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
-                </a>
-              
-            
-          </div>
         </div>
+
+        
+        
+          
+            <div class="relative">
+              <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center cursor-pointer group" data-menu="services">
+                Servicios
+                <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
+              </a>
+              <div id="subMenuServices" class="submenu services invisible absolute left-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
+                
+                  <a href="/valoracion-de-lesiones-en-accidentes-de-trafico/" class="submenu-item">Valoración de lesiones en accidentes de tráfico</a>
+                  <a href="/informes-medicos-periciales-en-accidentes-laborales/" class="submenu-item">Informes médicos periciales en accidentes laborales</a>
+                  <a href="/valoracion-de-secuelas-fisicas-y-neurologicas/" class="submenu-item">Valoración de secuelas físicas y neurológicas</a>
+                  <a href="/valoracion-medica-para-reclamaciones-y-seguros/" class="submenu-item">Valoración médica para reclamaciones y seguros</a>
+                  <a href="/asistencia-en-juicios-como-perito-medico/" class="submenu-item">Asistencia en juicios como perito médico</a>
+                  <a href="/deteccion-de-fraudes-en-lesiones/" class="submenu-item">Detección de fraudes en lesiones</a>
+                
+              </div>
+            </div>
+          
+        
+          
+            
+              <a href="/experiencia/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Experiencia
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            
+          
+        
+          
+            
+              <a href="/blog/" class="nav-link text-text-primary dark:text-text-primary relative group">
+                Blog
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            
+          
         
 
         
-        <div class="flex items-center space-x-4" data-animation="social">
-          
-          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
-          
-         
-        </div>
         
-       
+        
+          
+          
+          
+          
+          <div class="relative">
+            <a href="#" class="nav-link text-text-primary flex items-center cursor-pointer group" data-menu="lang">
+              <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" loading="lazy" decoding="async" fetchpriority="low" />
+              <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300"></i>
+            </a>
+            <div id="subMenuLang" class="submenu language invisible absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[10rem] opacity-0 transform translate-y-2 transition-all duration-300 ease-in-out">
+              
+                
+                
+                
+                <a href="/" class="submenu-item flex items-center gap-1">
+                  <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" loading="lazy" decoding="async" fetchpriority="low"/>
+                  Castellano
+                </a>
+              
+                
+                
+                
+                <a href="/ca/" class="submenu-item flex items-center gap-1">
+                  <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" loading="lazy" decoding="async" fetchpriority="low"/>
+                  Català
+                </a>
+              
+            </div>
+          </div>
+        
       </div>
+
+      
       <div class="lg:hidden flex items-center space-x-4">
-        
-       
-        <button id="menu-btn" class="text-text-primary dark:text-text-primary">
+        <a href="tel:630-049-095" class="text-text-primary dark:text-text-primary" aria-label="Llamar">
+          <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+        <button id="menu-btn" class="text-text-primary dark:text-text-primary focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
@@ -294,268 +350,199 @@
   </div>
 
   
-  <div id="mobile-menu" class="hidden lg:hidden bg-bg dark:bg-bg shadow-lg">
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-bg dark:bg-bg shadow-lg z-[99999] overflow-hidden transition-all duration-300 ease-in-out rounded-b-xl">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       
-        
+      <div class="px-3 py-2">
+        <button id="toggle-servicios" class="w-full flex justify-between items-center text-base font-semibold text-text-primary hover:bg-bg-secondary">
+          <span>Servicios</span>
+          <i id="icon-servicios" class="fas fa-chevron-down ml-1 transition-transform duration-300"></i>
+        </button>
+        <div id="submenu-servicios" class="hidden flex-col mt-1 space-y-1 pb-2 transition-all duration-300 ease-in-out">
           
-          <a href="/#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Sobre Mi
-          </a>
-        
-        
-      
-        
+            <a href="/valoracion-de-lesiones-en-accidentes-de-trafico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de lesiones en accidentes de tráfico</a>
+            <a href="/informes-medicos-periciales-en-accidentes-laborales/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Informes médicos periciales en accidentes laborales</a>
+            <a href="/valoracion-de-secuelas-fisicas-y-neurologicas/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración de secuelas físicas y neurológicas</a>
+            <a href="/valoracion-medica-para-reclamaciones-y-seguros/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Valoración médica para reclamaciones y seguros</a>
+            <a href="/asistencia-en-juicios-como-perito-medico/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Asistencia en juicios como perito médico</a>
+            <a href="/deteccion-de-fraudes-en-lesiones/" class="block px-6 py-2 text-text-primary hover:bg-bg-secondary">Detección de fraudes en lesiones</a>
           
-          <a href="/#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Servicios
-          </a>
-        
+        </div>
+      </div>
+
+      
+      
         
       
         
-          
-          <a href="/#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Contacto
-          </a>
-        
+          <a href="/experiencia/" class="block px-3 py-2 text-base text-text-primary hover:bg-bg-secondary">Experiencia</a>
         
       
         
-          
-          <a href="/#faqs" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Faqs
-          </a>
-        
+          <a href="/blog/" class="block px-3 py-2 text-base text-text-primary hover:bg-bg-secondary">Blog</a>
         
       
-        
-          
-          <a href="/experiencia/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Experiencia
-          </a>
-        
-        
+
       
-        
-          
-          <a href="/blog/" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-text-primary dark:text-text-primary">
-            Blog
-          </a>
-        
-        
-      
-      
-      
-      
-      <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
+      <div class="px-3 py-3 border-t border-border-primary flex items-center justify-between">
         <div class="flex items-center space-x-3">
           
           
             
             
-              
-              		
-              
-              
-              
-              
-              
-              
-              
-              
-                
-                  
-                    
-                    
-                  
-                
-              
-			  
-			
-              
-              <a href="/ca/tags/accident-de-tr%C3%A0nsit/" class="px-2 py-1 text-xl opacity-70 hover:opacity-100" aria-label="Switch to Català (has translation)">
-                <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 mr-2 inline-block" />Català
-              </a>
             
+            <a href="/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+              <img src="/images/es.png" alt="es flag" class="w-5 h-5 inline-block" loading="lazy" decoding="async" fetchpriority="low"/>
+              <span>Castellano</span>
+            </a>
           
             
             
-          
             
-            
-              
-              		
-              
-              
-              
-              
-              
-              
-              
-              
-                
-                  
-                
-              
-			  
-			
-              
-              <a href="/" class="px-2 py-1 text-xl opacity-100 font-semibold" aria-label="Switch to Castellano (go to home)">
-                <img src="/images/es.png" alt="es flag" class="w-5 h-5 mr-2 inline-block" />Castellano
-              </a>
-            
+            <a href="/ca/" class="flex items-center gap-1 text-sm text-text-primary hover:bg-bg-secondary rounded px-2 py-1">
+              <img src="/images/ca.png" alt="ca flag" class="w-5 h-5 inline-block" loading="lazy" decoding="async" fetchpriority="low"/>
+              <span>Català</span>
+            </a>
           
         </div>
-      </div>
-      
-
-      
-      <div class="flex items-center space-x-6 px-3 py-3 border-t border-border-primary dark:border-border-primary mt-2" data-animation="social">
-        <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
-          <i class="fab fa-linkedin-in text-2xl"></i>
-        </a>
       </div>
     </div>
   </div>
 
-  
-  <style>
-    .group.open .submenu {
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-  </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const toggleServicios = document.getElementById("toggle-servicios");
+  const submenuServicios = document.getElementById("submenu-servicios");
+  const iconServicios = document.getElementById("icon-servicios");
+  const body = document.body;
 
   
-  <script>
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('Navigation script loaded');
-      
-      const sectionLinks = document.querySelectorAll('.section-link');
-      console.log('Found section links:', sectionLinks.length);
-      const homePath = '\/';
-      
-      sectionLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          console.log('Section link clicked:', this.getAttribute('data-section'));
-          
-          const section = this.getAttribute('data-section');
-          const isHomePage = window.location.pathname === homePath || window.location.pathname === homePath + 'index.html' || window.location.pathname === homePath.replace(/\/$/, '');
-          console.log('Is home page:', isHomePage);
-          
-          if (isHomePage) {
-            
-            const targetElement = document.querySelector(section);
-            console.log('Target element found:', !!targetElement);
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: 'instant',
-                block: 'start'
-              });
-            }
-          } else {
-            
-            console.log('Navigating to:', homePath + section);
-            window.location.href = homePath + section;
-          }
-        });
-      });
-      
-      
-      function handleHashScroll() {
-        console.log('Checking for hash:', window.location.hash);
-        if (window.location.hash) {
-          const targetElement = document.querySelector(window.location.hash);
-          console.log('Hash target element found:', !!targetElement);
-          if (targetElement) {
-            
-            setTimeout(() => {
-              console.log('Scrolling to hash target');
-              targetElement.scrollIntoView({
-                behavior: 'instant',
-                block: 'start'
-              });
-            }, 100);
-          }
-        }
-      }
-      
-      
-      handleHashScroll();
-      
-      
-      setTimeout(handleHashScroll, 500);
-      setTimeout(handleHashScroll, 1000);
-      
-      
-      window.addEventListener('hashchange', function() {
-        console.log('Hash changed to:', window.location.hash);
-        handleHashScroll();
-      });
-      
-      
-      window.addEventListener('load', function() {
-        console.log('Window loaded, checking hash');
-        setTimeout(handleHashScroll, 200);
-      });
-    });
-    
-    
-    document.querySelectorAll('.group > a.nav-link, .group > button.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const group = this.closest('.group');
-        const isOpen = group.classList.contains('open');
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+    const open = !expanded;
+    menuBtn.setAttribute("aria-expanded", open);
+    mobileMenu.classList.toggle("hidden", !open);
+    body.style.overflow = open ? "hidden" : "";
+  });
 
-        
-        document.querySelectorAll('.group').forEach(g => g.classList.remove('open'));
+  
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.classList.contains("hidden") && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
+      mobileMenu.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+      body.style.overflow = "";
+    }
+  });
 
-        
-        if (!isOpen) {
-          group.classList.add('open');
-        }
-      });
+  
+  toggleServicios.addEventListener("click", () => {
+    const isOpen = !submenuServicios.classList.contains("hidden");
+    submenuServicios.classList.toggle("hidden", isOpen);
+    iconServicios.classList.toggle("rotate-180", !isOpen);
+  });
 
-      document.addEventListener('click', function(event) {
-        const group = link.closest('.group');
-        if (!group.contains(event.target)) {
-          group.classList.remove('open');
-        }
-      });
-    });
+  
+  const serviceLink = document.querySelector('a[data-menu="services"]');
+  const subMenuServices = document.getElementById("subMenuServices");
+  const langLink = document.querySelector('a[data-menu="lang"]');
+  const subMenuLang = document.getElementById("subMenuLang");
 
-    
-    function toggleDarkMode() {
-      
-	  
-	  const isDark= true;
-      localStorage.setItem('darkMode', isDark);
+  function setupHover(link, menu) {
+    if (!link || !menu) return;
+    let hoverTimeout;
+    const icon = link.querySelector("i");
+
+    function showMenu() {
+      clearTimeout(hoverTimeout);
+      hoverTimeout = setTimeout(() => {
+        menu.classList.remove("invisible", "opacity-0", "translate-y-2");
+        menu.classList.add("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.add("rotate-180");
+      }, 100);
     }
 
-   
-   
+    function hideMenu() {
+      clearTimeout(hoverTimeout);
+      hoverTimeout = setTimeout(() => {
+        menu.classList.add("invisible", "opacity-0", "translate-y-2");
+        menu.classList.remove("visible", "opacity-100", "translate-y-0");
+        if (icon) icon.classList.remove("rotate-180");
+      }, 150);
+    }
 
-    
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        document.getElementById('mobile-menu').classList.add('hidden');
-      });
-    });
+    link.addEventListener("mouseenter", showMenu);
+    link.addEventListener("mouseleave", hideMenu);
+    menu.addEventListener("mouseenter", showMenu);
+    menu.addEventListener("mouseleave", hideMenu);
+  }
+
+  setupHover(serviceLink, subMenuServices);
+  setupHover(langLink, subMenuLang);
+});
+</script>
+
+<style>
+.submenu.services {
+  width: 23rem;
+  left: -5rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.submenu.language {
+  left: -4rem;
+  transition: all 0.4s ease-in-out;
+}
+
+ 
+.submenu-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  position: relative;
+  color: var(--text-primary);  
+  transition: background-color 0.4s ease;
+}
+
+ 
+.submenu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(120, 120, 120, 0.25);  
+  transition: width 0.6s ease;
+}
+
+.submenu-item:hover::after {
+  width: 100%;
+}
+
+ 
+.submenu-item:hover {
+  background-color: rgba(59, 130, 246, 0.08);  
+}
+
+ 
+#icon-servicios.rotate-180,
+a[data-menu="services"] i.rotate-180,
+a[data-menu="lang"] i.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+</style>
 
 
-  </script>
+
 </nav>
 
+  <div class="w-full h-16"></div>
 
-
-
-    <div class="w-full h-16"></div>
-
-    <main class="flex-grow">
-        
+  <main class="flex-grow">
+    
 <section class="pt-8 pb-12 bg-bg dark:bg-bg" data-animate>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
@@ -569,7 +556,7 @@
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       
-      <a href="/blog/guardar-pruebas-accidente/" class="block group">
+      <a href="/blog/articulos-optimiza-blanch-final/ca-secuelas-psicologicas-accidente-final/" class="block group">
         <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
           
           
@@ -582,7 +569,7 @@
             
             <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
               <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-              Quines proves mèdiques conservar després d’un accident de trànsit per a una valoració pericial correcta
+              Seqüeles psicològiques després d’un accident de trànsit: com es valoren mèdicament
             </h2>
             
             
@@ -593,11 +580,15 @@
             <div class="flex flex-wrap gap-2">
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
-                proves mèdiques
+                seqüeles psicològiques
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
                 accident de trànsit
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                estrès posttraumàtic
               </span>
               
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
@@ -608,8 +599,169 @@
                 informe pericial
               </span>
               
+            </div>
+            
+            
+            
+            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span></span>
+              <i class="fas fa-chevron-right ml-2"></i>
+            </div>
+          </div>
+        </article>
+      </a>
+      
+      <a href="/blog/articulos-optimiza-blanch-final/ca-secuela-neurologica-accidente-trafico-final/" class="block group">
+        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
+          
+          
+          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
+            <i class="fas fa-project-diagram text-4xl text-primary"></i>
+          </div>
+          
+          
+          <div class="p-6">
+            
+            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
+              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+              Seqüeles neurològiques després d’un accident de trànsit: diagnòstic i valoració mèdica
+            </h2>
+            
+            
+            
+            
+            
+            
+            <div class="flex flex-wrap gap-2">
+              
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
-                indemnització
+                seqüeles neurològiques
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                traumatisme cranioencefàlic
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                accident de trànsit
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                valoració del dany corporal
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                peritatge mèdic
+              </span>
+              
+            </div>
+            
+            
+            
+            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span></span>
+              <i class="fas fa-chevron-right ml-2"></i>
+            </div>
+          </div>
+        </article>
+      </a>
+      
+      <a href="/blog/articulos-optimiza-blanch-final/ca-fractura-clavicula-accidente-final/" class="block group">
+        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
+          
+          
+          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
+            <i class="fas fa-project-diagram text-4xl text-primary"></i>
+          </div>
+          
+          
+          <div class="p-6">
+            
+            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
+              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+              Fractura de clavícula en un accident de trànsit: recuperació, seqüeles i indemnització
+            </h2>
+            
+            
+            
+            
+            
+            
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                fractura clavícula
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                accident de trànsit
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                lesions òssies
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                valoració mèdica
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                peritatge mèdic
+              </span>
+              
+            </div>
+            
+            
+            
+            <div class="mt-4 flex items-center text-primary dark:text-primary-light text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span></span>
+              <i class="fas fa-chevron-right ml-2"></i>
+            </div>
+          </div>
+        </article>
+      </a>
+      
+      <a href="/blog/articulos-optimiza-blanch-final/ca-cervicalgia-accidente-final/" class="block group">
+        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
+          
+          
+          <div class="h-64 bg-gradient-primary-lighter flex items-center justify-center">
+            <i class="fas fa-project-diagram text-4xl text-primary"></i>
+          </div>
+          
+          
+          <div class="p-6">
+            
+            <h2 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300 flex items-center">
+              <i class="fas fa-arrow-right mr-2 text-primary dark:text-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+              Quant temps dura la recuperació d’una cervicalgia després d’un accident de trànsit?
+            </h2>
+            
+            
+            
+            
+            
+            
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                cervicalgia
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                accident de trànsit
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                lesions cervicals
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                valoració mèdica
+              </span>
+              
+              <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                peritatge mèdic
               </span>
               
             </div>
@@ -633,9 +785,9 @@
 
 
 
-    </main>
+  </main>
 
-    
+  
 <footer class="bg-bg-secondary dark:bg-bg-secondary text-text-primary py-12 border-t border-border-primary" data-animate>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between items-center">
@@ -646,25 +798,20 @@
           Dr. Blanch
         </a>
         <p class="text-lg text-text-secondary dark:text-text-tertiary italic mt-2">
+          Número colegiado 20360
+        </p>
+        <p class="text-lg text-text-secondary dark:text-text-tertiary italic mt-2">
           Médico perito acreditado en valoración del daño corporal al servicio de pacientes y profesionales del derecho.
         </p>
         <p class="text-text-secondary dark:text-text-tertiary mt-2 flex md:justify-start">
           <i class="fas fa-map-marker-alt mr-2"></i>Barcelona, Cataluña
         </p>
-        <a href="mailto:20360jbd@comb.cat" class="text-primary dark:text-primary-light mt-2 inline-flex md:justify-start">
-          <i class="fas fa-envelope mr-2"></i>20360jbd@comb.cat
-        </a>
-        <div class="flex md:justify-start space-x-6 mt-6" data-animation="social">
-          
-          <a href="https://www.linkedin.com/in/jaume-blanch-delclos-8637272a/" target="_blank" class="transition-transform duration-300 hover:scale-125">
-            <i class="fab fa-linkedin-in text-2xl text-text-primary dark:text-text-primary"></i>
-          </a>
-          
-        </div>
       </div>
 
       
-      <div class="flex flex-col items-end">
+      <div class="flex flex-col items-end space-y-4">
+
+        
         <div class="flex flex-wrap gap-2 justify-end">
           
           
@@ -688,56 +835,135 @@
           </span>
           
         </div>
+		
+		
+        <div class="flex space-x-4 text-sm text-text-secondary dark:text-text-tertiary text-center">
+          <a href="/aviso-legal" class="hover:underline">
+            Aviso legal
+          </a>
+          <a href="/privacidad" class="hover:underline">
+            Política de privacidad
+          </a>
+          <a href="/cookies" class="hover:underline">
+            Política de cookies
+          </a>
+        </div>
+
+        
       </div>
 
     </div>
 
     
     <div class="mt-8 pt-8 border-t border-border-primary text-center text-text-secondary dark:text-text-muted text-sm">
+		
       <p>© 2025 | Jaume Blanch</p>
     </div>
   </div>
 </footer>
 
 
-    
-    
-    
-    <script src="/js/scripts.js"></script>
-    <script src="/js/gsap-animations.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+  
+  
+  
+  <script src="/js/scripts.js" defer></script>
+  <script src="/js/gsap-animations.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+       
+      if (typeof Swiper !== 'undefined') {
         new Swiper(".related-swiper", {
           slidesPerView: 1,
           spaceBetween: 24,
           loop: true,
-          autoplay: {
-            delay: 4000, 
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            768: { slidesPerView: 2 },
-            1280: { slidesPerView: 3 },
-          },
+          autoplay: { delay: 4000, disableOnInteraction: false },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+          breakpoints: { 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }
         });
-      });
+      }
+
+       
+      const overlay = document.getElementById("cookie-overlay");
+      const box = document.getElementById("cookie-box");
+      const acceptBtn = document.getElementById("accept-cookies");
+      const rejectBtn = document.getElementById("reject-cookies");
+
+      function showBanner() {
+        overlay.style.display = "flex";
+        requestAnimationFrame(() => {
+          overlay.classList.add("show");
+          box.classList.add("show");
+          document.body.style.overflow = "hidden";
+        });
+      }
+      function hideBanner(choice) {
+        localStorage.setItem("cookieConsent", choice);
+        box.classList.remove("show");
+        overlay.classList.remove("show");
+        setTimeout(() => { overlay.style.display = "none"; document.body.style.overflow = ""; }, 350);
+      }
 
       
-      window.addEventListener('load', function() {
-        document.body.style.visibility = 'visible';
-      });
-    </script>
+      function consentAcceptAll() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+        dataLayer.push({ event: 'consent_updated', consent_status: 'accept_all' });
+      }
+
+      function consentRejectAll() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied'
+        });
+        dataLayer.push({ event: 'consent_updated', consent_status: 'reject_all' });
+      }
+
+      if (!localStorage.getItem("cookieConsent")) {
+        const idleShow = () => showBanner();
+        if ("requestIdleCallback" in window) requestIdleCallback(idleShow, { timeout: 2500 });
+        else setTimeout(idleShow, 1800);
+      }
+
+      
+      acceptBtn?.addEventListener("click", () => { consentAcceptAll(); hideBanner("accepted"); });
+      rejectBtn?.addEventListener("click", () => { consentRejectAll(); hideBanner("rejected"); });
+
+      
+      window.openCookieSettings = function () {
+        overlay.style.display = "flex";
+        requestAnimationFrame(() => { overlay.classList.add("show"); box.classList.add("show"); });
+      };
+    });
+  </script>
+
+  
+  <div id="cookie-overlay">
+    <div id="cookie-box">
+      <h3 class="text-xl font-bold mb-4"> Tu privacidad es importante </h3>
+      <p class="text-sm mb-6">
+        Este sitio utiliza cookies técnicas necesarias para su correcto funcionamiento.
+        <a href="/cookies" class="underline ml-1">Política de cookies</a>
+      </p>
+      <div class="flex justify-center gap-4">
+        <button id="accept-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+          Aceptar
+        </button>
+        <button id="reject-cookies" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90">
+          Rechazar
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
