@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baja Laboral on Dr. Blanch</title>
+    <link>http://localhost:1313/ca/tags/baja-laboral/</link>
+    <description>Recent content in Baja Laboral on Dr. Blanch</description>
+    <generator>Hugo</generator>
+    <language>ca</language>
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/ca/tags/baja-laboral/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accidentes practicando deportes: importancia del informe médico pericial para el trabajo</title>
+      <link>http://localhost:1313/ca/blog/accidentes-deportivos-informe-medico-laboral/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ca/blog/accidentes-deportivos-informe-medico-laboral/</guid>
+      <description>Los accidentes deportivos pueden tener consecuencias laborales importantes. Descubre por qué un informe médico pericial es clave para justificar la baja o reclamar una indemnización.</description>
+    </item>
+  </channel>
+</rss>
